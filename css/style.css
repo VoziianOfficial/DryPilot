@@ -2205,3 +2205,70 @@ form {
 body.menu-open [data-site-header] {
     z-index: 1100;
 }
+
+/* ==========================================================
+   Decorative layer z-index fix
+   ========================================================== */
+
+.section > .container,
+.section > .container-wide {
+    position: relative;
+    z-index: 2;
+}
+
+.section::before,
+.section::after {
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ==========================================================
+   Contrast safety patch
+   ========================================================== */
+
+.section.section-light :is(h1, h2, h3, h4, h5, h6),
+.section.section-gray :is(h1, h2, h3, h4, h5, h6),
+.section.section-cool :is(h1, h2, h3, h4, h5, h6),
+.section.service-light-section :is(h1, h2, h3, h4, h5, h6),
+.section.service-cool-section :is(h1, h2, h3, h4, h5, h6),
+.section.wet-blueprint-section :is(h1, h2, h3, h4, h5, h6),
+.section.gauge-comparison-section :is(h1, h2, h3, h4, h5, h6),
+.section.damage-selector-section :is(h1, h2, h3, h4, h5, h6),
+.section.preparation-board-section :is(h1, h2, h3, h4, h5, h6),
+.section.intake-lab-section :is(h1, h2, h3, h4, h5, h6),
+.section.emergency-intake-section :is(h1, h2, h3, h4, h5, h6),
+.section.storm-map-section :is(h1, h2, h3, h4, h5, h6),
+.legal-content-section :is(h1, h2, h3, h4, h5, h6) {
+    color: var(--color-dark-heading);
+}
+
+.section.section-light :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.section.section-gray :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.section.section-cool :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.section.service-light-section :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.section.service-cool-section :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.section.wet-blueprint-section :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.section.gauge-comparison-section :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.section.damage-selector-section :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.section.preparation-board-section :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.section.intake-lab-section :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.section.emergency-intake-section :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.section.storm-map-section :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)),
+.legal-content-section :is(p, li):where(:not(.section-kicker)):where(:not(.kicker)):where(:not(.form-kicker)):where(:not(.mobile-menu-kicker)):where(:not(.damage-panel-kicker)) {
+    color: var(--color-dark-text);
+}
+
+.section.section-light .section-heading p,
+.section.section-gray .section-heading p,
+.section.section-cool .section-heading p,
+.section.service-light-section .section-heading p,
+.section.service-cool-section .section-heading p,
+.section.wet-blueprint-section .section-heading p,
+.section.gauge-comparison-section .section-heading p,
+.section.damage-selector-section .section-heading p,
+.section.preparation-board-section .section-heading p,
+.section.intake-lab-section .section-heading p,
+.section.emergency-intake-section .section-heading p,
+.section.storm-map-section .section-heading p {
+    color: var(--color-dark-muted);
+}

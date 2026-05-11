@@ -129,6 +129,7 @@
     content: "";
     position: absolute;
     inset: 0;
+    z-index: 0;
     background:
         linear-gradient(90deg, rgba(7, 19, 29, 0.035) 1px, transparent 1px),
         linear-gradient(180deg, rgba(7, 19, 29, 0.03) 1px, transparent 1px);
