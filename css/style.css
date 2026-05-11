@@ -2178,3 +2178,30 @@ form {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
 }
+/* ==========================================================
+   FIX: STICKY HEADER INSIDE DATA MOUNT
+   ========================================================== */
+
+[data-site-header] {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    width: 100%;
+    isolation: isolate;
+}
+
+[data-site-header] .site-header {
+    position: relative;
+    top: auto;
+    z-index: 1;
+    width: 100%;
+}
+
+[data-site-header] .mobile-menu-backdrop,
+[data-site-header] .mobile-menu {
+    position: fixed;
+}
+
+body.menu-open [data-site-header] {
+    z-index: 1100;
+}
