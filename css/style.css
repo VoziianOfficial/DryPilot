@@ -664,7 +664,7 @@ button:hover .icon-flow-line,
     display: flex;
     align-items: center;
     gap: clamp(1rem, 2.2vw, 2.4rem);
-    margin-left: clamp(1rem, 3vw, 2.4rem);
+    margin-left: clamp(2.1rem, 8vw, 8.2rem);
 }
 
 .site-nav-link {
