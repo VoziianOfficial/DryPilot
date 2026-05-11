@@ -1,0 +1,1182 @@
+/* ==========================================================
+   DRYPILOT — SERVICES PAGE
+   File: /css/services.css
+   ========================================================== */
+
+/* ==========================================================
+   SERVICES HERO — DAMAGE CATEGORY COMMAND
+   ========================================================== */
+
+.services-page .page-hero {
+    min-height: clamp(560px, 78vh, 820px);
+}
+
+.services-command-hero {
+    position: relative;
+}
+
+.services-command-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.56fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: center;
+}
+
+.services-command-copy {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.services-command-copy h1 {
+    max-width: 780px;
+}
+
+.services-command-copy p {
+    max-width: 650px;
+}
+
+.damage-chip-cloud {
+    position: relative;
+    display: grid;
+    gap: 0.85rem;
+    padding: 1rem;
+    border: 1px solid rgba(108, 182, 200, 0.2);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 20% 15%, rgba(108, 182, 200, 0.14), transparent 16rem),
+        linear-gradient(180deg, rgba(17, 24, 32, 0.82), rgba(4, 16, 27, 0.78));
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(16px);
+}
+
+.damage-chip-cloud::before {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    border: 1px dashed rgba(108, 182, 200, 0.14);
+    border-radius: calc(var(--radius-xl) - 1rem);
+    pointer-events: none;
+}
+
+.damage-chip-title {
+    position: relative;
+    z-index: 2;
+    color: var(--color-water);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.damage-chip-list {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+}
+
+.damage-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.48rem;
+    min-height: 2.35rem;
+    padding: 0.58rem 0.75rem;
+    border: 1px solid rgba(108, 182, 200, 0.22);
+    border-radius: 999px;
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.055);
+    font-size: 0.82rem;
+    font-weight: 750;
+    transition:
+        transform 0.22s var(--ease),
+        color 0.22s var(--ease),
+        border-color 0.22s var(--ease),
+        background 0.22s var(--ease),
+        box-shadow 0.22s var(--ease);
+}
+
+.damage-chip::before {
+    content: "";
+    width: 0.46rem;
+    height: 0.46rem;
+    border-radius: 70% 70% 70% 0;
+    background: var(--color-water);
+    transform: rotate(-45deg);
+    box-shadow: 0 0 14px rgba(108, 182, 200, 0.5);
+}
+
+.damage-chip:hover {
+    transform: translateY(-2px);
+    color: #ffffff;
+    border-color: rgba(117, 168, 77, 0.42);
+    background: rgba(117, 168, 77, 0.08);
+    box-shadow: var(--shadow-green);
+}
+
+.damage-command-meter {
+    position: relative;
+    z-index: 2;
+    height: 0.45rem;
+    margin-top: 0.35rem;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(216, 226, 229, 0.1);
+}
+
+.damage-command-meter span {
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    width: 76%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--color-water), var(--color-green));
+    box-shadow: 0 0 24px rgba(108, 182, 200, 0.42);
+}
+
+.damage-command-meter span::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.82), transparent);
+    animation: servicesMeterSweep 2.6s linear infinite;
+}
+
+@keyframes servicesMeterSweep {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* ==========================================================
+   SECTION 2 — VALVE-CONTROL SERVICE CAROUSEL
+   ========================================================== */
+
+.valve-carousel-section {
+    background:
+        radial-gradient(circle at 12% 28%, rgba(108, 182, 200, 0.14), transparent 34rem),
+        radial-gradient(circle at 86% 54%, rgba(117, 168, 77, 0.1), transparent 28rem),
+        linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
+}
+
+.valve-carousel-shell {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(260px, 0.35fr) minmax(0, 1fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    min-height: 610px;
+    overflow: hidden;
+    padding: clamp(1rem, 2.5vw, 1.6rem);
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+        rgba(4, 16, 27, 0.74);
+    box-shadow: var(--shadow-card);
+}
+
+.valve-carousel-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.04) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.valve-service-rail {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.9rem;
+    align-content: center;
+}
+
+.valve-service-rail::before {
+    content: "";
+    position: absolute;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    left: 1.58rem;
+    width: 1rem;
+    border-radius: 999px;
+    border-inline: 1px solid rgba(216, 226, 229, 0.16);
+    background:
+        linear-gradient(90deg, #263540, #0d1924 42%, #334652 50%, #0d1924 62%, #263540);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.14),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.55);
+}
+
+.valve-service-rail::after {
+    content: "";
+    position: absolute;
+    top: 1.1rem;
+    bottom: 1.1rem;
+    left: 1.93rem;
+    width: 0.3rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, transparent, var(--color-water), var(--color-water-strong), transparent);
+    background-size: 100% 10rem;
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.55);
+    animation: verticalFlow 2.4s linear infinite;
+}
+
+.valve-tab {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 3.2rem minmax(0, 1fr);
+    gap: 0.8rem;
+    align-items: center;
+    width: 100%;
+    min-height: 4.8rem;
+    padding: 0.72rem 0.8rem;
+    border: 1px solid rgba(216, 226, 229, 0.1);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025)),
+        rgba(17, 24, 32, 0.82);
+    text-align: left;
+    transition:
+        transform 0.24s var(--ease),
+        border-color 0.24s var(--ease),
+        background 0.24s var(--ease),
+        box-shadow 0.24s var(--ease);
+}
+
+.valve-tab:hover,
+.valve-tab.is-active {
+    transform: translateX(4px);
+    border-color: rgba(108, 182, 200, 0.42);
+    background:
+        radial-gradient(circle at 8% 50%, rgba(108, 182, 200, 0.14), transparent 8rem),
+        rgba(17, 24, 32, 0.9);
+    box-shadow: var(--shadow-water);
+}
+
+.valve-tab-icon {
+    position: relative;
+    display: grid;
+    width: 3.2rem;
+    height: 3.2rem;
+    place-items: center;
+    border: 1px solid rgba(108, 182, 200, 0.32);
+    border-radius: 999px;
+    color: var(--color-water);
+    background: rgba(4, 16, 27, 0.84);
+}
+
+.valve-tab-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0.55rem;
+    border: 1px solid rgba(117, 168, 77, 0.22);
+    border-radius: inherit;
+}
+
+.valve-tab.is-active .valve-tab-icon,
+.valve-tab:hover .valve-tab-icon {
+    color: var(--color-green);
+    border-color: rgba(117, 168, 77, 0.5);
+    box-shadow: 0 0 24px rgba(117, 168, 77, 0.2);
+}
+
+.valve-tab-copy {
+    display: grid;
+    gap: 0.16rem;
+}
+
+.valve-tab-copy strong {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 0.98rem;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+}
+
+.valve-tab-copy span {
+    color: var(--color-muted);
+    font-size: 0.76rem;
+    line-height: 1.35;
+}
+
+.valve-active-stage {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    align-items: center;
+    min-width: 0;
+}
+
+.pipe-bend-frame {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.96fr) minmax(260px, 0.58fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    min-height: 530px;
+    overflow: hidden;
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid rgba(108, 182, 200, 0.2);
+    border-radius: 46px 46px 120px 46px;
+    background:
+        radial-gradient(circle at 18% 18%, rgba(108, 182, 200, 0.15), transparent 24rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025)),
+        rgba(17, 24, 32, 0.88);
+    box-shadow: var(--shadow-card);
+}
+
+.pipe-bend-frame::before {
+    content: "";
+    position: absolute;
+    right: -5rem;
+    bottom: -5rem;
+    width: 16rem;
+    height: 16rem;
+    border: 1.2rem solid rgba(108, 182, 200, 0.1);
+    border-top-color: rgba(108, 182, 200, 0.28);
+    border-left-color: rgba(117, 168, 77, 0.16);
+    border-radius: 999px;
+    box-shadow:
+        inset 0 0 28px rgba(108, 182, 200, 0.1),
+        0 0 42px rgba(108, 182, 200, 0.08);
+}
+
+.pipe-bend-frame::after {
+    content: "";
+    position: absolute;
+    right: 3.5rem;
+    bottom: 3.5rem;
+    width: 7rem;
+    height: 0.32rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, transparent, var(--color-water), transparent);
+    background-size: 8rem 100%;
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.54);
+    animation: pipeFlow 2.6s linear infinite;
+    transform: rotate(-42deg);
+}
+
+.active-service-media {
+    position: relative;
+    min-height: 420px;
+    overflow: hidden;
+    border: 1px solid rgba(216, 226, 229, 0.12);
+    border-radius: var(--radius-xl);
+    background: var(--color-bg-soft);
+}
+
+.active-service-media::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(180deg, transparent, rgba(4, 16, 27, 0.82)),
+        radial-gradient(circle at 18% 12%, rgba(108, 182, 200, 0.18), transparent 18rem);
+}
+
+.active-service-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.08) contrast(1.07) brightness(0.86);
+}
+
+.active-service-content {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    align-content: center;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.active-service-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    width: max-content;
+    color: var(--color-water);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.active-service-label .svg-icon {
+    color: var(--color-green);
+}
+
+.active-service-content h3 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.8rem, 3.6vw, 3.45rem);
+    line-height: 0.96;
+    letter-spacing: -0.07em;
+}
+
+.active-service-content p {
+    color: var(--color-muted);
+    font-size: clamp(0.96rem, 1.2vw, 1.08rem);
+    line-height: 1.65;
+}
+
+.active-service-mini {
+    display: grid;
+    gap: 0.55rem;
+    margin-top: 0.25rem;
+}
+
+.active-service-mini span {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: var(--color-steel);
+    font-size: 0.84rem;
+    font-weight: 700;
+}
+
+.active-service-mini span::before {
+    content: "";
+    width: 0.44rem;
+    height: 0.44rem;
+    border-radius: 999px;
+    background: var(--color-water);
+    box-shadow: 0 0 14px rgba(108, 182, 200, 0.5);
+}
+
+/* ==========================================================
+   SECTION 3 — DAMAGE TYPE SELECTOR WALL
+   ========================================================== */
+
+.damage-selector-section {
+    color: var(--color-dark-text);
+    background:
+        radial-gradient(circle at 86% 16%, rgba(108, 182, 200, 0.16), transparent 26rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.66), rgba(255, 255, 255, 0.16)),
+        var(--color-section-gray);
+}
+
+.damage-selector-wall {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(230px, 0.32fr) minmax(0, 1fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    overflow: hidden;
+    padding: clamp(1rem, 2.5vw, 1.6rem);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.28)),
+        rgba(238, 242, 243, 0.72);
+    box-shadow: 0 24px 60px rgba(7, 19, 29, 0.12);
+}
+
+.damage-selector-wall::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(7, 19, 29, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(7, 19, 29, 0.03) 1px, transparent 1px);
+    background-size: 36px 36px;
+    pointer-events: none;
+}
+
+.selector-rail {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.6rem;
+    align-content: start;
+}
+
+.selector-rail::before {
+    content: "";
+    position: absolute;
+    top: 0.65rem;
+    bottom: 0.65rem;
+    left: 1.1rem;
+    width: 0.32rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(63, 169, 194, 0.12), rgba(63, 169, 194, 0.7), rgba(117, 168, 77, 0.32));
+    box-shadow: 0 0 18px rgba(63, 169, 194, 0.18);
+}
+
+.selector-button {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 2.2rem minmax(0, 1fr);
+    gap: 0.72rem;
+    align-items: center;
+    width: 100%;
+    min-height: 3.55rem;
+    padding: 0.72rem 0.8rem;
+    border: 1px solid rgba(7, 19, 29, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--color-dark-text);
+    background: rgba(255, 255, 255, 0.46);
+    text-align: left;
+    transition:
+        transform 0.22s var(--ease),
+        border-color 0.22s var(--ease),
+        background 0.22s var(--ease),
+        box-shadow 0.22s var(--ease);
+}
+
+.selector-button:hover,
+.selector-button.is-active {
+    transform: translateX(3px);
+    border-color: rgba(63, 169, 194, 0.48);
+    background: rgba(255, 255, 255, 0.78);
+    box-shadow: 0 16px 36px rgba(7, 19, 29, 0.1);
+}
+
+.selector-button-icon {
+    display: grid;
+    width: 2.2rem;
+    height: 2.2rem;
+    place-items: center;
+    border: 1px solid rgba(63, 169, 194, 0.28);
+    border-radius: 999px;
+    color: var(--color-water-strong);
+    background: rgba(217, 239, 243, 0.72);
+}
+
+.selector-button.is-active .selector-button-icon,
+.selector-button:hover .selector-button-icon {
+    color: var(--color-green-strong);
+    border-color: rgba(117, 168, 77, 0.44);
+    background: rgba(228, 242, 218, 0.78);
+}
+
+.selector-button strong {
+    display: block;
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: 0.96rem;
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+}
+
+.selector-button span {
+    color: var(--color-dark-muted);
+    font-size: 0.76rem;
+}
+
+.damage-panel {
+    position: relative;
+    z-index: 2;
+    min-height: 440px;
+    overflow: hidden;
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 82% 16%, rgba(108, 182, 200, 0.18), transparent 20rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.42));
+    box-shadow: 0 18px 50px rgba(7, 19, 29, 0.1);
+}
+
+.damage-panel::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 36%;
+    background:
+        linear-gradient(180deg, transparent, rgba(63, 169, 194, 0.1)),
+        repeating-linear-gradient(90deg,
+            rgba(7, 19, 29, 0.05) 0 1px,
+            transparent 1px 20px);
+    pointer-events: none;
+}
+
+.damage-panel-route {
+    position: absolute;
+    top: 2rem;
+    right: -3rem;
+    width: 18rem;
+    height: 18rem;
+    border: 1rem solid rgba(63, 169, 194, 0.12);
+    border-left-color: rgba(117, 168, 77, 0.18);
+    border-bottom-color: rgba(63, 169, 194, 0.26);
+    border-radius: 999px;
+    pointer-events: none;
+}
+
+.damage-panel-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    align-content: center;
+    gap: 1rem;
+    min-height: 440px;
+    width: min(660px, 100%);
+    padding: clamp(1.2rem, 4vw, 3rem);
+}
+
+.damage-panel-kicker {
+    color: var(--color-water-strong);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.damage-panel-content h3 {
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.9rem, 4vw, 4rem);
+    line-height: 0.95;
+    letter-spacing: -0.075em;
+}
+
+.damage-panel-content p {
+    max-width: 560px;
+    color: var(--color-dark-muted);
+    font-size: clamp(0.98rem, 1.3vw, 1.12rem);
+    line-height: 1.62;
+}
+
+.damage-panel-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.25rem;
+}
+
+.damage-panel-tags span {
+    display: inline-flex;
+    min-height: 2rem;
+    align-items: center;
+    padding: 0.46rem 0.64rem;
+    border: 1px solid rgba(7, 19, 29, 0.11);
+    border-radius: 999px;
+    color: var(--color-dark-text);
+    background: rgba(255, 255, 255, 0.46);
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+/* ==========================================================
+   SECTION 4 — FLOOD-LEVEL GAUGE COMPARISON
+   ========================================================== */
+
+.gauge-comparison-section {
+    color: var(--color-dark-text);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.54), rgba(255, 255, 255, 0.12)),
+        var(--color-section-cool);
+}
+
+.gauge-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.gauge-card {
+    position: relative;
+    display: grid;
+    align-content: end;
+    min-height: 360px;
+    overflow: hidden;
+    padding: 1rem;
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.28)),
+        rgba(238, 242, 243, 0.65);
+    box-shadow: 0 18px 44px rgba(7, 19, 29, 0.08);
+    transition:
+        transform 0.24s var(--ease),
+        border-color 0.24s var(--ease),
+        box-shadow 0.24s var(--ease);
+}
+
+.gauge-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(63, 169, 194, 0.45);
+    box-shadow: 0 24px 58px rgba(7, 19, 29, 0.12);
+}
+
+.gauge-card::before {
+    content: "";
+    position: absolute;
+    right: 0.65rem;
+    bottom: 0.65rem;
+    left: 0.65rem;
+    height: var(--gauge-fill, 52%);
+    border-radius: calc(var(--radius-lg) - 0.65rem);
+    background:
+        linear-gradient(180deg, rgba(108, 182, 200, 0.34), rgba(108, 182, 200, 0.13)),
+        repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.22) 0 1px,
+            transparent 1px 10px);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.36);
+}
+
+.gauge-card::after {
+    content: "";
+    position: absolute;
+    right: 0.95rem;
+    left: 0.95rem;
+    bottom: calc(var(--gauge-fill, 52%) + 0.62rem);
+    height: 2px;
+    border-radius: 999px;
+    background: var(--color-water-strong);
+    box-shadow: 0 0 18px rgba(63, 169, 194, 0.46);
+}
+
+.gauge-card:nth-child(1) {
+    --gauge-fill: 72%;
+}
+
+.gauge-card:nth-child(2) {
+    --gauge-fill: 58%;
+}
+
+.gauge-card:nth-child(3) {
+    --gauge-fill: 66%;
+}
+
+.gauge-card:nth-child(4) {
+    --gauge-fill: 50%;
+}
+
+.gauge-card:nth-child(5) {
+    --gauge-fill: 42%;
+}
+
+.gauge-card:nth-child(6) {
+    --gauge-fill: 62%;
+}
+
+.gauge-card-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.gauge-icon {
+    display: grid;
+    width: 2.4rem;
+    height: 2.4rem;
+    place-items: center;
+    border: 1px solid rgba(63, 169, 194, 0.28);
+    border-radius: 999px;
+    color: var(--color-water-strong);
+    background: rgba(255, 255, 255, 0.55);
+}
+
+.gauge-card h3 {
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: 1.08rem;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+}
+
+.gauge-card p {
+    color: var(--color-dark-muted);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+/* ==========================================================
+   SECTION 5 — PROVIDER FIT MATRIX
+   ========================================================== */
+
+.provider-matrix-section {
+    background:
+        radial-gradient(circle at 18% 18%, rgba(108, 182, 200, 0.14), transparent 32rem),
+        linear-gradient(180deg, #071827, #04101b);
+}
+
+.matrix-shell {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+        rgba(4, 16, 27, 0.84);
+    box-shadow: var(--shadow-card);
+}
+
+.matrix-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.03) 1px, transparent 1px);
+    background-size: 36px 36px;
+    pointer-events: none;
+}
+
+.provider-matrix-table {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 820px;
+}
+
+.provider-matrix-table th,
+.provider-matrix-table td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(108, 182, 200, 0.14);
+    text-align: left;
+    vertical-align: top;
+}
+
+.provider-matrix-table th {
+    color: var(--color-water);
+    background: rgba(108, 182, 200, 0.06);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.provider-matrix-table td {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.provider-matrix-table td:first-child {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+.provider-matrix-table tr {
+    transition:
+        background 0.22s var(--ease),
+        color 0.22s var(--ease);
+}
+
+.provider-matrix-table tbody tr:hover {
+    background: rgba(108, 182, 200, 0.06);
+}
+
+.matrix-scroll {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(108, 182, 200, 0.45) rgba(255, 255, 255, 0.05);
+}
+
+.matrix-scroll::-webkit-scrollbar {
+    height: 0.55rem;
+}
+
+.matrix-scroll::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.matrix-scroll::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(108, 182, 200, 0.45);
+}
+
+/* ==========================================================
+   SECTION 6 — PIPE CTA STRIP
+   ========================================================== */
+
+.services-pipe-cta {
+    padding-block: clamp(3rem, 5vw, 4.8rem);
+    background:
+        radial-gradient(circle at 80% 20%, rgba(117, 168, 77, 0.12), transparent 24rem),
+        linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
+}
+
+.pipe-cta-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+    overflow: hidden;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    border: 1px solid rgba(108, 182, 200, 0.2);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 12% 50%, rgba(108, 182, 200, 0.14), transparent 20rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+        rgba(17, 24, 32, 0.82);
+    box-shadow: var(--shadow-card);
+}
+
+.pipe-cta-card::before {
+    content: "";
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.1rem;
+    left: 1.2rem;
+    height: 0.95rem;
+    border-radius: 999px;
+    border-inline: 1px solid rgba(216, 226, 229, 0.15);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+    pointer-events: none;
+}
+
+.pipe-cta-card::after {
+    content: "";
+    position: absolute;
+    right: 2rem;
+    bottom: 1.46rem;
+    left: 2rem;
+    height: 0.22rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(90deg, transparent, var(--color-water), var(--color-green), transparent);
+    background-size: 12rem 100%;
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.56);
+    animation: pipeFlow 2.7s linear infinite;
+    pointer-events: none;
+}
+
+.pipe-cta-copy {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.6rem;
+    padding-bottom: 1.45rem;
+}
+
+.pipe-cta-copy h2 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.7rem, 3vw, 2.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+}
+
+.pipe-cta-copy p {
+    max-width: 680px;
+    color: var(--color-muted);
+    font-size: 0.98rem;
+}
+
+.pipe-cta-actions {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding-bottom: 1.45rem;
+}
+
+/* ==========================================================
+   RESPONSIVE — SERVICES PAGE
+   ========================================================== */
+
+@media (max-width: 1120px) {
+    .services-command-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .damage-chip-cloud {
+        width: min(100%, 680px);
+    }
+
+    .valve-carousel-shell {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .valve-service-rail {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .valve-service-rail::before,
+    .valve-service-rail::after {
+        display: none;
+    }
+
+    .valve-tab {
+        grid-template-columns: 1fr;
+        align-content: start;
+    }
+
+    .valve-tab-icon {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .pipe-bend-frame {
+        min-height: auto;
+    }
+
+    .gauge-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .pipe-bend-frame {
+        grid-template-columns: 1fr;
+        border-radius: var(--radius-xl);
+    }
+
+    .active-service-media {
+        min-height: 320px;
+    }
+
+    .damage-selector-wall {
+        grid-template-columns: 1fr;
+    }
+
+    .selector-rail {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .selector-rail::before {
+        display: none;
+    }
+
+    .damage-panel,
+    .damage-panel-content {
+        min-height: 360px;
+    }
+
+    .pipe-cta-card {
+        grid-template-columns: 1fr;
+    }
+
+    .pipe-cta-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .pipe-cta-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .damage-chip-cloud {
+        border-radius: var(--radius-lg);
+    }
+
+    .valve-carousel-shell,
+    .damage-selector-wall,
+    .matrix-shell,
+    .pipe-cta-card {
+        border-radius: var(--radius-lg);
+    }
+
+    .valve-service-rail {
+        grid-template-columns: 1fr;
+    }
+
+    .valve-tab {
+        grid-template-columns: 3rem minmax(0, 1fr);
+    }
+
+    .valve-tab:hover,
+    .valve-tab.is-active {
+        transform: translateY(-2px);
+    }
+
+    .active-service-media {
+        min-height: 250px;
+        border-radius: var(--radius-lg);
+    }
+
+    .active-service-content h3 {
+        font-size: clamp(1.8rem, 12vw, 2.8rem);
+    }
+
+    .selector-rail {
+        grid-template-columns: 1fr;
+    }
+
+    .damage-panel-route {
+        right: -8rem;
+        opacity: 0.6;
+    }
+
+    .damage-panel-content {
+        min-height: 330px;
+        padding: 1rem;
+    }
+
+    .gauge-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .gauge-card {
+        min-height: 260px;
+    }
+
+    .provider-matrix-table th,
+    .provider-matrix-table td {
+        padding: 0.85rem;
+    }
+}
+
+@media (max-width: 460px) {
+    .damage-chip-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .damage-chip {
+        justify-content: center;
+        min-width: 0;
+        padding-inline: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    .pipe-bend-frame {
+        padding: 0.8rem;
+    }
+
+    .active-service-media {
+        min-height: 210px;
+    }
+
+    .active-service-content {
+        gap: 0.8rem;
+    }
+
+    .active-service-content p {
+        font-size: 0.92rem;
+    }
+
+    .gauge-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gauge-card {
+        min-height: 230px;
+    }
+
+    .pipe-cta-card::before,
+    .pipe-cta-card::after {
+        display: none;
+    }
+
+    .pipe-cta-copy,
+    .pipe-cta-actions {
+        padding-bottom: 0;
+    }
+}

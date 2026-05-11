@@ -1,0 +1,1892 @@
+/* ==========================================================
+   DRYPILOT — INDIVIDUAL SERVICE PAGES
+   File: /css/service-page.css
+   ========================================================== */
+
+/* ==========================================================
+   GLOBAL SERVICE DETAIL HERO
+   ========================================================== */
+
+.service-detail-page .page-hero {
+    min-height: clamp(540px, 76vh, 820px);
+}
+
+.service-detail-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(300px, 0.5fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: center;
+}
+
+.service-detail-copy {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.service-command-card {
+    position: relative;
+    display: grid;
+    gap: 0.85rem;
+    padding: clamp(1rem, 2.4vw, 1.45rem);
+    overflow: hidden;
+    border: 1px solid rgba(108, 182, 200, 0.22);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 18% 18%, rgba(108, 182, 200, 0.16), transparent 18rem),
+        linear-gradient(180deg, rgba(17, 24, 32, 0.86), rgba(4, 16, 27, 0.82));
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(16px);
+}
+
+.service-command-card::before {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    border: 1px dashed rgba(108, 182, 200, 0.15);
+    border-radius: calc(var(--radius-xl) - 1rem);
+    pointer-events: none;
+}
+
+.service-command-card::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    height: 0.82rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.16),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.55);
+}
+
+.service-command-card h2 {
+    position: relative;
+    z-index: 2;
+    color: var(--color-water);
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.service-command-list {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.62rem;
+}
+
+.service-command-item {
+    display: grid;
+    grid-template-columns: 2.35rem minmax(0, 1fr);
+    gap: 0.72rem;
+    align-items: center;
+    min-height: 3.65rem;
+    padding: 0.72rem;
+    border: 1px solid rgba(216, 226, 229, 0.1);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.service-command-item .svg-icon {
+    color: var(--color-water);
+}
+
+.service-command-item strong {
+    display: block;
+    color: var(--color-heading);
+    font-size: 0.9rem;
+    line-height: 1.15;
+}
+
+.service-command-item span {
+    display: block;
+    color: var(--color-muted);
+    font-size: 0.76rem;
+    line-height: 1.3;
+}
+
+/* ==========================================================
+   SHARED SERVICE SECTIONS
+   ========================================================== */
+
+.service-light-section {
+    color: var(--color-dark-text);
+    background:
+        radial-gradient(circle at 82% 16%, rgba(108, 182, 200, 0.16), transparent 26rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.16)),
+        var(--color-section-light);
+}
+
+.service-cool-section {
+    color: var(--color-dark-text);
+    background:
+        radial-gradient(circle at 82% 16%, rgba(108, 182, 200, 0.16), transparent 26rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.14)),
+        var(--color-section-cool);
+}
+
+.service-dark-section {
+    color: var(--color-text);
+    background:
+        radial-gradient(circle at 16% 20%, rgba(108, 182, 200, 0.14), transparent 32rem),
+        radial-gradient(circle at 84% 68%, rgba(117, 168, 77, 0.1), transparent 28rem),
+        linear-gradient(180deg, #071827, #04101b);
+}
+
+.service-panel {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.28)),
+        rgba(238, 242, 243, 0.68);
+    box-shadow: 0 24px 60px rgba(7, 19, 29, 0.11);
+}
+
+.service-panel.dark {
+    border-color: rgba(108, 182, 200, 0.18);
+    background:
+        radial-gradient(circle at 12% 12%, rgba(108, 182, 200, 0.13), transparent 18rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent),
+        rgba(4, 16, 27, 0.82);
+    box-shadow: var(--shadow-card);
+}
+
+.service-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(7, 19, 29, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(7, 19, 29, 0.03) 1px, transparent 1px);
+    background-size: 36px 36px;
+    pointer-events: none;
+}
+
+.service-panel.dark::before {
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.03) 1px, transparent 1px);
+    background-size: 38px 38px;
+}
+
+.service-panel-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* ==========================================================
+   CLEANUP PAGE — WET SURFACE SCOPE BOARD
+   ========================================================== */
+
+.wet-scope-board {
+    display: grid;
+    grid-template-columns: minmax(0, 0.76fr) minmax(280px, 0.46fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: stretch;
+}
+
+.scope-board-main {
+    min-height: 520px;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.scope-board-main .service-panel-content {
+    display: grid;
+    align-content: end;
+    gap: 1rem;
+    min-height: 100%;
+}
+
+.scope-board-main h2 {
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 0.95;
+    letter-spacing: -0.075em;
+}
+
+.scope-board-main p {
+    max-width: 680px;
+    color: var(--color-dark-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.scope-board-waterline {
+    position: absolute;
+    right: 0;
+    bottom: 20%;
+    left: 0;
+    height: 2px;
+    background: var(--color-water-strong);
+    box-shadow: 0 0 24px rgba(63, 169, 194, 0.48);
+}
+
+.scope-board-waterline::before {
+    content: "";
+    position: absolute;
+    inset: -8rem 0 0;
+    background:
+        linear-gradient(180deg, transparent, rgba(108, 182, 200, 0.13)),
+        repeating-linear-gradient(90deg,
+            rgba(7, 19, 29, 0.04) 0 1px,
+            transparent 1px 18px);
+    pointer-events: none;
+}
+
+.scope-board-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.scope-board-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    gap: 0.8rem;
+    align-items: center;
+    min-height: 4.2rem;
+    padding: 0.85rem;
+    border: 1px solid rgba(7, 19, 29, 0.1);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.5);
+    transition:
+        transform 0.22s var(--ease),
+        border-color 0.22s var(--ease),
+        box-shadow 0.22s var(--ease);
+}
+
+.scope-board-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(63, 169, 194, 0.42);
+    box-shadow: 0 18px 44px rgba(7, 19, 29, 0.1);
+}
+
+.scope-board-icon {
+    display: grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border: 1px solid rgba(63, 169, 194, 0.28);
+    border-radius: 999px;
+    color: var(--color-water-strong);
+    background: rgba(217, 239, 243, 0.72);
+}
+
+.scope-board-item:hover .scope-board-icon {
+    color: var(--color-green-strong);
+    border-color: rgba(117, 168, 77, 0.42);
+    background: rgba(228, 242, 218, 0.72);
+}
+
+.scope-board-item strong {
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: 0.98rem;
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+}
+
+/* ==========================================================
+   CLEANUP PAGE — STANDING WATER CHECKLIST
+   ========================================================== */
+
+.standing-water-checklist {
+    position: relative;
+    display: grid;
+    gap: 0.9rem;
+}
+
+.water-check-row {
+    position: relative;
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr) 7rem;
+    gap: 1rem;
+    align-items: center;
+    min-height: 5rem;
+    overflow: hidden;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(108, 182, 200, 0.16);
+    border-radius: var(--radius-md);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.02)),
+        rgba(17, 24, 32, 0.76);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.16);
+}
+
+.water-check-row::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: var(--water-level, 36%);
+    background:
+        linear-gradient(180deg, rgba(108, 182, 200, 0.18), rgba(108, 182, 200, 0.08)),
+        repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.12) 0 1px,
+            transparent 1px 12px);
+}
+
+.water-check-row:nth-child(1) {
+    --water-level: 64%;
+}
+
+.water-check-row:nth-child(2) {
+    --water-level: 52%;
+}
+
+.water-check-row:nth-child(3) {
+    --water-level: 44%;
+}
+
+.water-check-row:nth-child(4) {
+    --water-level: 38%;
+}
+
+.water-check-row:nth-child(5) {
+    --water-level: 58%;
+}
+
+.water-check-icon,
+.water-check-text,
+.water-check-status {
+    position: relative;
+    z-index: 2;
+}
+
+.water-check-icon {
+    display: grid;
+    width: 3.4rem;
+    height: 3.4rem;
+    place-items: center;
+    border: 1px solid rgba(108, 182, 200, 0.32);
+    border-radius: 999px;
+    color: var(--color-water);
+    background: rgba(4, 16, 27, 0.86);
+}
+
+.water-check-text strong {
+    display: block;
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    line-height: 1.15;
+}
+
+.water-check-text span {
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--color-muted);
+    font-size: 0.84rem;
+    line-height: 1.35;
+}
+
+.water-check-status {
+    display: inline-flex;
+    min-height: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.55rem;
+    border: 1px solid rgba(117, 168, 77, 0.26);
+    border-radius: 999px;
+    color: var(--color-green);
+    background: rgba(117, 168, 77, 0.08);
+    font-size: 0.68rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* ==========================================================
+   CLEANUP PAGE — PROVIDER QUESTION ROUTE
+   ========================================================== */
+
+.question-route-board {
+    position: relative;
+    min-height: 440px;
+    overflow: hidden;
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 12% 18%, rgba(108, 182, 200, 0.13), transparent 22rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+        rgba(4, 16, 27, 0.82);
+    box-shadow: var(--shadow-card);
+}
+
+.question-route-line {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.question-route-line svg {
+    width: 100%;
+    height: 100%;
+}
+
+.question-route-base {
+    fill: none;
+    stroke: rgba(108, 182, 200, 0.34);
+    stroke-width: 11;
+    stroke-linecap: round;
+}
+
+.question-route-flow {
+    fill: none;
+    stroke: var(--color-water);
+    stroke-width: 3;
+    stroke-dasharray: 10 18;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 10px rgba(108, 182, 200, 0.72));
+    animation: mapRoute 3s linear infinite;
+}
+
+.question-route-nodes {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    min-height: 400px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.question-route-node {
+    display: grid;
+    justify-items: center;
+    gap: 0.7rem;
+    text-align: center;
+}
+
+.question-route-node:nth-child(even) {
+    transform: translateY(70px);
+}
+
+.question-route-icon {
+    display: grid;
+    width: 4.2rem;
+    height: 4.2rem;
+    place-items: center;
+    border: 1px solid rgba(108, 182, 200, 0.34);
+    border-radius: 999px;
+    color: var(--color-water);
+    background:
+        radial-gradient(circle, rgba(108, 182, 200, 0.16), transparent 62%),
+        rgba(4, 16, 27, 0.94);
+    box-shadow:
+        0 0 0 8px rgba(108, 182, 200, 0.05),
+        0 18px 44px rgba(0, 0, 0, 0.28);
+    transition:
+        transform 0.24s var(--ease),
+        color 0.24s var(--ease),
+        border-color 0.24s var(--ease),
+        box-shadow 0.24s var(--ease);
+}
+
+.question-route-node:hover .question-route-icon {
+    transform: translateY(-4px);
+    color: var(--color-green);
+    border-color: rgba(117, 168, 77, 0.48);
+    box-shadow:
+        0 0 0 8px rgba(117, 168, 77, 0.08),
+        0 0 32px rgba(117, 168, 77, 0.22);
+}
+
+.question-route-node strong {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 0.94rem;
+    line-height: 1.12;
+}
+
+.question-route-node span {
+    max-width: 190px;
+    color: var(--color-muted);
+    font-size: 0.78rem;
+    line-height: 1.35;
+}
+
+/* ==========================================================
+   DROPLET PHOTO CTA
+   ========================================================== */
+
+.droplet-photo-cta {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
+    gap: clamp(1rem, 4vw, 3rem);
+    align-items: center;
+}
+
+.droplet-photo {
+    position: relative;
+    min-height: 460px;
+    overflow: hidden;
+    border: 1px solid rgba(108, 182, 200, 0.22);
+    border-radius: 58% 42% 52% 48% / 44% 42% 58% 56%;
+    background: var(--color-bg-soft);
+    box-shadow: var(--shadow-card);
+}
+
+.droplet-photo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(180deg, transparent, rgba(4, 16, 27, 0.78)),
+        radial-gradient(circle at 18% 12%, rgba(108, 182, 200, 0.18), transparent 16rem);
+}
+
+.droplet-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 460px;
+    object-fit: cover;
+    filter: saturate(1.06) contrast(1.04);
+}
+
+.droplet-cta-copy {
+    display: grid;
+    gap: 1rem;
+}
+
+.droplet-cta-copy h2 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 0.96;
+    letter-spacing: -0.075em;
+}
+
+.droplet-cta-copy p {
+    max-width: 680px;
+    color: var(--color-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* ==========================================================
+   FLOOD PAGE — FLOOD LEVEL SCALE SYSTEM
+   ========================================================== */
+
+.flood-scale-system {
+    display: grid;
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 1fr);
+    gap: clamp(1rem, 4vw, 3rem);
+    align-items: stretch;
+}
+
+.flood-scale-meter {
+    position: relative;
+    min-height: 560px;
+    overflow: hidden;
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.28)),
+        rgba(238, 242, 243, 0.72);
+    box-shadow: 0 24px 60px rgba(7, 19, 29, 0.11);
+}
+
+.flood-scale-meter::before {
+    content: "";
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    height: 72%;
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(180deg, rgba(108, 182, 200, 0.35), rgba(108, 182, 200, 0.12)),
+        repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.2) 0 1px,
+            transparent 1px 12px);
+}
+
+.flood-scale-meter::after {
+    content: "";
+    position: absolute;
+    right: 1.5rem;
+    left: 1.5rem;
+    bottom: 72%;
+    height: 2px;
+    background: var(--color-water-strong);
+    box-shadow: 0 0 20px rgba(63, 169, 194, 0.55);
+}
+
+.flood-scale-labels {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    height: 100%;
+    min-height: 560px;
+    align-content: space-between;
+    padding: 1.3rem;
+}
+
+.flood-scale-label {
+    display: inline-flex;
+    width: max-content;
+    max-width: 100%;
+    min-height: 2.3rem;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid rgba(7, 19, 29, 0.1);
+    border-radius: 999px;
+    color: var(--color-dark-heading);
+    background: rgba(255, 255, 255, 0.58);
+    font-size: 0.76rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.flood-scale-panels {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.flood-scale-panel {
+    position: relative;
+    min-height: 6.5rem;
+    overflow: hidden;
+    padding: 1rem;
+    border: 1px solid rgba(7, 19, 29, 0.1);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.56);
+    box-shadow: 0 16px 40px rgba(7, 19, 29, 0.08);
+}
+
+.flood-scale-panel::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--color-water-strong), var(--color-green-strong));
+}
+
+.flood-scale-panel h3 {
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: 1.18rem;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+.flood-scale-panel p {
+    margin-top: 0.35rem;
+    color: var(--color-dark-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+/* ==========================================================
+   FLOOD PAGE — HORIZONTAL REPORT PANELS
+   ========================================================== */
+
+.horizontal-report-rail {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(300px, 420px);
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.8rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(108, 182, 200, 0.45) rgba(255, 255, 255, 0.05);
+}
+
+.report-panel {
+    position: relative;
+    min-height: 260px;
+    overflow: hidden;
+    padding: 1rem;
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(circle at 14% 14%, rgba(108, 182, 200, 0.12), transparent 14rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent),
+        rgba(4, 16, 27, 0.82);
+    box-shadow: var(--shadow-card);
+}
+
+.report-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0.75rem;
+    border: 1px dashed rgba(108, 182, 200, 0.14);
+    border-radius: calc(var(--radius-lg) - 0.75rem);
+    pointer-events: none;
+}
+
+.report-panel h3 {
+    position: relative;
+    z-index: 2;
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+.report-panel p {
+    position: relative;
+    z-index: 2;
+    margin-top: 0.8rem;
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.58;
+}
+
+.report-panel-code {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    color: rgba(108, 182, 200, 0.46);
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.08em;
+}
+
+/* ==========================================================
+   FLOOD PAGE — RESTORATION ROUTING DIAGRAM
+   ========================================================== */
+
+.restoration-routing {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 18% 20%, rgba(108, 182, 200, 0.14), transparent 28rem),
+        rgba(4, 16, 27, 0.84);
+    box-shadow: var(--shadow-card);
+}
+
+.restoration-routing-path {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.restoration-routing-path svg {
+    width: 100%;
+    height: 100%;
+}
+
+.restoration-route-base {
+    fill: none;
+    stroke: rgba(108, 182, 200, 0.3);
+    stroke-width: 12;
+    stroke-linecap: round;
+}
+
+.restoration-route-flow {
+    fill: none;
+    stroke: var(--color-water);
+    stroke-width: 3;
+    stroke-dasharray: 10 18;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 10px rgba(108, 182, 200, 0.7));
+    animation: mapRoute 3s linear infinite;
+}
+
+.restoration-routing-nodes {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    min-height: 480px;
+    align-items: center;
+    gap: 1rem;
+}
+
+.restoration-node {
+    display: grid;
+    justify-items: center;
+    gap: 0.7rem;
+    text-align: center;
+}
+
+.restoration-node:nth-child(2),
+.restoration-node:nth-child(4) {
+    transform: translateY(76px);
+}
+
+.restoration-node-icon {
+    display: grid;
+    width: 4.2rem;
+    height: 4.2rem;
+    place-items: center;
+    border: 1px solid rgba(108, 182, 200, 0.34);
+    border-radius: 999px;
+    color: var(--color-water);
+    background:
+        radial-gradient(circle, rgba(108, 182, 200, 0.16), transparent 62%),
+        rgba(4, 16, 27, 0.94);
+    box-shadow:
+        0 0 0 8px rgba(108, 182, 200, 0.05),
+        0 18px 44px rgba(0, 0, 0, 0.28);
+}
+
+.restoration-node strong {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 0.92rem;
+    line-height: 1.1;
+}
+
+.restoration-node span {
+    color: var(--color-muted);
+    font-size: 0.78rem;
+    line-height: 1.35;
+}
+
+/* ==========================================================
+   BURST PIPE PAGE — PIPE BURST ILLUSTRATION
+   ========================================================== */
+
+.pipe-burst-board {
+    position: relative;
+    min-height: 560px;
+    overflow: hidden;
+    padding: clamp(1rem, 3vw, 2rem);
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 18% 24%, rgba(108, 182, 200, 0.14), transparent 30rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+        rgba(4, 16, 27, 0.86);
+    box-shadow: var(--shadow-card);
+}
+
+.pipe-burst-main {
+    position: absolute;
+    top: 46%;
+    left: 5%;
+    right: 8%;
+    height: 1.15rem;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.16),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.55);
+}
+
+.pipe-burst-main::before {
+    content: "";
+    position: absolute;
+    inset: 0.36rem 0.5rem;
+    border-radius: inherit;
+    background:
+        linear-gradient(90deg, transparent, var(--color-water), var(--color-water-strong), transparent);
+    background-size: 12rem 100%;
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.58);
+    animation: pipeFlow 2.5s linear infinite;
+}
+
+.pipe-burst-crack {
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    z-index: 3;
+    width: 5rem;
+    height: 5rem;
+    transform: translate(-50%, -50%);
+}
+
+.pipe-burst-crack svg {
+    width: 100%;
+    height: 100%;
+}
+
+.pipe-crack-line {
+    fill: none;
+    stroke: var(--color-green);
+    stroke-width: 2;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 10px rgba(117, 168, 77, 0.6));
+}
+
+.pipe-burst-spray {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    z-index: 2;
+    width: 18rem;
+    height: 16rem;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.pipe-burst-spray span {
+    position: absolute;
+    width: 0.48rem;
+    height: 0.48rem;
+    border-radius: 70% 70% 70% 0;
+    background: var(--color-water);
+    box-shadow: 0 0 16px rgba(108, 182, 200, 0.7);
+    transform: rotate(-45deg);
+    animation: burstDrop 1.9s ease-in-out infinite;
+}
+
+.pipe-burst-spray span:nth-child(1) {
+    left: 16%;
+    top: 18%;
+}
+
+.pipe-burst-spray span:nth-child(2) {
+    left: 34%;
+    top: 4%;
+    animation-delay: 0.2s;
+}
+
+.pipe-burst-spray span:nth-child(3) {
+    left: 52%;
+    top: 12%;
+    animation-delay: 0.4s;
+}
+
+.pipe-burst-spray span:nth-child(4) {
+    left: 68%;
+    top: 26%;
+    animation-delay: 0.6s;
+}
+
+.pipe-burst-spray span:nth-child(5) {
+    left: 44%;
+    top: 40%;
+    animation-delay: 0.8s;
+}
+
+@keyframes burstDrop {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-45deg) scale(0.82);
+        opacity: 0.55;
+    }
+
+    50% {
+        transform: translateY(-16px) rotate(-45deg) scale(1.1);
+        opacity: 1;
+    }
+}
+
+.pipe-burst-notes {
+    position: relative;
+    z-index: 4;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    min-height: 520px;
+    align-items: end;
+    gap: 0.8rem;
+}
+
+.pipe-burst-note {
+    display: grid;
+    gap: 0.55rem;
+    min-height: 150px;
+    align-content: end;
+    padding: 0.85rem;
+    border: 1px solid rgba(108, 182, 200, 0.16);
+    border-radius: var(--radius-md);
+    background: rgba(17, 24, 32, 0.76);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.16);
+}
+
+.pipe-burst-note:nth-child(even) {
+    transform: translateY(-80px);
+}
+
+.pipe-burst-note strong {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    line-height: 1.1;
+}
+
+.pipe-burst-note span {
+    color: var(--color-muted);
+    font-size: 0.8rem;
+    line-height: 1.35;
+}
+
+/* ==========================================================
+   BURST PIPE PAGE — VALVE INFO RAIL
+   ========================================================== */
+
+.valve-info-rail {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    overflow: hidden;
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+        rgba(4, 16, 27, 0.84);
+    box-shadow: var(--shadow-card);
+}
+
+.valve-info-rail::before {
+    content: "";
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    top: 50%;
+    height: 1rem;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+}
+
+.valve-info-rail::after {
+    content: "";
+    position: absolute;
+    left: 2.8rem;
+    right: 2.8rem;
+    top: 50%;
+    height: 0.25rem;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    background:
+        linear-gradient(90deg, transparent, var(--color-water), var(--color-green), transparent);
+    background-size: 12rem 100%;
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.54);
+    animation: pipeFlow 2.7s linear infinite;
+}
+
+.valve-info-node {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    justify-items: center;
+    gap: 0.75rem;
+    min-height: 220px;
+    align-content: center;
+    padding: 1rem;
+    text-align: center;
+}
+
+.valve-info-icon {
+    display: grid;
+    width: 4.1rem;
+    height: 4.1rem;
+    place-items: center;
+    border: 1px solid rgba(108, 182, 200, 0.34);
+    border-radius: 999px;
+    color: var(--color-water);
+    background:
+        radial-gradient(circle, rgba(108, 182, 200, 0.16), transparent 62%),
+        rgba(4, 16, 27, 0.94);
+    box-shadow:
+        0 0 0 8px rgba(108, 182, 200, 0.05),
+        0 18px 44px rgba(0, 0, 0, 0.28);
+}
+
+.valve-info-node strong {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    line-height: 1.1;
+}
+
+.valve-info-node span {
+    color: var(--color-muted);
+    font-size: 0.78rem;
+    line-height: 1.35;
+}
+
+/* ==========================================================
+   BURST PIPE PAGE — DAMAGE AREA MOSAIC
+   ========================================================== */
+
+.damage-mosaic {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 0.9fr;
+    grid-template-rows: 260px 260px;
+    gap: 1rem;
+}
+
+.damage-mosaic-tile {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.52);
+    box-shadow: 0 18px 44px rgba(7, 19, 29, 0.09);
+}
+
+.damage-mosaic-tile.large {
+    grid-row: span 2;
+}
+
+.damage-mosaic-tile.wide {
+    grid-column: span 2;
+}
+
+.damage-mosaic-tile::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 46%;
+    background:
+        linear-gradient(180deg, transparent, rgba(63, 169, 194, 0.13)),
+        repeating-linear-gradient(90deg,
+            rgba(7, 19, 29, 0.04) 0 1px,
+            transparent 1px 18px);
+}
+
+.damage-mosaic-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.55rem;
+    align-content: end;
+    min-height: 100%;
+    padding: 1rem;
+}
+
+.damage-mosaic-content h3 {
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.2rem, 2vw, 1.9rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.damage-mosaic-content p {
+    color: var(--color-dark-muted);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================
+   BASEMENT PAGE — BASEMENT CONDITIONS SPLIT
+   ========================================================== */
+
+.basement-conditions-split {
+    display: grid;
+    grid-template-columns: minmax(0, 0.52fr) minmax(0, 0.48fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: stretch;
+}
+
+.basement-condition-photo {
+    position: relative;
+    min-height: 560px;
+    overflow: hidden;
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: var(--radius-xl);
+    background: var(--color-bg-soft);
+    box-shadow: 0 24px 60px rgba(7, 19, 29, 0.13);
+}
+
+.basement-condition-photo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(180deg, transparent, rgba(4, 16, 27, 0.78)),
+        radial-gradient(circle at 18% 12%, rgba(108, 182, 200, 0.18), transparent 18rem);
+}
+
+.basement-condition-photo::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 22%;
+    left: 0;
+    z-index: 3;
+    height: 2px;
+    background: var(--color-water);
+    box-shadow: 0 0 24px rgba(108, 182, 200, 0.52);
+}
+
+.basement-condition-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 560px;
+    object-fit: cover;
+    filter: saturate(1.06) contrast(1.04);
+}
+
+.basement-condition-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.basement-condition-item {
+    display: grid;
+    grid-template-columns: 2.6rem minmax(0, 1fr);
+    gap: 0.82rem;
+    align-items: center;
+    min-height: 4.7rem;
+    padding: 0.9rem;
+    border: 1px solid rgba(7, 19, 29, 0.1);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.52);
+    box-shadow: 0 16px 40px rgba(7, 19, 29, 0.08);
+}
+
+.basement-condition-icon {
+    display: grid;
+    width: 2.6rem;
+    height: 2.6rem;
+    place-items: center;
+    border: 1px solid rgba(63, 169, 194, 0.28);
+    border-radius: 999px;
+    color: var(--color-water-strong);
+    background: rgba(217, 239, 243, 0.72);
+}
+
+.basement-condition-item strong {
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    line-height: 1.1;
+}
+
+.basement-condition-item span {
+    display: block;
+    margin-top: 0.2rem;
+    color: var(--color-dark-muted);
+    font-size: 0.82rem;
+    line-height: 1.35;
+}
+
+/* ==========================================================
+   BASEMENT PAGE — MOISTURE METER GAUGE CARDS
+   ========================================================== */
+
+.moisture-meter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.moisture-meter-card {
+    position: relative;
+    display: grid;
+    align-content: end;
+    min-height: 360px;
+    overflow: hidden;
+    padding: 1rem;
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent),
+        rgba(4, 16, 27, 0.84);
+    box-shadow: var(--shadow-card);
+}
+
+.moisture-meter-card::before {
+    content: "";
+    position: absolute;
+    right: 0.7rem;
+    bottom: 0.7rem;
+    left: 0.7rem;
+    height: var(--meter-fill, 56%);
+    border-radius: calc(var(--radius-lg) - 0.7rem);
+    background:
+        linear-gradient(180deg, rgba(108, 182, 200, 0.34), rgba(108, 182, 200, 0.12)),
+        repeating-linear-gradient(90deg,
+            rgba(255, 255, 255, 0.18) 0 1px,
+            transparent 1px 10px);
+}
+
+.moisture-meter-card::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    left: 1rem;
+    bottom: calc(var(--meter-fill, 56%) + 0.68rem);
+    height: 2px;
+    background: var(--color-water);
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.55);
+}
+
+.moisture-meter-card:nth-child(1) {
+    --meter-fill: 72%;
+}
+
+.moisture-meter-card:nth-child(2) {
+    --meter-fill: 54%;
+}
+
+.moisture-meter-card:nth-child(3) {
+    --meter-fill: 62%;
+}
+
+.moisture-meter-card:nth-child(4) {
+    --meter-fill: 46%;
+}
+
+.moisture-meter-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.6rem;
+}
+
+.moisture-meter-icon {
+    display: grid;
+    width: 2.45rem;
+    height: 2.45rem;
+    place-items: center;
+    border: 1px solid rgba(108, 182, 200, 0.3);
+    border-radius: 999px;
+    color: var(--color-water);
+    background: rgba(4, 16, 27, 0.82);
+}
+
+.moisture-meter-content h3 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    line-height: 1.05;
+}
+
+.moisture-meter-content p {
+    color: var(--color-muted);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+/* ==========================================================
+   PROVIDER EVALUATION COLUMNS
+   ========================================================== */
+
+.provider-evaluation-columns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.provider-eval-column {
+    position: relative;
+    overflow: hidden;
+    min-height: 340px;
+    padding: 1rem;
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.28)),
+        rgba(238, 242, 243, 0.64);
+    box-shadow: 0 20px 50px rgba(7, 19, 29, 0.1);
+}
+
+.provider-eval-column::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-water-strong), var(--color-green-strong));
+}
+
+.provider-eval-column h3 {
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.provider-eval-column p {
+    margin-top: 0.7rem;
+    color: var(--color-dark-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.provider-eval-column ul {
+    display: grid;
+    gap: 0.55rem;
+    margin-top: 1rem;
+}
+
+.provider-eval-column li {
+    display: grid;
+    grid-template-columns: 0.8rem minmax(0, 1fr);
+    gap: 0.55rem;
+    color: var(--color-dark-text);
+    font-size: 0.86rem;
+    line-height: 1.4;
+}
+
+.provider-eval-column li::before {
+    content: "";
+    width: 0.48rem;
+    height: 0.48rem;
+    margin-top: 0.4rem;
+    border-radius: 999px;
+    background: var(--color-water-strong);
+    box-shadow: 0 0 12px rgba(63, 169, 194, 0.42);
+}
+
+/* ==========================================================
+   HOMEOWNER REPORT NOTES
+   ========================================================== */
+
+.homeowner-report-notes {
+    display: grid;
+    grid-template-columns: minmax(0, 0.58fr) minmax(0, 0.42fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: stretch;
+}
+
+.homeowner-note-main {
+    min-height: 420px;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.homeowner-note-main .service-panel-content {
+    display: grid;
+    align-content: end;
+    gap: 1rem;
+    min-height: 100%;
+}
+
+.homeowner-note-main h2 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 0.96;
+    letter-spacing: -0.075em;
+}
+
+.homeowner-note-main p {
+    max-width: 680px;
+    color: var(--color-muted);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.homeowner-note-stack {
+    display: grid;
+    gap: 0.8rem;
+}
+
+.homeowner-note-card {
+    position: relative;
+    padding: 0.95rem;
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-md);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent),
+        rgba(17, 24, 32, 0.76);
+    box-shadow: 0 14px 38px rgba(0, 0, 0, 0.16);
+}
+
+.homeowner-note-card h3 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    line-height: 1.1;
+}
+
+.homeowner-note-card p {
+    margin-top: 0.45rem;
+    color: var(--color-muted);
+    font-size: 0.84rem;
+    line-height: 1.45;
+}
+
+/* ==========================================================
+   SERVICE FAQ + FINAL CTA
+   ========================================================== */
+
+.service-faq-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
+    gap: clamp(1.4rem, 4vw, 3rem);
+    align-items: start;
+}
+
+.service-faq-note {
+    position: sticky;
+    top: calc(var(--header-height) + 1rem);
+    display: grid;
+    gap: 0.85rem;
+    padding: clamp(1rem, 2.4vw, 1.4rem);
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 12% 12%, rgba(108, 182, 200, 0.14), transparent 16rem),
+        rgba(17, 24, 32, 0.78);
+    box-shadow: var(--shadow-card);
+}
+
+.service-faq-note .svg-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    color: var(--color-water);
+}
+
+.service-faq-note h2 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.4rem, 2.4vw, 2.2rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.service-faq-note p {
+    color: var(--color-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.service-final-cta {
+    padding-block: clamp(3rem, 5vw, 4.8rem);
+    background:
+        radial-gradient(circle at 80% 22%, rgba(117, 168, 77, 0.12), transparent 24rem),
+        linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
+}
+
+.service-final-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+    overflow: hidden;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    border: 1px solid rgba(108, 182, 200, 0.2);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 12% 50%, rgba(108, 182, 200, 0.14), transparent 20rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+        rgba(17, 24, 32, 0.82);
+    box-shadow: var(--shadow-card);
+}
+
+.service-final-card::before {
+    content: "";
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.1rem;
+    left: 1.2rem;
+    height: 0.86rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+    pointer-events: none;
+}
+
+.service-final-card::after {
+    content: "";
+    position: absolute;
+    right: 2rem;
+    bottom: 1.42rem;
+    left: 2rem;
+    height: 0.2rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(90deg, transparent, var(--color-water), var(--color-green), transparent);
+    background-size: 12rem 100%;
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.5);
+    animation: pipeFlow 2.7s linear infinite;
+    pointer-events: none;
+}
+
+.service-final-copy {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.65rem;
+    padding-bottom: 1.35rem;
+}
+
+.service-final-copy h2 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.7rem, 3vw, 2.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+}
+
+.service-final-copy p {
+    max-width: 760px;
+    color: var(--color-muted);
+    font-size: 0.94rem;
+    line-height: 1.62;
+}
+
+.service-final-actions {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding-bottom: 1.35rem;
+}
+
+/* ==========================================================
+   RESPONSIVE — SERVICE PAGES
+   ========================================================== */
+
+@media (max-width: 1080px) {
+
+    .service-detail-hero-grid,
+    .wet-scope-board,
+    .flood-scale-system,
+    .basement-conditions-split,
+    .homeowner-report-notes,
+    .service-faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-command-card {
+        width: min(100%, 680px);
+    }
+
+    .scope-board-main,
+    .homeowner-note-main {
+        min-height: 380px;
+    }
+
+    .question-route-line,
+    .restoration-routing-path {
+        display: none;
+    }
+
+    .question-route-nodes,
+    .restoration-routing-nodes {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .question-route-node,
+    .restoration-node {
+        grid-template-columns: 4rem minmax(0, 1fr);
+        justify-items: start;
+        text-align: left;
+        padding: 0.85rem;
+        border: 1px solid rgba(108, 182, 200, 0.12);
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .question-route-node:nth-child(even),
+    .restoration-node:nth-child(2),
+    .restoration-node:nth-child(4) {
+        transform: none;
+    }
+
+    .pipe-burst-notes {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 250px;
+    }
+
+    .pipe-burst-note:nth-child(even) {
+        transform: none;
+    }
+
+    .valve-info-rail {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .valve-info-rail::before,
+    .valve-info-rail::after {
+        display: none;
+    }
+
+    .moisture-meter-grid,
+    .provider-evaluation-columns {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-faq-note {
+        position: relative;
+        top: auto;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .service-command-card,
+    .service-panel,
+    .scope-board-main,
+    .question-route-board,
+    .droplet-photo,
+    .flood-scale-meter,
+    .restoration-routing,
+    .pipe-burst-board,
+    .valve-info-rail,
+    .damage-mosaic-tile,
+    .basement-condition-photo,
+    .service-faq-note,
+    .service-final-card {
+        border-radius: var(--radius-lg);
+    }
+
+    .water-check-row {
+        grid-template-columns: 3.5rem minmax(0, 1fr);
+    }
+
+    .water-check-status {
+        grid-column: 2;
+        justify-self: start;
+    }
+
+    .droplet-photo-cta {
+        grid-template-columns: 1fr;
+    }
+
+    .droplet-photo,
+    .droplet-photo img,
+    .basement-condition-photo,
+    .basement-condition-photo img {
+        min-height: 340px;
+    }
+
+    .flood-scale-meter,
+    .flood-scale-labels {
+        min-height: 420px;
+    }
+
+    .horizontal-report-rail {
+        grid-auto-columns: minmax(280px, 86vw);
+    }
+
+    .damage-mosaic {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .damage-mosaic-tile,
+    .damage-mosaic-tile.large,
+    .damage-mosaic-tile.wide {
+        grid-column: auto;
+        grid-row: auto;
+        min-height: 240px;
+    }
+
+    .moisture-meter-grid,
+    .provider-evaluation-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .service-final-card {
+        grid-template-columns: 1fr;
+    }
+
+    .service-final-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .service-final-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+
+    .service-command-item,
+    .scope-board-item,
+    .basement-condition-item {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .scope-board-main,
+    .homeowner-note-main {
+        min-height: 320px;
+        padding: 1rem;
+    }
+
+    .scope-board-main h2,
+    .droplet-cta-copy h2,
+    .homeowner-note-main h2 {
+        font-size: clamp(2rem, 12vw, 3rem);
+    }
+
+    .water-check-row {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .water-check-status {
+        grid-column: auto;
+        justify-self: center;
+    }
+
+    .question-route-node,
+    .restoration-node,
+    .valve-info-node {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .question-route-icon,
+    .restoration-node-icon,
+    .valve-info-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .pipe-burst-board {
+        min-height: auto;
+    }
+
+    .pipe-burst-main {
+        top: 165px;
+        left: 1rem;
+        right: 1rem;
+    }
+
+    .pipe-burst-crack {
+        top: 165px;
+    }
+
+    .pipe-burst-spray {
+        top: 80px;
+        width: 14rem;
+    }
+
+    .pipe-burst-notes {
+        padding-top: 260px;
+    }
+
+    .valve-info-rail {
+        grid-template-columns: 1fr;
+    }
+
+    .service-final-card::before,
+    .service-final-card::after {
+        display: none;
+    }
+
+    .service-final-copy,
+    .service-final-actions {
+        padding-bottom: 0;
+    }
+}

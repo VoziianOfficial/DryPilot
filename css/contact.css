@@ -1,0 +1,1012 @@
+/* ==========================================================
+   DRYPILOT — CONTACT PAGE
+   File: /css/contact.css
+   ========================================================== */
+
+/* ==========================================================
+   CONTACT HERO — REQUEST COMMAND HERO
+   ========================================================== */
+
+.contact-page .page-hero {
+    min-height: clamp(520px, 72vh, 780px);
+}
+
+.contact-request-hero::before {
+    background:
+        radial-gradient(circle at 78% 18%, rgba(108, 182, 200, 0.18), transparent 34rem),
+        radial-gradient(circle at 18% 78%, rgba(117, 168, 77, 0.12), transparent 30rem),
+        linear-gradient(90deg, rgba(4, 16, 27, 0.96), rgba(4, 16, 27, 0.68), rgba(4, 16, 27, 0.9));
+}
+
+.contact-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.86fr) minmax(300px, 0.5fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: center;
+}
+
+.contact-hero-copy {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.contact-command-panel {
+    position: relative;
+    display: grid;
+    gap: 0.8rem;
+    padding: clamp(1rem, 2.4vw, 1.4rem);
+    overflow: hidden;
+    border: 1px solid rgba(108, 182, 200, 0.22);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 16% 18%, rgba(108, 182, 200, 0.16), transparent 18rem),
+        linear-gradient(180deg, rgba(17, 24, 32, 0.86), rgba(4, 16, 27, 0.82));
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(16px);
+}
+
+.contact-command-panel::before {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    border: 1px dashed rgba(108, 182, 200, 0.15);
+    border-radius: calc(var(--radius-xl) - 1rem);
+    pointer-events: none;
+}
+
+.contact-command-panel::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    height: 0.82rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.16),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.55);
+}
+
+.contact-command-panel h2 {
+    position: relative;
+    z-index: 2;
+    color: var(--color-water);
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.contact-command-list {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.62rem;
+}
+
+.contact-command-item {
+    display: grid;
+    grid-template-columns: 2.35rem minmax(0, 1fr) auto;
+    gap: 0.72rem;
+    align-items: center;
+    min-height: 3.65rem;
+    padding: 0.72rem;
+    border: 1px solid rgba(216, 226, 229, 0.1);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.contact-command-item .svg-icon {
+    color: var(--color-water);
+}
+
+.contact-command-item strong {
+    display: block;
+    color: var(--color-heading);
+    font-size: 0.9rem;
+    line-height: 1.15;
+}
+
+.contact-command-item span {
+    display: block;
+    color: var(--color-muted);
+    font-size: 0.76rem;
+    line-height: 1.3;
+}
+
+.contact-command-status {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    background: var(--color-green);
+    box-shadow: 0 0 18px rgba(117, 168, 77, 0.72);
+}
+
+/* ==========================================================
+   SECTION 2 — EMERGENCY INTAKE BOARD
+   ========================================================== */
+
+.emergency-intake-section {
+    color: var(--color-dark-text);
+    background:
+        radial-gradient(circle at 82% 16%, rgba(108, 182, 200, 0.18), transparent 26rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.16)),
+        var(--color-section-light);
+}
+
+.emergency-intake-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(7, 19, 29, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(7, 19, 29, 0.03) 1px, transparent 1px);
+    background-size: 36px 36px;
+    pointer-events: none;
+}
+
+.emergency-intake-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(280px, 0.46fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: stretch;
+}
+
+.intake-board {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(1rem, 2.4vw, 1.55rem);
+    border: 1px solid rgba(7, 19, 29, 0.14);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.38)),
+        rgba(255, 255, 255, 0.54);
+    box-shadow: 0 24px 60px rgba(7, 19, 29, 0.12);
+}
+
+.intake-board::before {
+    content: "";
+    position: absolute;
+    inset-block: 1rem;
+    left: 1rem;
+    width: 0.86rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.16),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.55);
+}
+
+.intake-board::after {
+    content: "";
+    position: absolute;
+    top: 1.6rem;
+    bottom: 1.6rem;
+    left: 1.28rem;
+    width: 0.28rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, transparent, var(--color-water), var(--color-green), transparent);
+    background-size: 100% 12rem;
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.5);
+    animation: verticalFlow 2.8s linear infinite;
+}
+
+.intake-board-inner {
+    position: relative;
+    z-index: 2;
+    padding-left: 1.4rem;
+}
+
+.contact-lead-form {
+    color: var(--color-dark-text);
+}
+
+.intake-side-panel {
+    position: relative;
+    display: grid;
+    align-content: center;
+    gap: 0.85rem;
+    overflow: hidden;
+    padding: clamp(1rem, 2.4vw, 1.4rem);
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 12% 12%, rgba(108, 182, 200, 0.16), transparent 16rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.28)),
+        rgba(221, 228, 230, 0.66);
+    box-shadow: 0 22px 54px rgba(7, 19, 29, 0.1);
+}
+
+.intake-side-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(7, 19, 29, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(7, 19, 29, 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+    pointer-events: none;
+}
+
+.intake-side-item {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 2.55rem minmax(0, 1fr);
+    gap: 0.8rem;
+    align-items: center;
+    min-height: 4.4rem;
+    padding: 0.85rem;
+    border: 1px solid rgba(7, 19, 29, 0.1);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.46);
+    transition:
+        transform 0.22s var(--ease),
+        border-color 0.22s var(--ease),
+        background 0.22s var(--ease),
+        box-shadow 0.22s var(--ease);
+}
+
+.intake-side-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(63, 169, 194, 0.42);
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 18px 42px rgba(7, 19, 29, 0.1);
+}
+
+.intake-side-icon {
+    display: grid;
+    width: 2.55rem;
+    height: 2.55rem;
+    place-items: center;
+    border: 1px solid rgba(63, 169, 194, 0.28);
+    border-radius: 999px;
+    color: var(--color-water-strong);
+    background: rgba(217, 239, 243, 0.72);
+}
+
+.intake-side-item:hover .intake-side-icon {
+    color: var(--color-green-strong);
+    border-color: rgba(117, 168, 77, 0.42);
+    background: rgba(228, 242, 218, 0.72);
+}
+
+.intake-side-item strong {
+    display: block;
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+}
+
+.intake-side-item span {
+    display: block;
+    margin-top: 0.18rem;
+    color: var(--color-dark-muted);
+    font-size: 0.82rem;
+    line-height: 1.35;
+}
+
+/* ==========================================================
+   SECTION 3 — CONTACT PIPE RAIL
+   ========================================================== */
+
+.contact-pipe-rail-section {
+    padding-block: clamp(3rem, 6vw, 5rem);
+    background:
+        radial-gradient(circle at 16% 22%, rgba(108, 182, 200, 0.14), transparent 30rem),
+        radial-gradient(circle at 86% 64%, rgba(117, 168, 77, 0.1), transparent 28rem),
+        linear-gradient(180deg, #071827, #04101b);
+}
+
+.contact-pipe-rail {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+        rgba(4, 16, 27, 0.82);
+    box-shadow: var(--shadow-card);
+}
+
+.contact-pipe-rail::before {
+    content: "";
+    position: absolute;
+    left: 2rem;
+    right: 2rem;
+    top: 50%;
+    height: 1rem;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.16),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.55);
+}
+
+.contact-pipe-rail::after {
+    content: "";
+    position: absolute;
+    left: 2.8rem;
+    right: 2.8rem;
+    top: 50%;
+    height: 0.25rem;
+    transform: translateY(-50%);
+    border-radius: 999px;
+    background:
+        linear-gradient(90deg, transparent, var(--color-water), var(--color-green), transparent);
+    background-size: 12rem 100%;
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.54);
+    animation: pipeFlow 2.7s linear infinite;
+}
+
+.contact-pipe-node-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.contact-pipe-node {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+    padding: 1rem 0.75rem;
+    text-align: center;
+}
+
+.contact-pipe-icon {
+    display: grid;
+    width: 4.1rem;
+    height: 4.1rem;
+    place-items: center;
+    border: 1px solid rgba(108, 182, 200, 0.34);
+    border-radius: 999px;
+    color: var(--color-water);
+    background:
+        radial-gradient(circle, rgba(108, 182, 200, 0.16), transparent 62%),
+        rgba(4, 16, 27, 0.94);
+    box-shadow:
+        0 0 0 8px rgba(108, 182, 200, 0.05),
+        0 18px 44px rgba(0, 0, 0, 0.28);
+    transition:
+        transform 0.24s var(--ease),
+        color 0.24s var(--ease),
+        border-color 0.24s var(--ease),
+        box-shadow 0.24s var(--ease);
+}
+
+.contact-pipe-node:hover .contact-pipe-icon {
+    transform: translateY(-4px);
+    color: var(--color-green);
+    border-color: rgba(117, 168, 77, 0.48);
+    box-shadow:
+        0 0 0 8px rgba(117, 168, 77, 0.08),
+        0 0 32px rgba(117, 168, 77, 0.22);
+}
+
+.contact-pipe-node strong {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.contact-pipe-node a,
+.contact-pipe-node span {
+    display: block;
+    max-width: 210px;
+    overflow-wrap: anywhere;
+    color: var(--color-muted);
+    font-size: 0.82rem;
+    line-height: 1.35;
+    transition: color 0.22s var(--ease);
+}
+
+.contact-pipe-node a:hover {
+    color: var(--color-water);
+}
+
+/* ==========================================================
+   SECTION 4 — STORM COVERAGE MAP
+   ========================================================== */
+
+.storm-map-section {
+    color: var(--color-dark-text);
+    background:
+        radial-gradient(circle at 82% 24%, rgba(108, 182, 200, 0.16), transparent 28rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.14)),
+        var(--color-section-gray);
+}
+
+.storm-map-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: stretch;
+}
+
+.storm-map-visual {
+    position: relative;
+    isolation: isolate;
+    min-height: 520px;
+    overflow: hidden;
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 68% 58%, rgba(117, 168, 77, 0.24), transparent 10rem),
+        radial-gradient(circle at 48% 48%, rgba(108, 182, 200, 0.2), transparent 24rem),
+        linear-gradient(180deg, #dbe4e7, #bfcbd0);
+    box-shadow: 0 24px 60px rgba(7, 19, 29, 0.14);
+}
+
+.storm-map-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(7, 19, 29, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(7, 19, 29, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.58;
+}
+
+.storm-map-visual::after {
+    content: "";
+    position: absolute;
+    inset: 9%;
+    border: 1px solid rgba(7, 19, 29, 0.08);
+    border-radius: var(--radius-lg);
+    pointer-events: none;
+}
+
+.map-road {
+    position: absolute;
+    height: 2px;
+    border-radius: 999px;
+    background: rgba(89, 102, 110, 0.42);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18);
+}
+
+.map-road.one {
+    top: 32%;
+    left: 8%;
+    width: 86%;
+    transform: rotate(-8deg);
+}
+
+.map-road.two {
+    top: 58%;
+    left: 2%;
+    width: 90%;
+    transform: rotate(12deg);
+}
+
+.map-road.three {
+    top: 18%;
+    left: 44%;
+    width: 2px;
+    height: 72%;
+    transform: rotate(18deg);
+}
+
+.map-road.four {
+    top: 8%;
+    left: 22%;
+    width: 2px;
+    height: 86%;
+    transform: rotate(-14deg);
+}
+
+.storm-map-pin {
+    position: absolute;
+    left: 56%;
+    top: 46%;
+    z-index: 4;
+}
+
+.storm-address-card {
+    position: absolute;
+    right: clamp(1rem, 4vw, 2rem);
+    bottom: clamp(1rem, 4vw, 2rem);
+    z-index: 5;
+    width: min(330px, calc(100% - 2rem));
+    padding: 1rem;
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: var(--radius-lg);
+    color: var(--color-dark-text);
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 20px 50px rgba(7, 19, 29, 0.16);
+    backdrop-filter: blur(14px);
+}
+
+.storm-address-card strong {
+    display: block;
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: 1.12rem;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+.storm-address-card span {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--color-dark-muted);
+    font-size: 0.86rem;
+    line-height: 1.45;
+}
+
+.storm-map-readout {
+    position: relative;
+    display: grid;
+    align-content: center;
+    gap: 0.85rem;
+    padding: clamp(1rem, 2.4vw, 1.4rem);
+    overflow: hidden;
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.3)),
+        rgba(238, 242, 243, 0.7);
+    box-shadow: 0 22px 54px rgba(7, 19, 29, 0.1);
+}
+
+.storm-map-readout h3 {
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 2.4vw, 2rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.storm-map-readout p {
+    color: var(--color-dark-muted);
+    font-size: 0.95rem;
+    line-height: 1.62;
+}
+
+.map-readout-list {
+    display: grid;
+    gap: 0.65rem;
+    margin-top: 0.35rem;
+}
+
+.map-readout-list li {
+    display: grid;
+    grid-template-columns: 1.2rem minmax(0, 1fr);
+    gap: 0.6rem;
+    align-items: start;
+    color: var(--color-dark-text);
+    font-size: 0.86rem;
+    line-height: 1.42;
+}
+
+.map-readout-list li::before {
+    content: "";
+    width: 0.58rem;
+    height: 0.58rem;
+    margin-top: 0.35rem;
+    border-radius: 999px;
+    background: var(--color-water-strong);
+    box-shadow: 0 0 14px rgba(63, 169, 194, 0.46);
+}
+
+/* ==========================================================
+   SECTION 5 — QUESTION DROPS FAQ
+   ========================================================== */
+
+.question-drops-section {
+    background:
+        radial-gradient(circle at 16% 16%, rgba(108, 182, 200, 0.14), transparent 30rem),
+        linear-gradient(180deg, #071827, #04101b);
+}
+
+.question-drops-grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 0.42fr) minmax(0, 1fr);
+    gap: clamp(1.4rem, 4vw, 3rem);
+    align-items: start;
+}
+
+.question-drops-note {
+    position: sticky;
+    top: calc(var(--header-height) + 1rem);
+    display: grid;
+    gap: 0.85rem;
+    padding: clamp(1rem, 2.4vw, 1.4rem);
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 12% 12%, rgba(108, 182, 200, 0.14), transparent 16rem),
+        rgba(17, 24, 32, 0.78);
+    box-shadow: var(--shadow-card);
+}
+
+.question-drops-note h3 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.3rem, 2.4vw, 2rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+}
+
+.question-drops-note p {
+    color: var(--color-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.question-drops-note .svg-icon {
+    width: 2.8rem;
+    height: 2.8rem;
+    color: var(--color-water);
+}
+
+/* ==========================================================
+   SECTION 6 — FINAL WATERLINE CTA
+   ========================================================== */
+
+.final-waterline-cta {
+    padding-block: clamp(3rem, 5vw, 4.8rem);
+    background:
+        radial-gradient(circle at 80% 22%, rgba(117, 168, 77, 0.12), transparent 24rem),
+        linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
+}
+
+.waterline-cta-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+    overflow: hidden;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    border: 1px solid rgba(108, 182, 200, 0.2);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 12% 50%, rgba(108, 182, 200, 0.14), transparent 20rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+        rgba(17, 24, 32, 0.82);
+    box-shadow: var(--shadow-card);
+}
+
+.waterline-cta-card::before {
+    content: "";
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.1rem;
+    left: 1.2rem;
+    height: 0.86rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+    pointer-events: none;
+}
+
+.waterline-cta-card::after {
+    content: "";
+    position: absolute;
+    right: 2rem;
+    bottom: 1.42rem;
+    left: 2rem;
+    height: 0.2rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(90deg, transparent, var(--color-water), var(--color-green), transparent);
+    background-size: 12rem 100%;
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.5);
+    animation: pipeFlow 2.7s linear infinite;
+    pointer-events: none;
+}
+
+.waterline-cta-copy {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.65rem;
+    padding-bottom: 1.35rem;
+}
+
+.waterline-cta-copy h2 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.7rem, 3vw, 2.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+}
+
+.waterline-cta-copy p {
+    max-width: 720px;
+    color: var(--color-muted);
+    font-size: 0.94rem;
+    line-height: 1.62;
+}
+
+.waterline-cta-actions {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding-bottom: 1.35rem;
+}
+
+/* ==========================================================
+   CONTACT JS INTERACTION STATES
+   ========================================================== */
+
+.contact-pipe-node,
+.intake-side-item,
+.map-readout-list li {
+    transition:
+        opacity 0.24s var(--ease),
+        transform 0.24s var(--ease);
+}
+
+.contact-pipe-node.is-active {
+    transform: translateY(-4px);
+}
+
+.contact-pipe-node.is-muted {
+    opacity: 0.58;
+}
+
+.contact-pipe-node.is-active .contact-pipe-icon {
+    color: var(--color-green);
+    border-color: rgba(117, 168, 77, 0.5);
+    box-shadow:
+        0 0 0 8px rgba(117, 168, 77, 0.08),
+        0 0 32px rgba(117, 168, 77, 0.22);
+}
+
+.intake-side-item.is-active {
+    transform: translateY(-4px);
+    border-color: rgba(117, 168, 77, 0.44);
+}
+
+.intake-side-item.is-active .intake-side-icon {
+    color: var(--color-green-strong);
+    border-color: rgba(117, 168, 77, 0.42);
+    background: rgba(228, 242, 218, 0.72);
+}
+
+/* ==========================================================
+   RESPONSIVE — CONTACT PAGE
+   ========================================================== */
+
+@media (max-width: 1080px) {
+
+    .contact-hero-grid,
+    .emergency-intake-grid,
+    .storm-map-grid,
+    .question-drops-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-command-panel,
+    .intake-side-panel {
+        width: min(100%, 680px);
+    }
+
+    .question-drops-note {
+        position: relative;
+        top: auto;
+    }
+
+    .contact-pipe-node-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-pipe-rail::before,
+    .contact-pipe-rail::after {
+        top: 1.5rem;
+        bottom: 1.5rem;
+        left: 50%;
+        right: auto;
+        width: 1rem;
+        height: auto;
+        transform: translateX(-50%);
+    }
+
+    .contact-pipe-rail::after {
+        width: 0.25rem;
+        background:
+            linear-gradient(180deg, transparent, var(--color-water), var(--color-green), transparent);
+        background-size: 100% 12rem;
+        animation: verticalFlow 2.7s linear infinite;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .contact-command-panel,
+    .intake-board,
+    .intake-side-panel,
+    .contact-pipe-rail,
+    .storm-map-visual,
+    .storm-map-readout,
+    .question-drops-note,
+    .waterline-cta-card {
+        border-radius: var(--radius-lg);
+    }
+
+    .contact-command-item {
+        grid-template-columns: 2.1rem minmax(0, 1fr);
+    }
+
+    .contact-command-status {
+        display: none;
+    }
+
+    .intake-board::before,
+    .intake-board::after {
+        display: none;
+    }
+
+    .intake-board-inner {
+        padding-left: 0;
+    }
+
+    .contact-pipe-node-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-pipe-rail::before,
+    .contact-pipe-rail::after {
+        display: none;
+    }
+
+    .contact-pipe-node {
+        grid-template-columns: 4rem minmax(0, 1fr);
+        justify-items: start;
+        text-align: left;
+        padding: 0.85rem;
+        border: 1px solid rgba(108, 182, 200, 0.12);
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .contact-pipe-node a,
+    .contact-pipe-node span {
+        max-width: none;
+    }
+
+    .contact-pipe-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .storm-map-visual {
+        min-height: 390px;
+    }
+
+    .storm-address-card {
+        right: 0.8rem;
+        bottom: 0.8rem;
+        width: calc(100% - 1.6rem);
+    }
+
+    .waterline-cta-card {
+        grid-template-columns: 1fr;
+    }
+
+    .waterline-cta-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .waterline-cta-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .contact-command-panel {
+        padding: 0.85rem;
+    }
+
+    .contact-command-item,
+    .intake-side-item {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .intake-side-icon {
+        width: 2.35rem;
+        height: 2.35rem;
+    }
+
+    .contact-pipe-node {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .storm-map-visual {
+        min-height: 340px;
+    }
+
+    .map-road.three,
+    .map-road.four {
+        display: none;
+    }
+
+    .storm-map-pin {
+        left: 48%;
+        top: 38%;
+    }
+
+    .waterline-cta-card::before,
+    .waterline-cta-card::after {
+        display: none;
+    }
+
+    .waterline-cta-copy,
+    .waterline-cta-actions {
+        padding-bottom: 0;
+    }
+}
+
+/* ==========================================================
+   CONTACT JS EXTRA INTERACTION STATES
+   Add to the bottom of /css/contact.css
+   ========================================================== */
+
+.contact-pipe-rail.has-active-node .contact-pipe-node:not(.is-active) {
+    opacity: 0.58;
+}
+
+.intake-side-item.is-muted,
+.map-readout-list li.is-muted {
+    opacity: 0.62;
+}
+
+.map-readout-list li.is-active {
+    transform: translateX(4px);
+    color: var(--color-dark-heading);
+}
+
+.map-readout-list li.is-active::before {
+    background: var(--color-green-strong);
+    box-shadow: 0 0 16px rgba(117, 168, 77, 0.5);
+}
+
+.storm-map-visual,
+.storm-address-card,
+.storm-map-pin {
+    transition:
+        transform 0.24s var(--ease),
+        box-shadow 0.24s var(--ease),
+        border-color 0.24s var(--ease);
+}
+
+.storm-map-visual.is-map-active {
+    box-shadow: 0 30px 76px rgba(7, 19, 29, 0.18);
+}
+
+.storm-map-pin.is-active {
+    transform: scale(1.08);
+}
+
+.storm-address-card.is-active {
+    transform: translateY(-4px);
+    border-color: rgba(63, 169, 194, 0.34);
+}

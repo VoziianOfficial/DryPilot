@@ -1,0 +1,1043 @@
+/* ==========================================================
+   DRYPILOT — ABOUT PAGE
+   File: /css/about.css
+   ========================================================== */
+
+/* ==========================================================
+   ABOUT HERO — STORM ORIGIN HERO
+   ========================================================== */
+
+.about-page .page-hero {
+    min-height: clamp(540px, 76vh, 820px);
+}
+
+.about-origin-hero .page-hero::before {
+    background:
+        radial-gradient(circle at 82% 16%, rgba(108, 182, 200, 0.18), transparent 34rem),
+        radial-gradient(circle at 16% 78%, rgba(117, 168, 77, 0.12), transparent 30rem),
+        linear-gradient(90deg, rgba(4, 16, 27, 0.95), rgba(4, 16, 27, 0.64), rgba(4, 16, 27, 0.9));
+}
+
+.about-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(300px, 0.48fr);
+    gap: clamp(2rem, 6vw, 5rem);
+    align-items: center;
+}
+
+.about-hero-copy {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.about-storm-panel {
+    position: relative;
+    display: grid;
+    gap: 0.8rem;
+    padding: clamp(1rem, 2.4vw, 1.45rem);
+    overflow: hidden;
+    border: 1px solid rgba(108, 182, 200, 0.22);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 18% 18%, rgba(108, 182, 200, 0.16), transparent 18rem),
+        linear-gradient(180deg, rgba(17, 24, 32, 0.86), rgba(4, 16, 27, 0.82));
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(16px);
+}
+
+.about-storm-panel::before {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    border: 1px dashed rgba(108, 182, 200, 0.16);
+    border-radius: calc(var(--radius-xl) - 1rem);
+    pointer-events: none;
+}
+
+.about-storm-panel::after {
+    content: "";
+    position: absolute;
+    right: 1.1rem;
+    bottom: 1.1rem;
+    left: 1.1rem;
+    height: 0.85rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.16),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.55);
+}
+
+.about-storm-panel h2 {
+    position: relative;
+    z-index: 2;
+    color: var(--color-water);
+    font-family: var(--font-heading);
+    font-size: 0.88rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.about-storm-list {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.65rem;
+}
+
+.about-storm-item {
+    display: grid;
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+    gap: 0.7rem;
+    align-items: center;
+    min-height: 3.6rem;
+    padding: 0.72rem;
+    border: 1px solid rgba(216, 226, 229, 0.1);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.about-storm-item .svg-icon {
+    color: var(--color-water);
+}
+
+.about-storm-item strong {
+    display: block;
+    color: var(--color-heading);
+    font-size: 0.9rem;
+    line-height: 1.15;
+}
+
+.about-storm-item span {
+    display: block;
+    color: var(--color-muted);
+    font-size: 0.76rem;
+    line-height: 1.3;
+}
+
+/* ==========================================================
+   SECTION 2 — WET BLUEPRINT STORY
+   ========================================================== */
+
+.wet-blueprint-section {
+    color: var(--color-dark-text);
+    background:
+        radial-gradient(circle at 78% 18%, rgba(108, 182, 200, 0.16), transparent 26rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.16)),
+        var(--color-section-light);
+}
+
+.wet-blueprint-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 0.68fr) minmax(280px, 0.48fr);
+    gap: clamp(1.4rem, 4vw, 3rem);
+    align-items: center;
+}
+
+.blueprint-copy {
+    position: relative;
+    display: grid;
+    gap: 1rem;
+    min-width: 0;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    overflow: hidden;
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(90deg, rgba(7, 19, 29, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(7, 19, 29, 0.03) 1px, transparent 1px),
+        rgba(255, 255, 255, 0.48);
+    background-size: 36px 36px, 36px 36px, auto;
+    box-shadow: 0 24px 58px rgba(7, 19, 29, 0.1);
+}
+
+.blueprint-copy::before {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    height: 32%;
+    background:
+        linear-gradient(180deg, transparent, rgba(63, 169, 194, 0.08)),
+        repeating-linear-gradient(90deg,
+            rgba(7, 19, 29, 0.05) 0 1px,
+            transparent 1px 22px);
+    pointer-events: none;
+}
+
+.blueprint-label-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    align-items: center;
+}
+
+.blueprint-label {
+    display: inline-flex;
+    min-height: 2rem;
+    align-items: center;
+    padding: 0.48rem 0.68rem;
+    border: 1px solid rgba(63, 169, 194, 0.28);
+    border-radius: 999px;
+    color: var(--color-water-strong);
+    background: rgba(217, 239, 243, 0.64);
+    font-size: 0.68rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.blueprint-label.green {
+    color: var(--color-green-strong);
+    border-color: rgba(117, 168, 77, 0.32);
+    background: rgba(228, 242, 218, 0.72);
+}
+
+.blueprint-copy h2 {
+    position: relative;
+    z-index: 2;
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 4rem);
+    line-height: 0.96;
+    letter-spacing: -0.075em;
+}
+
+.blueprint-copy p {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    color: var(--color-dark-muted);
+    font-size: clamp(0.98rem, 1.25vw, 1.12rem);
+    line-height: 1.72;
+}
+
+.blueprint-photo-frame {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: 48% 52% 44% 56% / 52% 42% 58% 48%;
+    background: var(--color-bg-soft);
+    box-shadow: 0 28px 70px rgba(7, 19, 29, 0.16);
+}
+
+.blueprint-photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(180deg, transparent, rgba(4, 16, 27, 0.68)),
+        radial-gradient(circle at 18% 12%, rgba(108, 182, 200, 0.18), transparent 18rem);
+}
+
+.blueprint-photo-frame::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 16%;
+    left: 0;
+    z-index: 3;
+    height: 2px;
+    background: var(--color-water);
+    box-shadow: 0 0 24px rgba(108, 182, 200, 0.52);
+}
+
+.blueprint-photo-frame img {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    object-fit: cover;
+    filter: saturate(1.08) contrast(1.04);
+}
+
+.blueprint-floating-note {
+    position: absolute;
+    right: -0.4rem;
+    bottom: 8%;
+    z-index: 4;
+    width: min(240px, 70%);
+    padding: 0.9rem;
+    border: 1px solid rgba(117, 168, 77, 0.34);
+    border-radius: var(--radius-md);
+    color: var(--color-heading);
+    background:
+        radial-gradient(circle at 12% 12%, rgba(117, 168, 77, 0.14), transparent 12rem),
+        rgba(4, 16, 27, 0.86);
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(14px);
+}
+
+.blueprint-floating-note strong {
+    display: block;
+    color: var(--color-green);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.blueprint-floating-note span {
+    display: block;
+    margin-top: 0.3rem;
+    color: var(--color-muted);
+    font-size: 0.82rem;
+    line-height: 1.42;
+}
+
+/* ==========================================================
+   SECTION 3 — TWO DRAINAGE CHANNELS
+   ========================================================== */
+
+.drainage-channels-section {
+    background:
+        radial-gradient(circle at 12% 22%, rgba(108, 182, 200, 0.14), transparent 30rem),
+        radial-gradient(circle at 84% 68%, rgba(117, 168, 77, 0.1), transparent 28rem),
+        linear-gradient(180deg, #071827, #04101b);
+}
+
+.drainage-shell {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 4rem minmax(0, 1fr);
+    gap: clamp(1rem, 3vw, 2rem);
+    overflow: hidden;
+    padding: clamp(1rem, 3vw, 1.7rem);
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+        rgba(4, 16, 27, 0.78);
+    box-shadow: var(--shadow-card);
+}
+
+.drainage-shell::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.03) 1px, transparent 1px);
+    background-size: 38px 38px;
+    pointer-events: none;
+}
+
+.drainage-channel {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 1rem;
+    min-width: 0;
+    padding: clamp(1rem, 2.4vw, 1.5rem);
+    overflow: hidden;
+    border: 1px solid rgba(216, 226, 229, 0.12);
+    border-radius: var(--radius-lg);
+    background:
+        radial-gradient(circle at 12% 12%, rgba(108, 182, 200, 0.1), transparent 16rem),
+        rgba(17, 24, 32, 0.74);
+}
+
+.drainage-channel.help {
+    border-color: rgba(117, 168, 77, 0.22);
+}
+
+.drainage-channel.no-direct {
+    border-color: rgba(108, 182, 200, 0.2);
+}
+
+.drainage-channel h3 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.45rem, 2.4vw, 2.35rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.drainage-channel.help h3 {
+    color: var(--color-green);
+}
+
+.drainage-channel.no-direct h3 {
+    color: var(--color-water);
+}
+
+.drainage-list {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.drainage-list li {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.55rem minmax(0, 1fr);
+    gap: 0.7rem;
+    align-items: start;
+    padding: 0.78rem;
+    border: 1px solid rgba(216, 226, 229, 0.1);
+    border-radius: var(--radius-sm);
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.drainage-list li::before {
+    content: "";
+    width: 0.74rem;
+    height: 0.74rem;
+    margin-top: 0.38rem;
+    border-radius: 70% 70% 70% 0;
+    transform: rotate(-45deg);
+    background: var(--color-water);
+    box-shadow: 0 0 14px rgba(108, 182, 200, 0.48);
+}
+
+.help .drainage-list li::before {
+    background: var(--color-green);
+    box-shadow: 0 0 14px rgba(117, 168, 77, 0.48);
+}
+
+.drainage-divider {
+    position: relative;
+    z-index: 2;
+    min-height: 420px;
+}
+
+.drainage-divider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1rem;
+    transform: translateX(-50%);
+    border-inline: 1px solid rgba(216, 226, 229, 0.15);
+    border-radius: 999px;
+    background:
+        linear-gradient(90deg, #263540, #0d1924 42%, #334652 50%, #0d1924 62%, #263540);
+    box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.14),
+        inset 0 -1px 2px rgba(0, 0, 0, 0.55);
+}
+
+.drainage-divider::after {
+    content: "";
+    position: absolute;
+    top: 1.2rem;
+    bottom: 1.2rem;
+    left: 50%;
+    width: 0.3rem;
+    transform: translateX(-50%);
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, transparent, var(--color-water), var(--color-green), transparent);
+    background-size: 100% 12rem;
+    box-shadow: 0 0 20px rgba(108, 182, 200, 0.46);
+    animation: verticalFlow 2.8s linear infinite;
+}
+
+.drainage-valve {
+    position: absolute;
+    left: 50%;
+    display: grid;
+    width: 3.3rem;
+    height: 3.3rem;
+    place-items: center;
+    transform: translateX(-50%);
+    border: 1px solid rgba(108, 182, 200, 0.34);
+    border-radius: 999px;
+    color: var(--color-water);
+    background: rgba(4, 16, 27, 0.92);
+    box-shadow: var(--shadow-water);
+}
+
+.drainage-valve:nth-child(1) {
+    top: 18%;
+}
+
+.drainage-valve:nth-child(2) {
+    top: 46%;
+}
+
+.drainage-valve:nth-child(3) {
+    bottom: 18%;
+}
+
+/* ==========================================================
+   SECTION 4 — ROUTING DIAGRAM
+   ========================================================== */
+
+.about-routing-section {
+    background:
+        radial-gradient(circle at 78% 18%, rgba(108, 182, 200, 0.14), transparent 30rem),
+        linear-gradient(180deg, #04101b, #071827);
+}
+
+.routing-diagram {
+    position: relative;
+    min-height: 430px;
+    overflow: hidden;
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+        rgba(4, 16, 27, 0.78);
+    box-shadow: var(--shadow-card);
+}
+
+.routing-diagram::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.04) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+    pointer-events: none;
+}
+
+.routing-path {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.routing-path svg {
+    width: 100%;
+    height: 100%;
+}
+
+.routing-line {
+    fill: none;
+    stroke: rgba(108, 182, 200, 0.38);
+    stroke-width: 10;
+    stroke-linecap: round;
+}
+
+.routing-flow {
+    fill: none;
+    stroke: var(--color-water);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 10 18;
+    filter: drop-shadow(0 0 10px rgba(108, 182, 200, 0.7));
+    animation: mapRoute 3s linear infinite;
+}
+
+.routing-node-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    min-height: 430px;
+    align-items: center;
+    gap: 1rem;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+.routing-node {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: 0.7rem;
+    text-align: center;
+}
+
+.routing-node-icon {
+    display: grid;
+    width: 4.2rem;
+    height: 4.2rem;
+    place-items: center;
+    border: 1px solid rgba(108, 182, 200, 0.34);
+    border-radius: 999px;
+    color: var(--color-water);
+    background:
+        radial-gradient(circle, rgba(108, 182, 200, 0.16), transparent 62%),
+        rgba(4, 16, 27, 0.9);
+    box-shadow:
+        0 0 0 8px rgba(108, 182, 200, 0.05),
+        0 18px 44px rgba(0, 0, 0, 0.28);
+    transition:
+        transform 0.24s var(--ease),
+        color 0.24s var(--ease),
+        border-color 0.24s var(--ease),
+        box-shadow 0.24s var(--ease);
+}
+
+.routing-node:hover .routing-node-icon {
+    transform: translateY(-4px);
+    color: var(--color-green);
+    border-color: rgba(117, 168, 77, 0.48);
+    box-shadow:
+        0 0 0 8px rgba(117, 168, 77, 0.08),
+        0 0 32px rgba(117, 168, 77, 0.22);
+}
+
+.routing-node strong {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+}
+
+.routing-node span {
+    max-width: 150px;
+    color: var(--color-muted);
+    font-size: 0.76rem;
+    line-height: 1.3;
+}
+
+/* ==========================================================
+   SECTION 5 — PREPARATION BOARD
+   ========================================================== */
+
+.preparation-board-section {
+    color: var(--color-dark-text);
+    background:
+        radial-gradient(circle at 84% 18%, rgba(108, 182, 200, 0.16), transparent 26rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.64), rgba(255, 255, 255, 0.16)),
+        var(--color-section-cool);
+}
+
+.prep-board-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(240px, 0.48fr);
+    grid-template-areas:
+        "large side"
+        "large bottom";
+    gap: clamp(1rem, 2.4vw, 1.4rem);
+}
+
+.prep-panel {
+    position: relative;
+    overflow: hidden;
+    min-height: 260px;
+    padding: clamp(1rem, 2.4vw, 1.45rem);
+    border: 1px solid rgba(7, 19, 29, 0.12);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(255, 255, 255, 0.28)),
+        rgba(238, 242, 243, 0.62);
+    box-shadow: 0 22px 54px rgba(7, 19, 29, 0.1);
+}
+
+.prep-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(7, 19, 29, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(7, 19, 29, 0.03) 1px, transparent 1px);
+    background-size: 34px 34px;
+    pointer-events: none;
+}
+
+.prep-panel.large {
+    grid-area: large;
+    min-height: 540px;
+}
+
+.prep-panel.side {
+    grid-area: side;
+}
+
+.prep-panel.bottom {
+    grid-area: bottom;
+    border-radius: 40% 60% 42% 58% / 54% 44% 56% 46%;
+}
+
+.prep-panel-media {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    opacity: 0.26;
+}
+
+.prep-panel-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.02) contrast(1.05);
+}
+
+.prep-panel.large .prep-panel-media {
+    opacity: 0.42;
+    mask-image: linear-gradient(180deg, black 0 50%, transparent 100%);
+}
+
+.prep-panel-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.85rem;
+    align-content: end;
+    min-height: 100%;
+}
+
+.prep-panel-icon {
+    display: grid;
+    width: 2.7rem;
+    height: 2.7rem;
+    place-items: center;
+    border: 1px solid rgba(63, 169, 194, 0.3);
+    border-radius: 999px;
+    color: var(--color-water-strong);
+    background: rgba(217, 239, 243, 0.68);
+}
+
+.prep-panel h3 {
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 2.5vw, 2.4rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+}
+
+.prep-panel p {
+    max-width: 520px;
+    color: var(--color-dark-muted);
+    font-size: 0.96rem;
+    line-height: 1.62;
+}
+
+.prep-panel-line {
+    position: relative;
+    height: 2px;
+    width: min(220px, 100%);
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(63, 169, 194, 0.16);
+}
+
+.prep-panel-line::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    left: -40%;
+    width: 40%;
+    background: linear-gradient(90deg, transparent, var(--color-water-strong), var(--color-green-strong), transparent);
+    animation: reportLine 2.6s linear infinite;
+}
+
+/* ==========================================================
+   SECTION 6 — COMPLIANCE CTA
+   ========================================================== */
+
+.about-compliance-cta {
+    padding-block: clamp(3rem, 5vw, 4.8rem);
+    background:
+        radial-gradient(circle at 76% 16%, rgba(117, 168, 77, 0.12), transparent 24rem),
+        linear-gradient(180deg, var(--color-bg-deep), var(--color-bg));
+}
+
+.compliance-cta-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.25rem;
+    align-items: center;
+    overflow: hidden;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    border: 1px solid rgba(108, 182, 200, 0.2);
+    border-radius: var(--radius-xl);
+    background:
+        radial-gradient(circle at 12% 50%, rgba(108, 182, 200, 0.14), transparent 20rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)),
+        rgba(17, 24, 32, 0.82);
+    box-shadow: var(--shadow-card);
+}
+
+.compliance-cta-card::before {
+    content: "";
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.1rem;
+    left: 1.2rem;
+    height: 0.86rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+    pointer-events: none;
+}
+
+.compliance-cta-card::after {
+    content: "";
+    position: absolute;
+    right: 2rem;
+    bottom: 1.42rem;
+    left: 2rem;
+    height: 0.2rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(90deg, transparent, var(--color-water), var(--color-green), transparent);
+    background-size: 12rem 100%;
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.5);
+    animation: pipeFlow 2.7s linear infinite;
+    pointer-events: none;
+}
+
+.compliance-copy {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.65rem;
+    padding-bottom: 1.35rem;
+}
+
+.compliance-copy h2 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.7rem, 3vw, 2.8rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+}
+
+.compliance-copy p {
+    max-width: 760px;
+    color: var(--color-muted);
+    font-size: 0.94rem;
+    line-height: 1.62;
+}
+
+.compliance-actions {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    padding-bottom: 1.35rem;
+}
+
+/* ==========================================================
+   RESPONSIVE — ABOUT PAGE
+   ========================================================== */
+
+@media (max-width: 1080px) {
+
+    .about-hero-grid,
+    .wet-blueprint-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-storm-panel {
+        width: min(100%, 680px);
+    }
+
+    .blueprint-photo-frame {
+        min-height: 430px;
+        border-radius: var(--radius-xl);
+    }
+
+    .blueprint-photo-frame img {
+        min-height: 430px;
+    }
+
+    .drainage-shell {
+        grid-template-columns: 1fr;
+    }
+
+    .drainage-divider {
+        min-height: 4rem;
+    }
+
+    .drainage-divider::before {
+        top: 50%;
+        right: 0;
+        bottom: auto;
+        left: 0;
+        width: auto;
+        height: 1rem;
+        transform: translateY(-50%);
+    }
+
+    .drainage-divider::after {
+        top: 50%;
+        right: 1rem;
+        bottom: auto;
+        left: 1rem;
+        width: auto;
+        height: 0.3rem;
+        transform: translateY(-50%);
+        background:
+            linear-gradient(90deg, transparent, var(--color-water), var(--color-green), transparent);
+        background-size: 12rem 100%;
+        animation: pipeFlow 2.8s linear infinite;
+    }
+
+    .drainage-valve {
+        top: 50% !important;
+        bottom: auto !important;
+    }
+
+    .drainage-valve:nth-child(1) {
+        left: 22%;
+    }
+
+    .drainage-valve:nth-child(2) {
+        left: 50%;
+    }
+
+    .drainage-valve:nth-child(3) {
+        left: 78%;
+    }
+
+    .routing-node-grid {
+        grid-template-columns: 1fr;
+        align-items: stretch;
+        min-height: auto;
+    }
+
+    .routing-path {
+        display: none;
+    }
+
+    .routing-node {
+        grid-template-columns: 4.2rem minmax(0, 1fr);
+        justify-items: start;
+        text-align: left;
+        padding: 0.75rem;
+        border: 1px solid rgba(108, 182, 200, 0.12);
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.04);
+    }
+
+    .routing-node span {
+        max-width: none;
+    }
+
+    .prep-board-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "large"
+            "side"
+            "bottom";
+    }
+
+    .prep-panel.large {
+        min-height: 420px;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .about-storm-panel,
+    .blueprint-copy,
+    .blueprint-photo-frame,
+    .drainage-shell,
+    .routing-diagram,
+    .prep-panel,
+    .compliance-cta-card {
+        border-radius: var(--radius-lg);
+    }
+
+    .blueprint-copy h2 {
+        font-size: clamp(2rem, 12vw, 3rem);
+    }
+
+    .blueprint-photo-frame,
+    .blueprint-photo-frame img {
+        min-height: 340px;
+    }
+
+    .blueprint-floating-note {
+        right: 0.8rem;
+        bottom: 0.8rem;
+        width: min(230px, calc(100% - 1.6rem));
+    }
+
+    .drainage-channel {
+        padding: 1rem;
+    }
+
+    .drainage-list li {
+        padding: 0.72rem;
+    }
+
+    .routing-node {
+        grid-template-columns: 3.5rem minmax(0, 1fr);
+    }
+
+    .routing-node-icon {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .prep-panel.large,
+    .prep-panel {
+        min-height: 300px;
+    }
+
+    .prep-panel.bottom {
+        border-radius: var(--radius-lg);
+    }
+
+    .compliance-cta-card {
+        grid-template-columns: 1fr;
+    }
+
+    .compliance-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .compliance-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 430px) {
+    .about-storm-item {
+        grid-template-columns: 2rem minmax(0, 1fr);
+    }
+
+    .about-storm-item .svg-icon {
+        width: 1.1rem;
+        height: 1.1rem;
+    }
+
+    .blueprint-copy {
+        padding: 1rem;
+    }
+
+    .blueprint-label-row {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .blueprint-label {
+        justify-content: center;
+    }
+
+    .blueprint-photo-frame,
+    .blueprint-photo-frame img {
+        min-height: 300px;
+    }
+
+    .drainage-divider {
+        display: none;
+    }
+
+    .routing-node {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .prep-panel {
+        padding: 1rem;
+    }
+
+    .compliance-cta-card::before,
+    .compliance-cta-card::after {
+        display: none;
+    }
+
+    .compliance-copy,
+    .compliance-actions {
+        padding-bottom: 0;
+    }
+}
