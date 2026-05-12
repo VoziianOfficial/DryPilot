@@ -651,3 +651,36 @@
 .legal-sidebar-card.is-muted {
     opacity: 0.72;
 }
+/* ==========================================================
+   LEGAL CONTACT INFO LIST — INLINE FIX
+   Add as the LAST block in /css/legal.css
+   ========================================================== */
+
+.legal-section .legal-list li:has([data-email-link]),
+.legal-section .legal-list li:has([data-phone-link]),
+.legal-section .legal-list li:has([data-address-text]) {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: baseline !important;
+    gap: 0.35rem !important;
+
+    grid-template-columns: none !important;
+    color: var(--color-dark-muted) !important;
+}
+
+.legal-section .legal-list li:has([data-email-link])::before,
+.legal-section .legal-list li:has([data-phone-link])::before,
+.legal-section .legal-list li:has([data-address-text])::before {
+    flex: 0 0 0.48rem !important;
+    margin-top: 0.55rem !important;
+}
+
+.legal-section .legal-list li [data-email-link],
+.legal-section .legal-list li [data-phone-link],
+.legal-section .legal-list li [data-address-text] {
+    display: inline !important;
+    width: auto !important;
+    min-width: 0 !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+}

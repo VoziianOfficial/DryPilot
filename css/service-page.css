@@ -40,21 +40,7 @@
     pointer-events: none;
 }
 
-.service-command-card::after {
-    content: "";
-    position: absolute;
-    right: 1rem;
-    bottom: 1rem;
-    left: 1rem;
-    height: 0.82rem;
-    border-radius: 999px;
-    background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
-        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
-    box-shadow:
-        inset 0 1px 2px rgba(255, 255, 255, 0.16),
-        inset 0 -1px 2px rgba(0, 0, 0, 0.55);
-}
+
 
 .service-command-card h2 {
     position: relative;
@@ -6202,4 +6188,49 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
 
 .service-detail-page .damage-zones-grid .damage-zone-card:nth-child(6) {
     --zone-bg: url("../assets/images/service-flood-damage.jpg") !important;
+}
+
+
+
+@media (max-width: 640px) {
+    .service-detail-page .service-command-list .service-command-item>.svg-icon {
+        display: grid !important;
+        place-items: center !important;
+
+        width: 2.25rem !important;
+        height: 2.25rem !important;
+        min-width: 2.25rem !important;
+        min-height: 2.25rem !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border-radius: 999px !important;
+        line-height: 1 !important;
+        align-self: center !important;
+        justify-self: center !important;
+    }
+
+    .service-detail-page .service-command-list .service-command-item>.svg-icon .svg-icon {
+        display: grid !important;
+        place-items: center !important;
+
+        width: 1rem !important;
+        height: 1rem !important;
+        min-width: 1rem !important;
+        min-height: 1rem !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+        line-height: 1 !important;
+    }
+
+    .service-detail-page .service-command-list .service-command-item>.svg-icon svg {
+        display: block !important;
+        width: 1rem !important;
+        height: 1rem !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+    }
 }
