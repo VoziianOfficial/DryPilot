@@ -1890,3 +1890,1916 @@
         padding-bottom: 0;
     }
 }
+
+/* ==========================================================
+   SERVICE PAGES — CENTERED BIG SECTION HEADINGS
+   Add to bottom of /css/service-page.css
+   ========================================================== */
+
+.service-detail-page .section>.container>.section-heading {
+    width: min(1040px, 100%) !important;
+    margin-inline: auto !important;
+    margin-bottom: clamp(2.6rem, 5vw, 4.8rem) !important;
+    text-align: center !important;
+    justify-items: center !important;
+}
+
+.service-detail-page .section>.container>.section-heading .section-kicker {
+    justify-content: center !important;
+}
+
+.service-detail-page .section>.container>.section-heading h2 {
+    max-width: 980px !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+    text-wrap: balance !important;
+    line-height: 0.98 !important;
+}
+
+.service-detail-page .section>.container>.section-heading p {
+    max-width: 820px !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+    text-wrap: balance !important;
+    line-height: 1.6 !important;
+}
+
+/* Light service sections: keep text readable */
+.service-detail-page .service-light-section .section-heading h2,
+.service-detail-page .section-light .section-heading h2 {
+    color: var(--color-dark-heading) !important;
+}
+
+.service-detail-page .service-light-section .section-heading p,
+.service-detail-page .section-light .section-heading p {
+    color: var(--color-dark-muted) !important;
+}
+
+/* Dark service sections */
+.service-detail-page .section:not(.service-light-section):not(.section-light) .section-heading h2 {
+    color: var(--color-heading) !important;
+}
+
+.service-detail-page .section:not(.service-light-section):not(.section-light) .section-heading p {
+    color: var(--color-muted) !important;
+}
+
+/* Desktop: make section heading bigger */
+@media (min-width: 981px) {
+    .service-detail-page .section>.container>.section-heading {
+        width: min(1240px, 100%) !important;
+        margin-bottom: clamp(3.4rem, 6vw, 5.8rem) !important;
+    }
+
+    .service-detail-page .section>.container>.section-heading .section-kicker {
+        font-size: 0.88rem !important;
+        letter-spacing: 0.22em !important;
+    }
+
+    .service-detail-page .section>.container>.section-heading h2 {
+        max-width: 1160px !important;
+        font-size: clamp(3.1rem, 5vw, 5.4rem) !important;
+        line-height: 0.92 !important;
+        letter-spacing: -0.085em !important;
+    }
+
+    .service-detail-page .section>.container>.section-heading p {
+        max-width: 920px !important;
+        font-size: clamp(1.12rem, 1.45vw, 1.38rem) !important;
+        line-height: 1.58 !important;
+    }
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+    .service-detail-page .section>.container>.section-heading {
+        width: min(760px, 100%) !important;
+        margin-bottom: 2.3rem !important;
+    }
+
+    .service-detail-page .section>.container>.section-heading h2 {
+        font-size: clamp(2rem, 6vw, 3rem) !important;
+        line-height: 1 !important;
+        letter-spacing: -0.065em !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .service-detail-page .section>.container>.section-heading {
+        width: 100% !important;
+        margin-bottom: 1.8rem !important;
+        text-align: center !important;
+        justify-items: center !important;
+    }
+
+    .service-detail-page .section>.container>.section-heading h2 {
+        max-width: 100% !important;
+        font-size: clamp(1.85rem, 9vw, 2.55rem) !important;
+        line-height: 1 !important;
+        letter-spacing: -0.055em !important;
+    }
+
+    .service-detail-page .section>.container>.section-heading p {
+        max-width: 94% !important;
+        font-size: 0.96rem !important;
+        line-height: 1.55 !important;
+    }
+}
+
+/* ==========================================================
+   SERVICE PAGES — SCOPE BOARD MAIN PHOTO BACKGROUND
+   Add to bottom of /css/service-page.css
+   ========================================================== */
+
+.service-detail-page .service-panel.scope-board-main {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    color: var(--color-heading) !important;
+    border-color: rgba(108, 182, 200, 0.24) !important;
+
+   background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.22), rgba(4, 16, 27, 0.78)),
+        radial-gradient(circle at 18% 18%, rgba(108, 182, 200, 0.24), transparent 18rem),
+        radial-gradient(circle at 88% 82%, rgba(117, 168, 77, 0.18), transparent 18rem),
+        url("../assets/images/hero-services-damage.jpg") center / cover no-repeat !important;
+    box-shadow:
+        0 24px 64px rgba(4, 16, 27, 0.34),
+        0 0 0 1px rgba(108, 182, 200, 0.08) !important;
+}
+
+/* Extra dark overlay for readability */
+.service-detail-page .service-panel.scope-board-main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background:
+        linear-gradient(90deg, rgba(4, 16, 27, 0.82), rgba(4, 16, 27, 0.46)),
+        linear-gradient(180deg, rgba(4, 16, 27, 0.18), rgba(4, 16, 27, 0.78));
+}
+
+/* Subtle premium grid / water texture */
+.service-detail-page .service-panel.scope-board-main::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.2;
+
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.16) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.12) 1px, transparent 1px);
+    background-size: 38px 38px;
+}
+
+/* Keep content above photo and overlays */
+.service-detail-page .service-panel.scope-board-main .service-panel-content,
+.service-detail-page .service-panel.scope-board-main .scope-board-waterline {
+    position: relative;
+    z-index: 3;
+}
+
+/* Text readability */
+.service-detail-page .service-panel.scope-board-main h2 {
+    color: #ffffff !important;
+    text-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
+}
+
+.service-detail-page .service-panel.scope-board-main p:not(.section-kicker) {
+    color: rgba(216, 226, 229, 0.92) !important;
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.36);
+}
+
+.service-detail-page .service-panel.scope-board-main .section-kicker {
+    color: var(--color-water) !important;
+}
+
+/* Make waterline visible on dark photo */
+.service-detail-page .service-panel.scope-board-main .scope-board-waterline {
+    background: linear-gradient(90deg, var(--color-water), var(--color-green), transparent) !important;
+    opacity: 0.95 !important;
+}
+
+/* ==========================================================
+   SERVICE PAGES — DIFFERENT BRIGHT PHOTOS FOR SCOPE BOARD
+   Add to bottom of /css/service-page.css
+   ========================================================== */
+
+/* Base style for all service scope boards */
+.service-detail-page .service-panel.scope-board-main {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    color: var(--color-heading) !important;
+    border-color: rgba(108, 182, 200, 0.26) !important;
+
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    box-shadow:
+        0 24px 64px rgba(4, 16, 27, 0.34),
+        0 0 0 1px rgba(108, 182, 200, 0.08) !important;
+}
+
+/* Brighter photo layer effect through lighter dark gradient */
+.service-detail-page .service-panel.scope-board-main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background:
+        linear-gradient(90deg, rgba(4, 16, 27, 0.58), rgba(4, 16, 27, 0.26)),
+        linear-gradient(180deg, rgba(4, 16, 27, 0.08), rgba(4, 16, 27, 0.58));
+}
+
+/* Soft water/technical layer */
+.service-detail-page .service-panel.scope-board-main::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.14;
+
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.16) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.12) 1px, transparent 1px);
+    background-size: 38px 38px;
+}
+
+.service-detail-page .service-panel.scope-board-main .service-panel-content,
+.service-detail-page .service-panel.scope-board-main .scope-board-waterline {
+    position: relative;
+    z-index: 3;
+}
+
+.service-detail-page .service-panel.scope-board-main h2 {
+    color: #ffffff !important;
+    text-shadow: 0 12px 32px rgba(0, 0, 0, 0.52);
+}
+
+.service-detail-page .service-panel.scope-board-main p:not(.section-kicker) {
+    color: rgba(216, 226, 229, 0.94) !important;
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.42);
+}
+
+.service-detail-page .service-panel.scope-board-main .section-kicker {
+    color: var(--color-water) !important;
+}
+
+.service-detail-page .service-panel.scope-board-main .scope-board-waterline {
+    background: linear-gradient(90deg, var(--color-water), var(--color-green), transparent) !important;
+    opacity: 1 !important;
+}
+
+/* ==========================================================
+   UNIQUE PHOTOS BY SERVICE PAGE
+   ВАЖНО: data-service-id должен совпадать с body
+   ========================================================== */
+
+body[data-service-id="basement-water"] .service-panel.scope-board-main {
+    background-image:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.16), rgba(4, 16, 27, 0.66)),
+        url("../assets/images/service-basement-water.jpg") !important;
+}
+
+body[data-service-id="burst-pipe"] .service-panel.scope-board-main {
+    background-image:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.16), rgba(4, 16, 27, 0.66)),
+        url("../assets/images/service-burst-pipe.jpg") !important;
+}
+
+body[data-service-id="flood-damage"] .service-panel.scope-board-main {
+    background-image:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.16), rgba(4, 16, 27, 0.66)),
+        url("../assets/images/service-flood-damage.jpg") !important;
+}
+
+body[data-service-id="leak-detection"] .service-panel.scope-board-main {
+    background-image:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.16), rgba(4, 16, 27, 0.66)),
+        url("../assets/images/service-leak-detection.jpg") !important;
+}
+
+body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
+    background-image:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.16), rgba(4, 16, 27, 0.66)),
+        url("../assets/images/service-moisture-damage.jpg") !important;
+}
+
+/* Fallback photo if service id does not match */
+.service-detail-page .service-panel.scope-board-main {
+    background-image:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.16), rgba(4, 16, 27, 0.66)),
+        url("../assets/images/hero-services-damage.jpg");
+}
+
+/* Remove decorative before layer from every water checklist row */
+.water-check-row::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* ==========================================================
+   STANDING WATER CHECKLIST — MOBILE COMPACT CARDS
+   Icon + status on top right
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+@media (max-width: 640px) {
+    .service-detail-page .standing-water-checklist {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.58rem !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-row {
+        position: relative !important;
+        display: block !important;
+
+        min-height: 3.75rem !important;
+        padding: 0.62rem 4.9rem 0.62rem 0.78rem !important;
+
+        border-radius: 15px !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-row::before {
+        display: none !important;
+        content: none !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-text {
+        display: grid !important;
+        gap: 0.1rem !important;
+        width: 100% !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-text strong {
+        display: block !important;
+        width: 100% !important;
+        font-size: 0.72rem !important;
+        line-height: 1.12 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-text span {
+        display: block !important;
+        width: 100% !important;
+        font-size: 0.65rem !important;
+        line-height: 1.18 !important;
+        text-align: left !important;
+    }
+
+    /* Main icon — top right */
+    .service-detail-page .standing-water-checklist .water-check-icon {
+        position: absolute !important;
+        top: 0.58rem !important;
+        right: 0.62rem !important;
+
+        display: grid !important;
+        place-items: center !important;
+
+        width: 2rem !important;
+        height: 2rem !important;
+        min-width: 2rem !important;
+        min-height: 2rem !important;
+
+        margin: 0 !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-icon .svg-icon {
+        width: 0.86rem !important;
+        height: 0.86rem !important;
+    }
+
+    /* Status badge — second item on top right */
+    .service-detail-page .standing-water-checklist .water-check-status {
+        position: absolute !important;
+        top: 0.66rem !important;
+        right: 2.9rem !important;
+
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        min-height: 1.55rem !important;
+        max-width: 4.2rem !important;
+        padding: 0.28rem 0.44rem !important;
+
+        border-radius: 999px !important;
+        font-size: 0.58rem !important;
+        line-height: 1 !important;
+        white-space: nowrap !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-row:hover,
+    .service-detail-page .standing-water-checklist .water-check-row:focus-within {
+        transform: none !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .service-detail-page .standing-water-checklist .water-check-row {
+        min-height: 3.45rem !important;
+        padding: 0.54rem 4.35rem 0.54rem 0.68rem !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-icon {
+        top: 0.5rem !important;
+        right: 0.52rem !important;
+        width: 1.82rem !important;
+        height: 1.82rem !important;
+        min-width: 1.82rem !important;
+        min-height: 1.82rem !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-icon .svg-icon {
+        width: 0.78rem !important;
+        height: 0.78rem !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-status {
+        top: 0.56rem !important;
+        right: 2.55rem !important;
+        min-height: 1.42rem !important;
+        max-width: 3.65rem !important;
+        padding: 0.24rem 0.36rem !important;
+        font-size: 0.52rem !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-text strong {
+        font-size: 0.68rem !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-text span {
+        font-size: 0.61rem !important;
+    }
+}
+
+/* ==========================================================
+   STANDING WATER CHECKLIST — HIDE STATUS ON MOBILE
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+@media (max-width: 640px) {
+    .service-detail-page .standing-water-checklist .water-check-status {
+        display: none !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-row {
+        padding-right: 3.05rem !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-icon {
+        right: 0.62rem !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .service-detail-page .standing-water-checklist .water-check-row {
+        padding-right: 2.65rem !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-icon {
+        right: 0.52rem !important;
+    }
+}
+
+/* ==========================================================
+   QUESTION ROUTE NODES — TABLET/MOBILE COMPACT CARDS
+   Icon on the right
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 641px) {
+    .service-detail-page .question-route-nodes {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.85rem !important;
+        align-items: stretch !important;
+    }
+
+    .service-detail-page .question-route-node {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 2.45rem !important;
+        gap: 0.8rem !important;
+        align-items: center !important;
+
+        min-height: 4.35rem !important;
+        padding: 0.72rem 0.8rem 0.72rem 0.95rem !important;
+
+        text-align: left !important;
+        border-radius: 18px !important;
+    }
+
+    .service-detail-page .question-route-node p {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .question-route-node strong,
+    .service-detail-page .question-route-node p span {
+        display: block !important;
+        width: 100% !important;
+        text-align: left !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .service-detail-page .question-route-node strong {
+        font-size: 0.78rem !important;
+        line-height: 1.12 !important;
+    }
+
+    .service-detail-page .question-route-node p span {
+        margin-top: 0.12rem !important;
+        font-size: 0.72rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .service-detail-page .question-route-icon {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+
+        width: 2.35rem !important;
+        height: 2.35rem !important;
+        min-width: 2.35rem !important;
+        min-height: 2.35rem !important;
+
+        justify-self: end !important;
+        align-self: center !important;
+        margin: 0 !important;
+
+        display: grid !important;
+        place-items: center !important;
+    }
+
+    .service-detail-page .question-route-icon .svg-icon {
+        width: 0.98rem !important;
+        height: 0.98rem !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .service-detail-page .question-route-nodes {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.58rem !important;
+    }
+
+    .service-detail-page .question-route-node {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 2.05rem !important;
+        gap: 0.68rem !important;
+        align-items: center !important;
+
+        min-height: 3.55rem !important;
+        padding: 0.56rem 0.62rem 0.56rem 0.76rem !important;
+
+        text-align: left !important;
+        border-radius: 15px !important;
+    }
+
+    .service-detail-page .question-route-node p {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .question-route-node strong {
+        display: block !important;
+        width: 100% !important;
+        font-size: 0.72rem !important;
+        line-height: 1.1 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .question-route-node p span {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 0.1rem !important;
+        font-size: 0.65rem !important;
+        line-height: 1.16 !important;
+        text-align: left !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .service-detail-page .question-route-icon {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+
+        width: 2rem !important;
+        height: 2rem !important;
+        min-width: 2rem !important;
+        min-height: 2rem !important;
+
+        justify-self: end !important;
+        align-self: center !important;
+        margin: 0 !important;
+
+        display: grid !important;
+        place-items: center !important;
+    }
+
+    .service-detail-page .question-route-icon .svg-icon {
+        width: 0.86rem !important;
+        height: 0.86rem !important;
+    }
+
+    .service-detail-page .question-route-node:hover,
+    .service-detail-page .question-route-node:focus-within {
+        transform: none !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .service-detail-page .question-route-node {
+        grid-template-columns: minmax(0, 1fr) 1.82rem !important;
+        min-height: 3.25rem !important;
+        padding: 0.5rem 0.54rem 0.5rem 0.66rem !important;
+    }
+
+    .service-detail-page .question-route-icon {
+        width: 1.78rem !important;
+        height: 1.78rem !important;
+        min-width: 1.78rem !important;
+        min-height: 1.78rem !important;
+    }
+
+    .service-detail-page .question-route-icon .svg-icon {
+        width: 0.78rem !important;
+        height: 0.78rem !important;
+    }
+
+    .service-detail-page .question-route-node strong {
+        font-size: 0.68rem !important;
+    }
+
+    .service-detail-page .question-route-node p span {
+        font-size: 0.61rem !important;
+    }
+}
+
+/* ==========================================================
+   QUESTION ROUTE BOARD — TABLET/MOBILE COMPACT HEIGHT
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 641px) {
+    .service-detail-page .question-route-board {
+        min-height: auto !important;
+        padding: clamp(1rem, 2vw, 1.35rem) !important;
+        border-radius: 22px !important;
+    }
+
+    .service-detail-page .question-route-board .section-heading,
+    .service-detail-page .question-route-board .question-route-copy {
+        margin-bottom: 1.4rem !important;
+    }
+
+    .service-detail-page .question-route-board h2 {
+        margin-bottom: 0.65rem !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .service-detail-page .question-route-board {
+        min-height: auto !important;
+        padding: 0.85rem !important;
+        border-radius: 18px !important;
+    }
+
+    .service-detail-page .question-route-board .section-heading,
+    .service-detail-page .question-route-board .question-route-copy {
+        margin-bottom: 1rem !important;
+    }
+
+    .service-detail-page .question-route-board h2 {
+        margin-bottom: 0.5rem !important;
+    }
+
+    .service-detail-page .question-route-board p {
+        margin-bottom: 0 !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .service-detail-page .question-route-board {
+        padding: 0.68rem !important;
+        border-radius: 16px !important;
+    }
+}
+
+/* ==========================================================
+   SCOPE BOARD LIST — ALTERNATIVE COMPACT MOSAIC LAYOUT
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+/* Tablet: 3 cards top, 2 cards centered below */
+@media (max-width: 1024px) and (min-width: 641px) {
+    .service-detail-page .scope-board-list {
+        display: grid !important;
+        grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+        gap: 0.72rem !important;
+        align-items: stretch !important;
+    }
+
+    .service-detail-page .scope-board-item {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 2.15rem !important;
+        align-items: center !important;
+        gap: 0.65rem !important;
+
+        min-height: 3.35rem !important;
+        padding: 0.55rem 0.62rem 0.55rem 0.78rem !important;
+
+        border-radius: 999px !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .scope-board-item:nth-child(1),
+    .service-detail-page .scope-board-item:nth-child(2),
+    .service-detail-page .scope-board-item:nth-child(3) {
+        grid-column: span 2 !important;
+        width: auto !important;
+        justify-self: stretch !important;
+    }
+
+    .service-detail-page .scope-board-item:nth-child(4) {
+        grid-column: 2 / span 2 !important;
+        width: auto !important;
+        justify-self: stretch !important;
+    }
+
+    .service-detail-page .scope-board-item:nth-child(5) {
+        grid-column: 4 / span 2 !important;
+        width: auto !important;
+        justify-self: stretch !important;
+    }
+
+    .service-detail-page .scope-board-item p {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .scope-board-item strong {
+        display: block !important;
+        width: 100% !important;
+        font-size: 0.74rem !important;
+        line-height: 1.1 !important;
+        text-align: left !important;
+        white-space: normal !important;
+    }
+
+    .service-detail-page .scope-board-icon {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+
+        width: 2.05rem !important;
+        height: 2.05rem !important;
+        min-width: 2.05rem !important;
+        min-height: 2.05rem !important;
+
+        justify-self: end !important;
+        align-self: center !important;
+        margin: 0 !important;
+
+        display: grid !important;
+        place-items: center !important;
+    }
+
+    .service-detail-page .scope-board-icon .svg-icon {
+        width: 0.82rem !important;
+        height: 0.82rem !important;
+    }
+}
+
+/* Mobile: 2-column compact chips, last card full width */
+@media (max-width: 640px) {
+    .service-detail-page .scope-board-list {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.5rem !important;
+        align-items: stretch !important;
+    }
+
+    .service-detail-page .scope-board-item {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 1.78rem !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+
+        min-height: 2.85rem !important;
+        padding: 0.46rem 0.5rem 0.46rem 0.62rem !important;
+
+        border-radius: 999px !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .scope-board-item:nth-child(5) {
+        grid-column: 1 / -1 !important;
+        width: min(100%, 72%) !important;
+        justify-self: center !important;
+    }
+
+    .service-detail-page .scope-board-item p {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .scope-board-item strong {
+        display: block !important;
+        width: 100% !important;
+
+        font-size: 0.64rem !important;
+        line-height: 1.08 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .scope-board-icon {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+
+        width: 1.7rem !important;
+        height: 1.7rem !important;
+        min-width: 1.7rem !important;
+        min-height: 1.7rem !important;
+
+        justify-self: end !important;
+        align-self: center !important;
+        margin: 0 !important;
+
+        display: grid !important;
+        place-items: center !important;
+    }
+
+    .service-detail-page .scope-board-icon .svg-icon {
+        width: 0.72rem !important;
+        height: 0.72rem !important;
+    }
+
+    .service-detail-page .scope-board-item:hover,
+    .service-detail-page .scope-board-item:focus-within {
+        transform: none !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .service-detail-page .scope-board-list {
+        gap: 0.42rem !important;
+    }
+
+    .service-detail-page .scope-board-item {
+        grid-template-columns: minmax(0, 1fr) 1.55rem !important;
+        min-height: 2.65rem !important;
+        padding: 0.42rem 0.44rem 0.42rem 0.54rem !important;
+    }
+
+    .service-detail-page .scope-board-item:nth-child(5) {
+        width: 82% !important;
+    }
+
+    .service-detail-page .scope-board-item strong {
+        font-size: 0.6rem !important;
+    }
+
+    .service-detail-page .scope-board-icon {
+        width: 1.5rem !important;
+        height: 1.5rem !important;
+        min-width: 1.5rem !important;
+        min-height: 1.5rem !important;
+    }
+
+    .service-detail-page .scope-board-icon .svg-icon {
+        width: 0.66rem !important;
+        height: 0.66rem !important;
+    }
+}
+
+/* ==========================================================
+   STANDING WATER CHECKLIST — CARD HOVERS
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+.service-detail-page .standing-water-checklist .water-check-row {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    transition:
+        transform 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+/* чтобы старый декоративный ::before точно не мешал */
+.service-detail-page .standing-water-checklist .water-check-row::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* новый hover-glow слой */
+.service-detail-page .standing-water-checklist .water-check-row::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    opacity: 0;
+    background:
+        radial-gradient(circle at 12% 20%, rgba(108, 182, 200, 0.18), transparent 11rem),
+        radial-gradient(circle at 88% 82%, rgba(117, 168, 77, 0.14), transparent 12rem),
+        linear-gradient(90deg, rgba(108, 182, 200, 0.08), rgba(117, 168, 77, 0.045));
+
+    transition: opacity 0.28s var(--ease);
+}
+
+.service-detail-page .standing-water-checklist .water-check-row:hover,
+.service-detail-page .standing-water-checklist .water-check-row:focus-within {
+    transform: translateY(-4px);
+    border-color: rgba(108, 182, 200, 0.44) !important;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.03)),
+        rgba(17, 24, 32, 0.9) !important;
+
+    box-shadow:
+        0 20px 46px rgba(0, 0, 0, 0.28),
+        0 0 34px rgba(108, 182, 200, 0.14) !important;
+}
+
+.service-detail-page .standing-water-checklist .water-check-row:hover::after,
+.service-detail-page .standing-water-checklist .water-check-row:focus-within::after {
+    opacity: 1;
+}
+
+/* Icon hover */
+.service-detail-page .standing-water-checklist .water-check-icon {
+    transition:
+        transform 0.28s var(--ease),
+        color 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+.service-detail-page .standing-water-checklist .water-check-row:hover .water-check-icon,
+.service-detail-page .standing-water-checklist .water-check-row:focus-within .water-check-icon {
+    transform: translateY(-2px) scale(1.06);
+    color: var(--color-green) !important;
+    border-color: rgba(117, 168, 77, 0.48) !important;
+    background: rgba(117, 168, 77, 0.1) !important;
+    box-shadow:
+        0 0 0 5px rgba(117, 168, 77, 0.08),
+        0 0 24px rgba(117, 168, 77, 0.26) !important;
+}
+
+/* Text hover */
+.service-detail-page .standing-water-checklist .water-check-row:hover .water-check-text strong,
+.service-detail-page .standing-water-checklist .water-check-row:focus-within .water-check-text strong {
+    color: #ffffff !important;
+}
+
+.service-detail-page .standing-water-checklist .water-check-row:hover .water-check-text span,
+.service-detail-page .standing-water-checklist .water-check-row:focus-within .water-check-text span {
+    color: rgba(216, 226, 229, 0.9) !important;
+}
+
+/* Status hover */
+.service-detail-page .standing-water-checklist .water-check-status {
+    transition:
+        color 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+.service-detail-page .standing-water-checklist .water-check-row:hover .water-check-status,
+.service-detail-page .standing-water-checklist .water-check-row:focus-within .water-check-status {
+    color: #ffffff !important;
+    border-color: rgba(117, 168, 77, 0.46) !important;
+    background: rgba(117, 168, 77, 0.16) !important;
+    box-shadow: 0 0 18px rgba(117, 168, 77, 0.2) !important;
+}
+
+/* Mobile: без прыжка, только подсветка */
+@media (max-width: 640px) {
+
+    .service-detail-page .standing-water-checklist .water-check-row:hover,
+    .service-detail-page .standing-water-checklist .water-check-row:focus-within {
+        transform: none !important;
+    }
+
+    .service-detail-page .standing-water-checklist .water-check-row:hover .water-check-icon,
+    .service-detail-page .standing-water-checklist .water-check-row:focus-within .water-check-icon {
+        transform: scale(1.04) !important;
+    }
+}
+
+/* ==========================================================
+   BASEMENT CONDITION LIST — CENTER ICONS INSIDE CARDS
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+.service-detail-page .basement-condition-list .basement-condition-item {
+    align-items: center !important;
+}
+
+.service-detail-page .basement-condition-list .basement-condition-icon {
+    display: grid !important;
+    place-items: center !important;
+
+    width: 2.45rem !important;
+    height: 2.45rem !important;
+    min-width: 2.45rem !important;
+    min-height: 2.45rem !important;
+
+    flex: 0 0 2.45rem !important;
+    align-self: center !important;
+    justify-self: center !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+.service-detail-page .basement-condition-list .basement-condition-icon .svg-icon {
+    display: grid !important;
+    place-items: center !important;
+
+    width: 1.1rem !important;
+    height: 1.1rem !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+.service-detail-page .basement-condition-list .basement-condition-icon svg {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    transform: none !important;
+}
+
+.service-detail-page .basement-condition-list .basement-condition-item p {
+    margin: 0 !important;
+}
+
+/* ==========================================================
+   BASEMENT CONDITION LIST — CARD HOVERS
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+.service-detail-page .basement-condition-list .basement-condition-item {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    transition:
+        transform 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+.service-detail-page .basement-condition-list .basement-condition-item::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    z-index: -1;
+
+    width: 3px;
+    opacity: 0;
+
+    background: linear-gradient(180deg, var(--color-water), var(--color-green));
+    transition: opacity 0.28s var(--ease);
+}
+
+.service-detail-page .basement-condition-list .basement-condition-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    opacity: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 12% 18%, rgba(108, 182, 200, 0.18), transparent 11rem),
+        radial-gradient(circle at 88% 82%, rgba(117, 168, 77, 0.14), transparent 12rem),
+        linear-gradient(90deg, rgba(108, 182, 200, 0.08), rgba(117, 168, 77, 0.045));
+
+    transition: opacity 0.28s var(--ease);
+}
+
+.service-detail-page .basement-condition-list .basement-condition-item:hover,
+.service-detail-page .basement-condition-list .basement-condition-item:focus-within {
+    transform: translateY(-4px);
+    border-color: rgba(108, 182, 200, 0.42) !important;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.03)),
+        rgba(17, 24, 32, 0.9) !important;
+
+    box-shadow:
+        0 20px 46px rgba(0, 0, 0, 0.28),
+        0 0 34px rgba(108, 182, 200, 0.14) !important;
+}
+
+.service-detail-page .basement-condition-list .basement-condition-item:hover::before,
+.service-detail-page .basement-condition-list .basement-condition-item:focus-within::before,
+.service-detail-page .basement-condition-list .basement-condition-item:hover::after,
+.service-detail-page .basement-condition-list .basement-condition-item:focus-within::after {
+    opacity: 1;
+}
+
+/* Icon hover */
+.service-detail-page .basement-condition-list .basement-condition-icon {
+    transition:
+        transform 0.28s var(--ease),
+        color 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+.service-detail-page .basement-condition-list .basement-condition-item:hover .basement-condition-icon,
+.service-detail-page .basement-condition-list .basement-condition-item:focus-within .basement-condition-icon {
+    transform: translateY(-2px) scale(1.06);
+    color: var(--color-green) !important;
+    border-color: rgba(117, 168, 77, 0.48) !important;
+    background: rgba(117, 168, 77, 0.1) !important;
+
+    box-shadow:
+        0 0 0 5px rgba(117, 168, 77, 0.08),
+        0 0 24px rgba(117, 168, 77, 0.26) !important;
+}
+
+/* Text hover */
+.service-detail-page .basement-condition-list .basement-condition-item:hover strong,
+.service-detail-page .basement-condition-list .basement-condition-item:focus-within strong {
+    color: #ffffff !important;
+}
+
+.service-detail-page .basement-condition-list .basement-condition-item:hover p span,
+.service-detail-page .basement-condition-list .basement-condition-item:focus-within p span {
+    color: rgba(216, 226, 229, 0.9) !important;
+}
+
+/* Mobile: no jump, only glow */
+@media (max-width: 640px) {
+
+    .service-detail-page .basement-condition-list .basement-condition-item:hover,
+    .service-detail-page .basement-condition-list .basement-condition-item:focus-within {
+        transform: none !important;
+    }
+
+    .service-detail-page .basement-condition-list .basement-condition-item:hover .basement-condition-icon,
+    .service-detail-page .basement-condition-list .basement-condition-item:focus-within .basement-condition-icon {
+        transform: scale(1.04) !important;
+    }
+}
+
+/* ==========================================================
+   PROVIDER SCAN BOARD + PROVIDER FIT ROUTE
+   Replace old provider column sections
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+/* =========================
+   SECTION 4 — PROVIDER SCAN
+   ========================= */
+
+.service-detail-page .provider-scan-section {
+    position: relative;
+    overflow: hidden;
+    color: var(--color-heading);
+    background:
+        radial-gradient(circle at 12% 18%, rgba(108, 182, 200, 0.16), transparent 32rem),
+        radial-gradient(circle at 86% 72%, rgba(117, 168, 77, 0.12), transparent 30rem),
+        linear-gradient(180deg, #04101b, #071827);
+}
+
+.service-detail-page .provider-scan-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+    opacity: 0.5;
+}
+
+.service-detail-page .provider-scan-section .section-heading {
+    position: relative;
+    z-index: 2;
+    width: min(1120px, 100%);
+    margin-inline: auto;
+    margin-bottom: clamp(2.6rem, 5vw, 5rem);
+}
+
+.service-detail-page .provider-scan-section .section-heading h2 {
+    max-width: 1060px;
+    margin-inline: auto;
+    color: var(--color-heading);
+    text-wrap: balance;
+}
+
+.service-detail-page .provider-scan-section .section-heading p {
+    max-width: 820px;
+    margin-inline: auto;
+    color: var(--color-muted);
+    text-wrap: balance;
+}
+
+@media (min-width: 981px) {
+    .service-detail-page .provider-scan-section .section-heading h2 {
+        font-size: clamp(3.2rem, 5.6vw, 6rem);
+        line-height: 0.9;
+        letter-spacing: -0.085em;
+    }
+
+    .service-detail-page .provider-scan-section .section-heading p {
+        font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+        line-height: 1.62;
+    }
+}
+
+.service-detail-page .provider-scan-layout {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(340px, 0.74fr);
+    gap: clamp(1rem, 2.4vw, 1.6rem);
+    align-items: stretch;
+}
+
+.service-detail-page .provider-scan-main {
+    position: relative;
+    isolation: isolate;
+    min-height: 620px;
+    overflow: hidden;
+    border: 1px solid rgba(108, 182, 200, 0.2);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.18), rgba(4, 16, 27, 0.88)),
+        var(--scan-bg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow-card);
+}
+
+.service-detail-page .provider-scan-main::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background:
+        linear-gradient(90deg, rgba(4, 16, 27, 0.94), rgba(4, 16, 27, 0.42), rgba(4, 16, 27, 0.86)),
+        radial-gradient(circle at 18% 18%, rgba(108, 182, 200, 0.2), transparent 18rem),
+        radial-gradient(circle at 82% 82%, rgba(117, 168, 77, 0.14), transparent 18rem);
+}
+
+.service-detail-page .provider-scan-main::after {
+    content: "";
+    position: absolute;
+    right: 1.2rem;
+    bottom: 1.2rem;
+    left: 1.2rem;
+    height: 0.8rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.16), transparent),
+        linear-gradient(90deg, #263540, #0d1924 30%, #334652 52%, #0d1924 72%, #263540);
+    opacity: 0.8;
+}
+
+.service-detail-page .provider-scan-main-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    align-content: end;
+    gap: 1rem;
+    min-height: 100%;
+    padding: clamp(1.2rem, 3vw, 2.2rem);
+}
+
+.service-detail-page .provider-scan-label {
+    width: max-content;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid rgba(108, 182, 200, 0.34);
+    border-radius: 999px;
+    color: var(--color-water);
+    background: rgba(4, 16, 27, 0.58);
+    backdrop-filter: blur(12px);
+    font-size: 0.68rem;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.service-detail-page .provider-scan-main h3 {
+    max-width: 760px;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 4.4rem);
+    line-height: 0.92;
+    letter-spacing: -0.075em;
+    text-wrap: balance;
+}
+
+.service-detail-page .provider-scan-main p:not(.provider-scan-label) {
+    max-width: 660px;
+    color: rgba(216, 226, 229, 0.9);
+    font-size: clamp(0.96rem, 1.2vw, 1.1rem);
+    line-height: 1.65;
+}
+
+.service-detail-page .provider-scan-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+    margin-top: 0.45rem;
+}
+
+.service-detail-page .provider-scan-metrics span {
+    display: inline-flex;
+    min-height: 2rem;
+    align-items: center;
+    padding: 0.45rem 0.7rem;
+    border: 1px solid rgba(117, 168, 77, 0.28);
+    border-radius: 999px;
+    color: var(--color-green);
+    background: rgba(117, 168, 77, 0.08);
+    font-size: 0.72rem;
+    font-weight: 800;
+}
+
+.service-detail-page .provider-scan-stack {
+    display: grid;
+    gap: 0.9rem;
+}
+
+.service-detail-page .provider-scan-card {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: 3.1rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: start;
+    min-height: 100%;
+    overflow: hidden;
+    padding: 1rem;
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-lg);
+    color: var(--color-text);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025)),
+        rgba(17, 24, 32, 0.82);
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.2);
+    transition:
+        transform 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+.service-detail-page .provider-scan-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    background:
+        radial-gradient(circle at 12% 16%, rgba(108, 182, 200, 0.18), transparent 12rem),
+        radial-gradient(circle at 88% 84%, rgba(117, 168, 77, 0.14), transparent 13rem);
+    transition: opacity 0.28s var(--ease);
+}
+
+.service-detail-page .provider-scan-card:hover,
+.service-detail-page .provider-scan-card:focus-within {
+    transform: translateY(-4px);
+    border-color: rgba(108, 182, 200, 0.42);
+    box-shadow:
+        0 22px 54px rgba(0, 0, 0, 0.28),
+        0 0 30px rgba(108, 182, 200, 0.14);
+}
+
+.service-detail-page .provider-scan-card:hover::before,
+.service-detail-page .provider-scan-card:focus-within::before {
+    opacity: 1;
+}
+
+.service-detail-page .provider-scan-number {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    border: 1px solid rgba(108, 182, 200, 0.32);
+    border-radius: 999px;
+    color: var(--color-water);
+    background: rgba(108, 182, 200, 0.08);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.service-detail-page .provider-scan-card-copy {
+    display: grid;
+    gap: 0.65rem;
+    min-width: 0;
+}
+
+.service-detail-page .provider-scan-card h3 {
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.service-detail-page .provider-scan-card p {
+    color: var(--color-muted);
+    font-size: 0.88rem;
+    line-height: 1.52;
+}
+
+.service-detail-page .provider-scan-card ul {
+    display: grid;
+    gap: 0.42rem;
+}
+
+.service-detail-page .provider-scan-card li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2rem;
+    padding: 0.42rem 0.55rem;
+    border: 1px solid rgba(216, 226, 229, 0.08);
+    border-radius: 12px;
+    color: rgba(216, 226, 229, 0.86);
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 0.78rem;
+    line-height: 1.25;
+}
+
+.service-detail-page .provider-scan-card li::before {
+    content: "";
+    width: 0.38rem;
+    height: 0.38rem;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: var(--color-green);
+    box-shadow: 0 0 12px rgba(117, 168, 77, 0.52);
+}
+
+/* =========================
+   SECTION 5 — FIT ROUTE
+   ========================= */
+
+.service-detail-page .provider-fit-route-section {
+    position: relative;
+    overflow: hidden;
+    color: var(--color-dark-text);
+    background:
+        radial-gradient(circle at 82% 18%, rgba(108, 182, 200, 0.18), transparent 28rem),
+        radial-gradient(circle at 16% 78%, rgba(117, 168, 77, 0.14), transparent 28rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.74), rgba(255, 255, 255, 0.16)),
+        var(--color-section-light);
+}
+
+.service-detail-page .provider-fit-route-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(7, 19, 29, 0.035) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(7, 19, 29, 0.03) 1px, transparent 1px);
+    background-size: 38px 38px;
+    opacity: 0.7;
+}
+
+.service-detail-page .provider-fit-route-section .section-heading {
+    position: relative;
+    z-index: 2;
+    width: min(1120px, 100%);
+    margin-inline: auto;
+    margin-bottom: clamp(2.4rem, 5vw, 4.8rem);
+}
+
+.service-detail-page .provider-fit-route-section .section-heading h2 {
+    max-width: 1040px;
+    margin-inline: auto;
+    color: var(--color-dark-heading);
+    text-wrap: balance;
+}
+
+.service-detail-page .provider-fit-route-section .section-heading p {
+    max-width: 820px;
+    margin-inline: auto;
+    color: var(--color-dark-muted);
+    text-wrap: balance;
+}
+
+@media (min-width: 981px) {
+    .service-detail-page .provider-fit-route-section .section-heading h2 {
+        font-size: clamp(3rem, 5.2vw, 5.6rem);
+        line-height: 0.9;
+        letter-spacing: -0.085em;
+    }
+
+    .service-detail-page .provider-fit-route-section .section-heading p {
+        font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+        line-height: 1.62;
+    }
+}
+
+.service-detail-page .provider-fit-route-board {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) minmax(280px, 0.85fr);
+    gap: 0.9rem;
+    align-items: stretch;
+}
+
+.service-detail-page .provider-fit-route-line {
+    position: absolute;
+    top: 2.2rem;
+    left: 2rem;
+    right: 24%;
+    z-index: -1;
+    height: 0.85rem;
+    border-radius: 999px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.42), transparent),
+        linear-gradient(90deg, rgba(63, 169, 194, 0.32), rgba(117, 168, 77, 0.26), rgba(63, 169, 194, 0.22));
+    box-shadow: 0 0 28px rgba(108, 182, 200, 0.2);
+}
+
+.service-detail-page .provider-fit-node,
+.service-detail-page .provider-fit-note-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border: 1px solid rgba(7, 19, 29, 0.13);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 22px 54px rgba(7, 19, 29, 0.1);
+}
+
+.service-detail-page .provider-fit-node {
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    min-height: 410px;
+    padding: 1rem;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(255, 255, 255, 0.42)),
+        rgba(238, 242, 243, 0.72);
+    transition:
+        transform 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+.service-detail-page .provider-fit-node:nth-child(3) {
+    margin-top: 2rem;
+}
+
+.service-detail-page .provider-fit-node:nth-child(4) {
+    margin-top: 4rem;
+}
+
+.service-detail-page .provider-fit-node::after,
+.service-detail-page .provider-fit-note-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 14% 16%, rgba(108, 182, 200, 0.22), transparent 14rem),
+        radial-gradient(circle at 86% 84%, rgba(117, 168, 77, 0.16), transparent 15rem);
+    transition: opacity 0.28s var(--ease);
+}
+
+.service-detail-page .provider-fit-node:hover,
+.service-detail-page .provider-fit-node:focus-within {
+    transform: translateY(-6px);
+    border-color: rgba(63, 169, 194, 0.36);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.52)),
+        rgba(238, 242, 243, 0.82);
+    box-shadow:
+        0 28px 70px rgba(7, 19, 29, 0.16),
+        0 0 34px rgba(108, 182, 200, 0.16);
+}
+
+.service-detail-page .provider-fit-node:hover::after,
+.service-detail-page .provider-fit-node:focus-within::after,
+.service-detail-page .provider-fit-note-card:hover::after,
+.service-detail-page .provider-fit-note-card:focus-within::after {
+    opacity: 1;
+}
+
+.service-detail-page .provider-fit-step {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    border: 1px solid rgba(63, 169, 194, 0.32);
+    border-radius: 999px;
+    color: var(--color-water-strong);
+    background: rgba(217, 239, 243, 0.72);
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.service-detail-page .provider-fit-copy {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.service-detail-page .provider-fit-copy h3,
+.service-detail-page .provider-fit-note-card h3 {
+    color: var(--color-dark-heading);
+    font-family: var(--font-heading);
+    font-size: clamp(1.35rem, 2vw, 2.05rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+}
+
+.service-detail-page .provider-fit-copy p,
+.service-detail-page .provider-fit-note-card p {
+    color: var(--color-dark-muted);
+    font-size: 0.9rem;
+    line-height: 1.58;
+}
+
+.service-detail-page .provider-fit-node ul {
+    display: grid;
+    gap: 0.45rem;
+    margin-top: auto;
+}
+
+.service-detail-page .provider-fit-node li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2.25rem;
+    padding: 0.5rem 0.58rem;
+    border: 1px solid rgba(7, 19, 29, 0.1);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--color-dark-text);
+    font-size: 0.8rem;
+    line-height: 1.28;
+}
+
+.service-detail-page .provider-fit-node li::before {
+    content: "";
+    width: 0.42rem;
+    height: 0.42rem;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: var(--color-water-strong);
+    box-shadow: 0 0 12px rgba(108, 182, 200, 0.42);
+}
+
+.service-detail-page .provider-fit-note-card {
+    display: grid;
+    align-content: end;
+    gap: 0.7rem;
+    min-height: 410px;
+    padding: 1.15rem;
+    color: var(--color-heading);
+    background:
+        radial-gradient(circle at 18% 16%, rgba(108, 182, 200, 0.18), transparent 14rem),
+        linear-gradient(180deg, rgba(17, 24, 32, 0.94), rgba(4, 16, 27, 0.94));
+}
+
+.service-detail-page .provider-fit-note-kicker {
+    width: max-content;
+    padding: 0.45rem 0.62rem;
+    border: 1px solid rgba(117, 168, 77, 0.3);
+    border-radius: 999px;
+    color: var(--color-green);
+    background: rgba(117, 168, 77, 0.08);
+    font-size: 0.68rem !important;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.service-detail-page .provider-fit-note-card h3 {
+    color: #ffffff;
+}
+
+.service-detail-page .provider-fit-note-card p:not(.provider-fit-note-kicker) {
+    color: rgba(216, 226, 229, 0.82);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1180px) {
+    .service-detail-page .provider-fit-route-board {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .service-detail-page .provider-fit-route-line {
+        display: none;
+    }
+
+    .service-detail-page .provider-fit-node,
+    .service-detail-page .provider-fit-node:nth-child(3),
+    .service-detail-page .provider-fit-node:nth-child(4),
+    .service-detail-page .provider-fit-note-card {
+        min-height: auto;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .service-detail-page .provider-scan-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail-page .provider-scan-main {
+        min-height: 460px;
+    }
+
+    .service-detail-page .provider-scan-stack {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .service-detail-page .provider-scan-card {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail-page .provider-scan-number {
+        width: 2.55rem;
+        height: 2.55rem;
+    }
+}
+
+@media (max-width: 760px) {
+
+    .service-detail-page .provider-scan-section .section-heading,
+    .service-detail-page .provider-fit-route-section .section-heading {
+        margin-bottom: 1.9rem;
+    }
+
+    .service-detail-page .provider-scan-main {
+        min-height: 380px;
+        border-radius: var(--radius-lg);
+    }
+
+    .service-detail-page .provider-scan-main h3 {
+        font-size: clamp(1.8rem, 9vw, 3rem);
+    }
+
+    .service-detail-page .provider-scan-stack {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail-page .provider-scan-card {
+        grid-template-columns: 2.45rem minmax(0, 1fr);
+        gap: 0.72rem;
+        padding: 0.78rem;
+        border-radius: 18px;
+    }
+
+    .service-detail-page .provider-scan-number {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 0.68rem;
+    }
+
+    .service-detail-page .provider-scan-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-detail-page .provider-scan-card p {
+        font-size: 0.82rem;
+    }
+
+    .service-detail-page .provider-scan-card li {
+        min-height: 1.85rem;
+        font-size: 0.72rem;
+    }
+
+    .service-detail-page .provider-fit-route-board {
+        grid-template-columns: 1fr;
+        gap: 0.72rem;
+    }
+
+    .service-detail-page .provider-fit-node,
+    .service-detail-page .provider-fit-note-card {
+        padding: 0.82rem;
+        border-radius: 18px;
+    }
+
+    .service-detail-page .provider-fit-node {
+        grid-template-columns: 2.35rem minmax(0, 1fr);
+        gap: 0.72rem;
+        align-items: start;
+    }
+
+    .service-detail-page .provider-fit-step {
+        width: 2.2rem;
+        height: 2.2rem;
+        font-size: 0.66rem;
+    }
+
+    .service-detail-page .provider-fit-copy h3,
+    .service-detail-page .provider-fit-note-card h3 {
+        font-size: 1.22rem;
+    }
+
+    .service-detail-page .provider-fit-copy p,
+    .service-detail-page .provider-fit-note-card p {
+        font-size: 0.82rem;
+        line-height: 1.5;
+    }
+
+    .service-detail-page .provider-fit-node ul {
+        grid-column: 1 / -1;
+        gap: 0.4rem;
+    }
+
+    .service-detail-page .provider-fit-node li {
+        min-height: 2rem;
+        font-size: 0.72rem;
+    }
+
+    .service-detail-page .provider-scan-card:hover,
+    .service-detail-page .provider-scan-card:focus-within,
+    .service-detail-page .provider-fit-node:hover,
+    .service-detail-page .provider-fit-node:focus-within {
+        transform: none;
+    }
+}
