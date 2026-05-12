@@ -651,10 +651,7 @@
 .legal-sidebar-card.is-muted {
     opacity: 0.72;
 }
-/* ==========================================================
-   LEGAL CONTACT INFO LIST — INLINE FIX
-   Add as the LAST block in /css/legal.css
-   ========================================================== */
+
 
 .legal-section .legal-list li:has([data-email-link]),
 .legal-section .legal-list li:has([data-phone-link]),
