@@ -906,7 +906,7 @@
       </button>
 
       <p class="form-message" data-form-message role="status" aria-live="polite"></p>
-      <p class="form-legal-note">${escapeHtml(CONFIG.legalNotice)}</p>
+      <p class="form-legal-note" data-legal-notice>${escapeHtml(CONFIG.legalNotice)}</p>
     `;
     }
 

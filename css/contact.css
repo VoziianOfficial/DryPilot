@@ -1067,7 +1067,7 @@
         linear-gradient(180deg, rgba(4, 16, 27, 0.38), rgba(4, 16, 27, 0.92)),
         radial-gradient(circle at 16% 18%, rgba(108, 182, 200, 0.2), transparent 16rem),
         radial-gradient(circle at 86% 82%, rgba(117, 168, 77, 0.14), transparent 16rem),
-        url("../assets/images/wet-glass-reports.jpg") center / cover no-repeat !important;
+        url("../assets/images/flood-map-texture.jpg") center / cover no-repeat !important;
 
     border-color: rgba(108, 182, 200, 0.22) !important;
     box-shadow:
@@ -1197,4 +1197,215 @@
         width: 1rem !important;
         height: 1rem !important;
     }
+}
+
+/* ==========================================================
+   INTAKE SIDE PANEL — BRIGHTER BACKGROUND PHOTO
+   Add to bottom of /css/contact.css
+   ========================================================== */
+
+.intake-side-panel {
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.14), rgba(4, 16, 27, 0.68)),
+        radial-gradient(circle at 16% 18%, rgba(108, 182, 200, 0.24), transparent 16rem),
+        radial-gradient(circle at 86% 82%, rgba(117, 168, 77, 0.18), transparent 16rem),
+        url("../assets/images/flood-map-texture.jpg") center / cover no-repeat !important;
+}
+
+/* Dark layer becomes softer so the photo is more visible */
+.intake-side-panel::before {
+    background:
+        linear-gradient(90deg, rgba(4, 16, 27, 0.52), rgba(4, 16, 27, 0.34)),
+        linear-gradient(180deg, rgba(4, 16, 27, 0.08), rgba(4, 16, 27, 0.46)) !important;
+}
+
+/* Make grid softer so it doesn't darken the image too much */
+.intake-side-panel::after {
+    opacity: 0.18 !important;
+}
+
+/* Keep every item readable on brighter photo */
+.intake-side-item {
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.64), rgba(4, 16, 27, 0.5)),
+        rgba(4, 16, 27, 0.52) !important;
+    border-color: rgba(216, 226, 229, 0.18) !important;
+    backdrop-filter: blur(12px);
+}
+
+.intake-side-item strong {
+    color: #ffffff !important;
+}
+
+.intake-side-item p span {
+    color: rgba(216, 226, 229, 0.9) !important;
+}
+
+
+/* ==========================================================
+   CONTACT PIPE RAIL — SECTION BACKGROUND PHOTO
+   Add to bottom of /css/contact.css
+   ========================================================== */
+
+.contact-pipe-rail-section {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: var(--color-heading);
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.76), rgba(4, 16, 27, 0.92)),
+        radial-gradient(circle at 18% 18%, rgba(108, 182, 200, 0.22), transparent 28rem),
+        radial-gradient(circle at 86% 72%, rgba(117, 168, 77, 0.16), transparent 28rem),
+        url("../assets/images/contact-card.jpg") center / cover no-repeat;
+}
+
+/* Dark readable overlay */
+.contact-pipe-rail-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(4, 16, 27, 0.9), rgba(4, 16, 27, 0.46), rgba(4, 16, 27, 0.88)),
+        linear-gradient(180deg, rgba(4, 16, 27, 0.2), rgba(4, 16, 27, 0.78));
+}
+
+/* Technical water grid */
+.contact-pipe-rail-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.22;
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.16) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.12) 1px, transparent 1px);
+    background-size: 42px 42px;
+}
+
+/* Heading readability */
+.contact-pipe-rail-section .section-heading h2 {
+    color: #ffffff !important;
+}
+
+.contact-pipe-rail-section .section-heading p {
+    color: rgba(216, 226, 229, 0.9) !important;
+}
+
+/* Main rail panel on top of photo */
+.contact-pipe-rail {
+    position: relative;
+    overflow: hidden;
+    border-color: rgba(108, 182, 200, 0.24) !important;
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.72), rgba(4, 16, 27, 0.58)),
+        rgba(4, 16, 27, 0.54) !important;
+    box-shadow:
+        0 28px 70px rgba(0, 0, 0, 0.34),
+        0 0 0 1px rgba(108, 182, 200, 0.08) !important;
+    backdrop-filter: blur(16px);
+}
+
+/* Cards readability */
+.contact-pipe-node {
+    position: relative;
+    overflow: hidden;
+    border-color: rgba(216, 226, 229, 0.16) !important;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.035)),
+        rgba(4, 16, 27, 0.58) !important;
+    backdrop-filter: blur(12px);
+    transition:
+        transform 0.24s var(--ease),
+        border-color 0.24s var(--ease),
+        background 0.24s var(--ease),
+        box-shadow 0.24s var(--ease);
+}
+
+.contact-pipe-node:hover,
+.contact-pipe-node:focus-within {
+    transform: translateY(-3px);
+    border-color: rgba(108, 182, 200, 0.44) !important;
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.12), rgba(117, 168, 77, 0.08)),
+        rgba(4, 16, 27, 0.66) !important;
+    box-shadow:
+        0 18px 42px rgba(0, 0, 0, 0.24),
+        0 0 24px rgba(108, 182, 200, 0.12);
+}
+
+.contact-pipe-node strong {
+    color: #ffffff !important;
+}
+
+.contact-pipe-node a,
+.contact-pipe-node p span {
+    color: rgba(216, 226, 229, 0.88) !important;
+}
+
+/* Keep icons centered and visible */
+.contact-pipe-icon {
+    color: var(--color-water) !important;
+    background: rgba(4, 16, 27, 0.58) !important;
+    border-color: rgba(108, 182, 200, 0.32) !important;
+    backdrop-filter: blur(10px);
+}
+
+.contact-pipe-node:hover .contact-pipe-icon,
+.contact-pipe-node:focus-within .contact-pipe-icon {
+    color: var(--color-green) !important;
+    border-color: rgba(117, 168, 77, 0.46) !important;
+    box-shadow:
+        0 0 0 5px rgba(117, 168, 77, 0.08),
+        0 0 22px rgba(117, 168, 77, 0.24);
+}
+
+/* Mobile: no jump */
+@media (max-width: 640px) {
+
+    .contact-pipe-node:hover,
+    .contact-pipe-node:focus-within {
+        transform: none;
+    }
+}
+
+/* ==========================================================
+   CONTACT PIPE RAIL — BRIGHTER BACKGROUND PHOTO
+   Add after previous contact-pipe-rail-section styles
+   ========================================================== */
+
+.contact-pipe-rail-section {
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.36), rgba(4, 16, 27, 0.64)),
+        radial-gradient(circle at 18% 18%, rgba(108, 182, 200, 0.22), transparent 28rem),
+        radial-gradient(circle at 86% 72%, rgba(117, 168, 77, 0.16), transparent 28rem),
+        url("../assets/images/wet-glass-reports.jpg") center / cover no-repeat !important;
+}
+
+/* уменьшаем затемнение поверх фото */
+.contact-pipe-rail-section::before {
+    background:
+        linear-gradient(90deg, rgba(4, 16, 27, 0.46), rgba(4, 16, 27, 0.22), rgba(4, 16, 27, 0.48)),
+        linear-gradient(180deg, rgba(4, 16, 27, 0.08), rgba(4, 16, 27, 0.38)) !important;
+}
+
+/* сетка меньше затемняет фото */
+.contact-pipe-rail-section::after {
+    opacity: 0.12 !important;
+}
+
+/* сама панель чуть прозрачнее, чтобы фото сильнее просвечивало */
+.contact-pipe-rail {
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.52), rgba(4, 16, 27, 0.42)),
+        rgba(4, 16, 27, 0.36) !important;
+}
+
+/* карточки оставляем читаемыми */
+.contact-pipe-node {
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.66), rgba(4, 16, 27, 0.52)),
+        rgba(4, 16, 27, 0.46) !important;
 }
