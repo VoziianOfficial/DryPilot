@@ -318,6 +318,8 @@
     }
 
     function initReportPanels() {
+        initReportSwiper();
+
         const panels = document.querySelectorAll(".report-panel");
 
         if (!panels.length) return;
@@ -476,3 +478,76 @@
         return candidates[0] || document.body;
     }
 })();
+
+function initReportSwiper() {
+    const swipers = document.querySelectorAll(".horizontal-report-swiper");
+
+    if (!swipers.length) return;
+
+    if (typeof Swiper === "undefined") {
+        console.warn("Swiper is not loaded. Add Swiper JS/CSS before service-page.js.");
+        return;
+    }
+
+    swipers.forEach((swiperEl) => {
+        if (swiperEl.dataset.reportSwiperReady === "true") return;
+
+        swiperEl.dataset.reportSwiperReady = "true";
+
+        const shell = swiperEl.closest(".report-swiper-shell");
+        const nextEl = shell ? shell.querySelector(".report-swiper-next") : null;
+        const prevEl = shell ? shell.querySelector(".report-swiper-prev") : null;
+        const paginationEl = shell ? shell.querySelector(".report-swiper-pagination") : null;
+
+        new Swiper(swiperEl, {
+            loop: true,
+            speed: 520,
+            grabCursor: true,
+            watchOverflow: true,
+            preventClicks: false,
+            preventClicksPropagation: false,
+            threshold: 4,
+            touchRatio: 1.35,
+            resistanceRatio: 0.55,
+            slidesPerView: 3,
+            spaceBetween: 16,
+
+            autoplay: {
+                delay: 2600,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+            },
+
+            navigation: {
+                nextEl,
+                prevEl
+            },
+
+            pagination: {
+                el: paginationEl,
+                clickable: true
+            },
+
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    speed: 430,
+                    touchRatio: 1.45
+                },
+                641: {
+                    slidesPerView: 2,
+                    spaceBetween: 14,
+                    speed: 480,
+                    touchRatio: 1.4
+                },
+                1025: {
+                    slidesPerView: 3,
+                    spaceBetween: 16,
+                    speed: 520,
+                    touchRatio: 1.35
+                }
+            }
+        });
+    });
+}

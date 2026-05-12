@@ -692,20 +692,7 @@
     line-height: 1.55;
 }
 
-/* ==========================================================
-   FLOOD PAGE — HORIZONTAL REPORT PANELS
-   ========================================================== */
 
-.horizontal-report-rail {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(300px, 420px);
-    gap: 1rem;
-    overflow-x: auto;
-    padding-bottom: 0.8rem;
-    scrollbar-width: thin;
-    scrollbar-color: rgba(108, 182, 200, 0.45) rgba(255, 255, 255, 0.05);
-}
 
 .report-panel {
     position: relative;
@@ -1639,6 +1626,7 @@
     position: relative;
     z-index: 2;
     display: flex;
+    
     gap: 0.75rem;
     align-items: center;
     padding-bottom: 1.35rem;
@@ -1769,9 +1757,7 @@
         min-height: 420px;
     }
 
-    .horizontal-report-rail {
-        grid-auto-columns: minmax(280px, 86vw);
-    }
+    
 
     .damage-mosaic {
         grid-template-columns: 1fr;
@@ -5110,4 +5096,876 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
         height: 2.25rem !important;
         font-size: 0.66rem !important;
     }
+}
+
+
+/* ==========================================================
+   RESTORATION ROUTING — COMPACT TABLET/MOBILE CARDS + HOVERS
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+/* Base hover setup */
+.service-detail-page .restoration-node {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    transition:
+        transform 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+.service-detail-page .restoration-node::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    z-index: -1;
+    width: 3px;
+    opacity: 0;
+    background: linear-gradient(180deg, var(--color-water), var(--color-green));
+    transition: opacity 0.28s var(--ease);
+}
+
+.service-detail-page .restoration-node::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    opacity: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 14% 18%, rgba(108, 182, 200, 0.16), transparent 11rem),
+        radial-gradient(circle at 88% 80%, rgba(117, 168, 77, 0.12), transparent 12rem);
+    transition: opacity 0.28s var(--ease);
+}
+
+.service-detail-page .restoration-node-icon {
+    transition:
+        transform 0.28s var(--ease),
+        color 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+.service-detail-page .restoration-node:hover .restoration-node-icon,
+.service-detail-page .restoration-node:focus-within .restoration-node-icon {
+    color: var(--color-green) !important;
+    border-color: rgba(117, 168, 77, 0.48) !important;
+    background: rgba(117, 168, 77, 0.1) !important;
+    box-shadow:
+        0 0 0 5px rgba(117, 168, 77, 0.08),
+        0 0 24px rgba(117, 168, 77, 0.24) !important;
+}
+
+.service-detail-page .restoration-node:hover strong,
+.service-detail-page .restoration-node:focus-within strong {
+    color: #ffffff !important;
+}
+
+.service-detail-page .restoration-node:hover p span,
+.service-detail-page .restoration-node:focus-within p span {
+    color: rgba(216, 226, 229, 0.9) !important;
+}
+
+/* Tablet: compact 2-column cards, icons on the right */
+@media (max-width: 1024px) and (min-width: 641px) {
+    .service-detail-page .restoration-routing {
+        min-height: auto !important;
+        padding: 1rem !important;
+        border-radius: 24px !important;
+    }
+
+    .service-detail-page .restoration-routing-path {
+        display: none !important;
+    }
+
+    .service-detail-page .restoration-routing-nodes {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.75rem !important;
+        min-height: 0 !important;
+        align-items: stretch !important;
+    }
+
+    .service-detail-page .restoration-node,
+    .service-detail-page .restoration-node:nth-child(2),
+    .service-detail-page .restoration-node:nth-child(4) {
+        transform: none !important;
+    }
+
+    .service-detail-page .restoration-node {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 2.45rem !important;
+        gap: 0.8rem !important;
+        align-items: center !important;
+
+        min-height: 4.35rem !important;
+        padding: 0.72rem 0.8rem 0.72rem 0.95rem !important;
+
+        border: 1px solid rgba(108, 182, 200, 0.16) !important;
+        border-radius: 18px !important;
+        background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02)),
+            rgba(17, 24, 32, 0.76) !important;
+
+        text-align: left !important;
+        justify-items: stretch !important;
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.16) !important;
+    }
+
+    .service-detail-page .restoration-node:nth-child(5) {
+        grid-column: 1 / -1 !important;
+        width: min(100%, 520px) !important;
+        justify-self: center !important;
+    }
+
+    .service-detail-page .restoration-node p {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .restoration-node strong {
+        display: block !important;
+        width: 100% !important;
+        color: var(--color-heading) !important;
+        font-size: 0.8rem !important;
+        line-height: 1.12 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .restoration-node p span {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 0.12rem !important;
+        color: var(--color-muted) !important;
+        font-size: 0.72rem !important;
+        line-height: 1.18 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .restoration-node-icon {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+
+        display: grid !important;
+        place-items: center !important;
+
+        width: 2.35rem !important;
+        height: 2.35rem !important;
+        min-width: 2.35rem !important;
+        min-height: 2.35rem !important;
+
+        justify-self: end !important;
+        align-self: center !important;
+        margin: 0 !important;
+    }
+
+    .service-detail-page .restoration-node-icon .svg-icon {
+        width: 0.98rem !important;
+        height: 0.98rem !important;
+    }
+
+    .service-detail-page .restoration-node:hover,
+    .service-detail-page .restoration-node:focus-within {
+        transform: translateY(-4px) !important;
+        border-color: rgba(108, 182, 200, 0.42) !important;
+        background:
+            linear-gradient(90deg, rgba(108, 182, 200, 0.09), rgba(117, 168, 77, 0.055)),
+            rgba(17, 24, 32, 0.9) !important;
+        box-shadow:
+            0 20px 48px rgba(0, 0, 0, 0.28),
+            0 0 30px rgba(108, 182, 200, 0.14) !important;
+    }
+
+    .service-detail-page .restoration-node:hover::before,
+    .service-detail-page .restoration-node:hover::after,
+    .service-detail-page .restoration-node:focus-within::before,
+    .service-detail-page .restoration-node:focus-within::after {
+        opacity: 1 !important;
+    }
+}
+
+/* Mobile: very compact cards, text first, icon on the right */
+@media (max-width: 640px) {
+    .service-detail-page .restoration-routing {
+        min-height: auto !important;
+        padding: 0.62rem !important;
+        border-radius: 18px !important;
+    }
+
+    .service-detail-page .restoration-routing-path {
+        display: none !important;
+    }
+
+    .service-detail-page .restoration-routing-nodes {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.46rem !important;
+        min-height: 0 !important;
+        align-items: stretch !important;
+    }
+
+    .service-detail-page .restoration-node,
+    .service-detail-page .restoration-node:nth-child(2),
+    .service-detail-page .restoration-node:nth-child(4) {
+        transform: none !important;
+    }
+
+    .service-detail-page .restoration-node {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 2rem !important;
+        gap: 0.62rem !important;
+        align-items: center !important;
+
+        min-height: 3.15rem !important;
+        padding: 0.48rem 0.58rem 0.48rem 0.68rem !important;
+
+        border: 1px solid rgba(108, 182, 200, 0.15) !important;
+        border-radius: 14px !important;
+        background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.052), rgba(255, 255, 255, 0.018)),
+            rgba(17, 24, 32, 0.78) !important;
+
+        text-align: left !important;
+        justify-items: stretch !important;
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14) !important;
+    }
+
+    .service-detail-page .restoration-node p {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .restoration-node strong {
+        display: block !important;
+        width: 100% !important;
+        color: var(--color-heading) !important;
+        font-size: 0.68rem !important;
+        line-height: 1.08 !important;
+        text-align: left !important;
+        letter-spacing: 0.01em !important;
+    }
+
+    .service-detail-page .restoration-node p span {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 0.08rem !important;
+        color: var(--color-muted) !important;
+        font-size: 0.6rem !important;
+        line-height: 1.14 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .restoration-node-icon {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+
+        display: grid !important;
+        place-items: center !important;
+
+        width: 1.9rem !important;
+        height: 1.9rem !important;
+        min-width: 1.9rem !important;
+        min-height: 1.9rem !important;
+
+        justify-self: end !important;
+        align-self: center !important;
+        margin: 0 !important;
+    }
+
+    .service-detail-page .restoration-node-icon .svg-icon {
+        width: 0.78rem !important;
+        height: 0.78rem !important;
+    }
+
+    .service-detail-page .restoration-node:hover,
+    .service-detail-page .restoration-node:focus-within {
+        transform: none !important;
+        border-color: rgba(108, 182, 200, 0.38) !important;
+        background:
+            linear-gradient(90deg, rgba(108, 182, 200, 0.08), rgba(117, 168, 77, 0.05)),
+            rgba(17, 24, 32, 0.9) !important;
+        box-shadow:
+            0 14px 32px rgba(0, 0, 0, 0.22),
+            0 0 24px rgba(108, 182, 200, 0.12) !important;
+    }
+
+    .service-detail-page .restoration-node:hover::before,
+    .service-detail-page .restoration-node:hover::after,
+    .service-detail-page .restoration-node:focus-within::before,
+    .service-detail-page .restoration-node:focus-within::after {
+        opacity: 1 !important;
+    }
+
+    .service-detail-page .restoration-node:hover .restoration-node-icon,
+    .service-detail-page .restoration-node:focus-within .restoration-node-icon {
+        transform: scale(1.04) !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .service-detail-page .restoration-routing {
+        padding: 0.5rem !important;
+    }
+
+    .service-detail-page .restoration-node {
+        grid-template-columns: minmax(0, 1fr) 1.72rem !important;
+        min-height: 2.9rem !important;
+        padding: 0.42rem 0.5rem 0.42rem 0.58rem !important;
+        border-radius: 12px !important;
+    }
+
+    .service-detail-page .restoration-node strong {
+        font-size: 0.62rem !important;
+    }
+
+    .service-detail-page .restoration-node p span {
+        font-size: 0.55rem !important;
+    }
+
+    .service-detail-page .restoration-node-icon {
+        width: 1.65rem !important;
+        height: 1.65rem !important;
+        min-width: 1.65rem !important;
+        min-height: 1.65rem !important;
+    }
+
+    .service-detail-page .restoration-node-icon .svg-icon {
+        width: 0.7rem !important;
+        height: 0.7rem !important;
+    }
+}
+
+
+/* ==========================================================
+   HORIZONTAL REPORT PANELS — FINAL SWIPER
+   Desktop: 3 cards / Tablet: 2 cards / Mobile: 1 card
+   ========================================================== */
+
+.service-detail-page .horizontal-report-rail,
+.service-detail-page .horizontal-report-rail.is-infinite-swiper {
+    --report-gap: 1rem;
+
+    display: flex !important;
+    gap: var(--report-gap) !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+
+    padding-block: 0.25rem 1rem !important;
+    padding-inline: 0 !important;
+
+    scroll-behavior: auto !important;
+    scroll-snap-type: none !important;
+    scrollbar-width: none !important;
+    overscroll-behavior-inline: contain !important;
+
+    cursor: grab !important;
+    user-select: none !important;
+    touch-action: pan-y !important;
+
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+
+.service-detail-page .horizontal-report-rail::-webkit-scrollbar,
+.service-detail-page .horizontal-report-rail.is-infinite-swiper::-webkit-scrollbar {
+    display: none !important;
+}
+
+.service-detail-page .horizontal-report-rail.is-dragging,
+.service-detail-page .horizontal-report-rail.is-infinite-swiper.is-dragging {
+    cursor: grabbing !important;
+}
+
+/* Cards */
+.service-detail-page .horizontal-report-rail>.report-panel.report-panel,
+.service-detail-page .horizontal-report-rail.is-infinite-swiper>.report-panel.report-panel {
+    flex: 0 0 var(--report-panel-width, calc((100% - 2rem) / 3)) !important;
+    width: var(--report-panel-width, calc((100% - 2rem) / 3)) !important;
+    max-width: var(--report-panel-width, calc((100% - 2rem) / 3)) !important;
+    min-width: 0 !important;
+
+    min-height: 250px !important;
+    height: auto !important;
+
+    display: grid !important;
+    align-content: start !important;
+
+    padding: 1rem !important;
+    border-radius: var(--radius-lg) !important;
+    box-sizing: border-box !important;
+
+    transition:
+        transform 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease) !important;
+}
+
+.service-detail-page .horizontal-report-rail>.report-panel:hover,
+.service-detail-page .horizontal-report-rail>.report-panel:focus-within,
+.service-detail-page .horizontal-report-rail.is-infinite-swiper>.report-panel:hover,
+.service-detail-page .horizontal-report-rail.is-infinite-swiper>.report-panel:focus-within {
+    transform: translateY(-4px) !important;
+    border-color: rgba(108, 182, 200, 0.44) !important;
+    box-shadow:
+        0 24px 58px rgba(0, 0, 0, 0.3),
+        0 0 32px rgba(108, 182, 200, 0.14) !important;
+}
+
+.service-detail-page .horizontal-report-rail .report-panel h3 {
+    font-size: 1.28rem !important;
+    line-height: 1.05 !important;
+}
+
+.service-detail-page .horizontal-report-rail .report-panel p {
+    margin-top: 0.72rem !important;
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+}
+
+.service-detail-page .horizontal-report-rail .report-panel-code {
+    right: 1rem !important;
+    bottom: 0.9rem !important;
+    font-size: 2.8rem !important;
+}
+
+/* Tablet: exactly 2 cards visible */
+@media (max-width: 1024px) and (min-width: 641px) {
+
+    .service-detail-page .horizontal-report-rail,
+    .service-detail-page .horizontal-report-rail.is-infinite-swiper {
+        --report-gap: 0.85rem;
+    }
+
+    .service-detail-page .horizontal-report-rail>.report-panel.report-panel,
+    .service-detail-page .horizontal-report-rail.is-infinite-swiper>.report-panel.report-panel {
+        min-height: 210px !important;
+        padding: 0.9rem !important;
+        border-radius: 20px !important;
+    }
+
+    .service-detail-page .horizontal-report-rail .report-panel h3 {
+        font-size: 1.08rem !important;
+    }
+
+    .service-detail-page .horizontal-report-rail .report-panel p {
+        margin-top: 0.58rem !important;
+        font-size: 0.78rem !important;
+        line-height: 1.38 !important;
+    }
+
+    .service-detail-page .horizontal-report-rail .report-panel-code {
+        font-size: 2.25rem !important;
+    }
+}
+
+/* Mobile: exactly 1 card visible */
+@media (max-width: 640px) {
+
+    .service-detail-page .horizontal-report-rail,
+    .service-detail-page .horizontal-report-rail.is-infinite-swiper {
+        --report-gap: 0.65rem;
+        padding-bottom: 0.65rem !important;
+    }
+
+    .service-detail-page .horizontal-report-rail>.report-panel.report-panel,
+    .service-detail-page .horizontal-report-rail.is-infinite-swiper>.report-panel.report-panel {
+        min-height: 170px !important;
+        padding: 0.78rem !important;
+        border-radius: 16px !important;
+    }
+
+    .service-detail-page .horizontal-report-rail .report-panel h3 {
+        font-size: 0.98rem !important;
+        line-height: 1.05 !important;
+    }
+
+    .service-detail-page .horizontal-report-rail .report-panel p {
+        margin-top: 0.5rem !important;
+        font-size: 0.7rem !important;
+        line-height: 1.28 !important;
+    }
+
+    .service-detail-page .horizontal-report-rail .report-panel-code {
+        right: 0.72rem !important;
+        bottom: 0.58rem !important;
+        font-size: 1.9rem !important;
+    }
+
+    .service-detail-page .horizontal-report-rail>.report-panel:hover,
+    .service-detail-page .horizontal-report-rail>.report-panel:focus-within,
+    .service-detail-page .horizontal-report-rail.is-infinite-swiper>.report-panel:hover,
+    .service-detail-page .horizontal-report-rail.is-infinite-swiper>.report-panel:focus-within {
+        transform: none !important;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .service-detail-page .horizontal-report-rail>.report-panel.report-panel,
+    .service-detail-page .horizontal-report-rail.is-infinite-swiper>.report-panel.report-panel {
+        min-height: 158px !important;
+        padding: 0.68rem !important;
+    }
+
+    .service-detail-page .horizontal-report-rail .report-panel h3 {
+        font-size: 0.9rem !important;
+    }
+
+    .service-detail-page .horizontal-report-rail .report-panel p {
+        font-size: 0.64rem !important;
+    }
+
+    .service-detail-page .horizontal-report-rail .report-panel-code {
+        font-size: 1.7rem !important;
+    }
+}
+
+/* ==========================================================
+   REPORT PANELS — REAL SWIPER
+   Desktop: 3 / Tablet: 2 / Mobile: 1
+   ========================================================== */
+
+.service-detail-page .report-swiper-shell {
+    position: relative;
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.service-detail-page .horizontal-report-swiper {
+    width: 100%;
+    overflow: hidden;
+    padding: 0.25rem 0.15rem 0.8rem;
+}
+
+.service-detail-page .horizontal-report-swiper .swiper-wrapper {
+    align-items: stretch;
+}
+
+.service-detail-page .horizontal-report-swiper .swiper-slide {
+    height: auto;
+}
+
+.service-detail-page .report-panel {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: grid;
+    align-content: start;
+
+    min-height: 250px;
+    padding: 1rem;
+
+    border: 1px solid rgba(108, 182, 200, 0.18);
+    border-radius: var(--radius-lg);
+
+    background:
+        radial-gradient(circle at 14% 14%, rgba(108, 182, 200, 0.12), transparent 14rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.045), transparent),
+        rgba(4, 16, 27, 0.82);
+
+    box-shadow: var(--shadow-card);
+
+    transition:
+        transform 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+.service-detail-page .report-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0.75rem;
+    z-index: -1;
+    border: 1px dashed rgba(108, 182, 200, 0.14);
+    border-radius: calc(var(--radius-lg) - 0.75rem);
+    pointer-events: none;
+}
+
+.service-detail-page .report-panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    opacity: 0;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 12% 18%, rgba(108, 182, 200, 0.18), transparent 13rem),
+        radial-gradient(circle at 88% 82%, rgba(117, 168, 77, 0.12), transparent 14rem);
+
+    transition: opacity 0.28s var(--ease);
+}
+
+.service-detail-page .report-panel:hover,
+.service-detail-page .report-panel:focus-within {
+    transform: translateY(-4px);
+    border-color: rgba(108, 182, 200, 0.44);
+    box-shadow:
+        0 24px 58px rgba(0, 0, 0, 0.3),
+        0 0 32px rgba(108, 182, 200, 0.14);
+}
+
+.service-detail-page .report-panel:hover::after,
+.service-detail-page .report-panel:focus-within::after {
+    opacity: 1;
+}
+
+.service-detail-page .report-panel h3 {
+    position: relative;
+    z-index: 2;
+    color: var(--color-heading);
+    font-family: var(--font-heading);
+    font-size: 1.28rem;
+    line-height: 1.05;
+    letter-spacing: -0.045em;
+}
+
+.service-detail-page .report-panel p {
+    position: relative;
+    z-index: 2;
+    margin-top: 0.72rem;
+    color: var(--color-muted);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.service-detail-page .report-panel-code {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.9rem;
+    z-index: 1;
+
+    color: rgba(108, 182, 200, 0.46);
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.08em;
+    line-height: 1;
+}
+
+/* Controls */
+
+.service-detail-page .report-swiper-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.service-detail-page .report-swiper-btn {
+    display: grid;
+    width: 2.45rem;
+    height: 2.45rem;
+    place-items: center;
+
+    border: 1px solid rgba(108, 182, 200, 0.28);
+    border-radius: 999px;
+
+    color: var(--color-water);
+    background: rgba(17, 24, 32, 0.82);
+
+    cursor: pointer;
+
+    transition:
+        transform 0.24s var(--ease),
+        border-color 0.24s var(--ease),
+        color 0.24s var(--ease),
+        background 0.24s var(--ease),
+        box-shadow 0.24s var(--ease);
+}
+
+.service-detail-page .report-swiper-btn:hover,
+.service-detail-page .report-swiper-btn:focus-visible {
+    transform: translateY(-2px);
+    color: var(--color-green);
+    border-color: rgba(117, 168, 77, 0.46);
+    background: rgba(117, 168, 77, 0.1);
+    box-shadow: 0 0 24px rgba(117, 168, 77, 0.18);
+}
+
+.service-detail-page .report-swiper-btn span {
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.service-detail-page .report-swiper-pagination {
+    position: static;
+    display: flex;
+    width: auto !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.service-detail-page .report-swiper-pagination .swiper-pagination-bullet {
+    width: 0.42rem;
+    height: 0.42rem;
+    margin: 0 !important;
+    opacity: 1;
+    background: rgba(108, 182, 200, 0.28);
+}
+
+.service-detail-page .report-swiper-pagination .swiper-pagination-bullet-active {
+    width: 1.35rem;
+    border-radius: 999px;
+    background: var(--color-water);
+}
+
+/* Tablet: 2 cards */
+
+@media (max-width: 1024px) and (min-width: 641px) {
+    .service-detail-page .report-panel {
+        min-height: 210px;
+        padding: 0.9rem;
+        border-radius: 20px;
+    }
+
+    .service-detail-page .report-panel h3 {
+        font-size: 1.08rem;
+    }
+
+    .service-detail-page .report-panel p {
+        margin-top: 0.58rem;
+        font-size: 0.78rem;
+        line-height: 1.38;
+    }
+
+    .service-detail-page .report-panel-code {
+        font-size: 2.25rem;
+    }
+}
+
+/* Mobile: 1 card */
+
+@media (max-width: 640px) {
+    .service-detail-page .report-swiper-shell {
+        gap: 0.75rem;
+    }
+
+    .service-detail-page .horizontal-report-swiper {
+        padding-bottom: 0.45rem;
+    }
+
+    .service-detail-page .report-panel {
+        min-height: 170px;
+        padding: 0.78rem;
+        border-radius: 16px;
+    }
+
+    .service-detail-page .report-panel h3 {
+        font-size: 0.98rem;
+        line-height: 1.05;
+    }
+
+    .service-detail-page .report-panel p {
+        margin-top: 0.5rem;
+        font-size: 0.7rem;
+        line-height: 1.28;
+    }
+
+    .service-detail-page .report-panel-code {
+        right: 0.72rem;
+        bottom: 0.58rem;
+        font-size: 1.9rem;
+    }
+
+    .service-detail-page .report-panel:hover,
+    .service-detail-page .report-panel:focus-within {
+        transform: none;
+    }
+
+    .service-detail-page .report-swiper-btn {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .service-detail-page .report-panel {
+        min-height: 158px;
+        padding: 0.68rem;
+    }
+
+    .service-detail-page .report-panel h3 {
+        font-size: 0.9rem;
+    }
+
+    .service-detail-page .report-panel p {
+        font-size: 0.64rem;
+    }
+
+    .service-detail-page .report-panel-code {
+        font-size: 1.7rem;
+    }
+}
+
+/* ==========================================================
+   REPORT PANELS — CENTER CARD CONTENT
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+.service-detail-page .report-panel {
+    display: grid !important;
+    align-content: center !important;
+    justify-items: center !important;
+
+    text-align: center !important;
+
+    padding: 1.25rem 1.15rem 3.2rem !important;
+}
+
+.service-detail-page .report-panel h3 {
+    max-width: 90% !important;
+    margin-inline: auto !important;
+    text-align: center !important;
+}
+
+.service-detail-page .report-panel p {
+    max-width: 34ch !important;
+    margin: 0.75rem auto 0 !important;
+    text-align: center !important;
+}
+
+.service-detail-page .report-panel-code {
+    right: 50% !important;
+    bottom: 0.8rem !important;
+    transform: translateX(50%) !important;
+
+    font-size: 2.55rem !important;
+    opacity: 0.55 !important;
+    pointer-events: none !important;
 }

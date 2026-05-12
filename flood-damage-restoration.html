@@ -12,6 +12,7 @@
 <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg?v=5">
 <link rel="shortcut icon" type="image/svg+xml" href="./assets/icons/favicon.svg?v=5">
 <link rel="apple-touch-icon" href="./assets/icons/favicon.svg?v=5">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -150,72 +151,88 @@
             </div>
         </section>
 
-    <section class="section service-dark-section" aria-labelledby="reportPanelsTitle">
-        <div class="container">
-            <div class="section-heading">
-                <p class="section-kicker">
-                    Horizontal Report Panels
-                </p>
-    
-                <h2 id="reportPanelsTitle">
-                    Compare the details that can vary by provider.
-                </h2>
-    
-                <p>
-                    Flood-related requests often depend on scope, documentation, equipment, timing, and provider
-                    availability. These report panels are designed for comparison, not promises.
-                </p>
+<section class="section service-dark-section" aria-labelledby="reportPanelsTitle">
+    <div class="container">
+        <div class="section-heading">
+            <p class="section-kicker">
+                Horizontal Report Panels
+            </p>
+
+            <h2 id="reportPanelsTitle">
+                Compare the details that can vary by provider.
+            </h2>
+
+            <p>
+                Flood-related requests often depend on scope, documentation, equipment, timing, and provider
+                availability. These report panels are designed for comparison, not promises.
+            </p>
+        </div>
+    </div>
+
+    <div class="container-wide">
+        <div class="report-swiper-shell">
+            <div class="horizontal-report-swiper swiper" aria-label="Flood damage report panels">
+                <div class="swiper-wrapper">
+                    <article class="report-panel swiper-slide">
+                        <h3>Drying plan</h3>
+                        <p>
+                            Ask what drying approach may be used, what equipment could be involved, and how long the
+                            provider expects the process to take.
+                        </p>
+                        <span class="report-panel-code" aria-hidden="true">DRY</span>
+                    </article>
+
+                    <article class="report-panel swiper-slide">
+                        <h3>Documentation approach</h3>
+                        <p>
+                            Different providers may use different documentation depending on affected materials, water
+                            exposure, and available resources.
+                        </p>
+                        <span class="report-panel-code" aria-hidden="true">DOC</span>
+                    </article>
+
+                    <article class="report-panel swiper-slide">
+                        <h3>Equipment approach</h3>
+                        <p>
+                            Different providers may use different equipment depending on affected materials, water
+                            exposure, and available resources.
+                        </p>
+                        <span class="report-panel-code" aria-hidden="true">EQP</span>
+                    </article>
+
+                    <article class="report-panel swiper-slide">
+                        <h3>Estimate format</h3>
+                        <p>
+                            Ask whether the provider offers written estimates, line items, exclusions, photos, and
+                            documentation notes.
+                        </p>
+                        <span class="report-panel-code" aria-hidden="true">EST</span>
+                    </article>
+
+                    <article class="report-panel swiper-slide">
+                        <h3>Timeline expectations</h3>
+                        <p>
+                            Provider timing can vary by ZIP code, schedule, request details, and service category.
+                        </p>
+                        <span class="report-panel-code" aria-hidden="true">TIME</span>
+                    </article>
+                </div>
+            </div>
+
+            <div class="report-swiper-controls" aria-label="Report panel controls">
+                <button class="report-swiper-btn report-swiper-prev" type="button" aria-label="Previous report panel">
+                    <span aria-hidden="true">←</span>
+                </button>
+
+                <div class="report-swiper-pagination"></div>
+
+                <button class="report-swiper-btn report-swiper-next" type="button" aria-label="Next report panel">
+                    <span aria-hidden="true">→</span>
+                </button>
             </div>
         </div>
-    
-        <div class="container-wide">
-            <div class="horizontal-report-rail no-scrollbar" aria-label="Flood damage report panels">
-                <article class="report-panel">
-                    <h3>Drying plan</h3>
-                    <p>
-                        Ask what drying approach may be used, what equipment could be involved, and how long the
-                        provider expects the process to take.
-                    </p>
-                    <span class="report-panel-code" aria-hidden="true">DRY</span>
-                </article>
-    
-                <article class="report-panel">
-                    <h3>Documentation approach</h3>
-                    <p>
-                        Different providers may use different documentation depending on affected materials, water
-                        exposure, and available resources.
-                    </p>
-                    <span class="report-panel-code" aria-hidden="true">DOC</span>
-                </article>
-    
-                <article class="report-panel">
-                    <h3>Equipment approach</h3>
-                    <p>
-                        Different providers may use different equipment depending on affected materials, water
-                        exposure, and available resources.
-                    </p>
-                    <span class="report-panel-code" aria-hidden="true">EQP</span>
-                </article>
-    
-                <article class="report-panel">
-                    <h3>Estimate format</h3>
-                    <p>
-                        Ask whether the provider offers written estimates, line items, exclusions, photos, and
-                        documentation notes.
-                    </p>
-                    <span class="report-panel-code" aria-hidden="true">EST</span>
-                </article>
-    
-                <article class="report-panel">
-                    <h3>Timeline expectations</h3>
-                    <p>
-                        Provider timing can vary by ZIP code, schedule, request details, and service category.
-                    </p>
-                    <span class="report-panel-code" aria-hidden="true">TIME</span>
-                </article>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
         <!-- =====================================================
       SECTION 4 — RESTORATION ROUTING DIAGRAM
@@ -466,9 +483,10 @@
     <div data-site-footer></div>
     <div data-policy-banner></div>
 
-    <script src="./js/config.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/service-page.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/main.js"></script>
+<script src="./js/service-page.js"></script>
 </body>
 
 </html>
