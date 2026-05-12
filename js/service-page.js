@@ -1,23 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   DRYPILOT — INDIVIDUAL SERVICE PAGE JS
-   File: /js/service-page.js
 
-   Shared behavior for:
-   - water-damage-cleanup.html
-   - flood-damage-restoration.html
-   - burst-pipe-water-damage.html
-   - basement-water-removal.html
-
-   Responsibilities:
-   - detect current service page
-   - inject service-specific data from config
-   - update hero image/title/intro
-   - set FAQ key
-   - update service CTA links
-   - add hover/focus interaction states
-   ========================================================== */
 
 (function () {
     const APP = window.DryPilot;
@@ -51,9 +34,7 @@
         initServicePageForms();
     });
 
-    /* ========================================================
-       CONFIG LOOKUP
-       ======================================================== */
+ 
 
     function getCurrentPageData() {
         return CONFIG.servicePages && CONFIG.servicePages[state.pageKey]
@@ -72,9 +53,7 @@
         return state.service.id || "general";
     }
 
-    /* ========================================================
-       APPLY PAGE DATA
-       ======================================================== */
+
 
     function applyServicePageData() {
         document.querySelectorAll("[data-service-title]").forEach((el) => {
@@ -130,9 +109,7 @@
         document.body.setAttribute("data-current-service", state.service.id);
     }
 
-    /* ========================================================
-       SERVICE COMMAND CARD
-       ======================================================== */
+
 
     function renderServiceCommandCard() {
         document.querySelectorAll("[data-service-command-card]").forEach((mount) => {
@@ -229,9 +206,6 @@
         return baseItems;
     }
 
-    /* ========================================================
-       FAQ
-       ======================================================== */
 
     function renderServiceFaq() {
         document.querySelectorAll("[data-service-faq]").forEach((mount) => {
@@ -245,9 +219,7 @@
         APP.renderFaqs();
     }
 
-    /* ========================================================
-       FORMS
-       ======================================================== */
+
 
     function initServicePageForms() {
         document.querySelectorAll("[data-service-page-form]").forEach((form) => {
@@ -265,9 +237,7 @@
         APP.initForms();
     }
 
-    /* ========================================================
-       INTERACTIONS
-       ======================================================== */
+
 
     function initServiceInteractions() {
         initScopeBoard();

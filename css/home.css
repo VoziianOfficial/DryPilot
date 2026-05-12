@@ -1,11 +1,4 @@
-/* ==========================================================
-   DRYPILOT — HOME PAGE
-   File: /css/home.css
-   ========================================================== */
 
-/* ==========================================================
-   SECTION 1 — SPLIT FLOOD COMMAND HERO
-   ========================================================== */
 
 .home-hero {
     position: relative;
@@ -432,9 +425,6 @@
     }
 }
 
-/* ==========================================================
-   SECTION 2 — LEAK PATH RIBBON
-   ========================================================== */
 
 .leak-ribbon {
     position: relative;
@@ -647,9 +637,7 @@
     transform: rotate(16deg);
 }
 
-/* ==========================================================
-   SECTION 3 — SERVICE DELTA SYSTEM
-   ========================================================== */
+
 
 .service-delta-section {
     padding-top: clamp(5rem, 9vw, 8rem);
@@ -892,7 +880,6 @@
     opacity: 1;
 }
 
-/* different module shapes */
 
 .delta-module-drop {
     left: 4%;
@@ -984,9 +971,7 @@
     transform: rotate(12deg);
 }
 
-/* ==========================================================
-   SECTION 4 — ZIP FLOOD ATLAS MAP
-   ========================================================== */
+
 
 .zip-atlas-section {
     background:
@@ -1216,9 +1201,7 @@
     font-size: 0.95rem;
 }
 
-/* ==========================================================
-   SECTION 5 — INCIDENT INTAKE LAB
-   ========================================================== */
+
 
 .intake-lab-section {
     position: relative;
@@ -1445,9 +1428,7 @@
     top: 84%;
 }
 
-/* ==========================================================
-   SECTION 6 — FLOOD REPORT CAROUSEL
-   ========================================================== */
+
 
 .flood-reports-section {
     background:
@@ -1669,9 +1650,7 @@
     box-shadow: 0 0 16px rgba(117, 168, 77, 0.64);
 }
 
-/* ==========================================================
-   RESPONSIVE — HOME
-   ========================================================== */
+
 
 @media (max-width: 1180px) {
     .home-hero-grid {
@@ -2029,12 +2008,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICE DELTA — REFINED LAYOUT PATCH
-   Add to the bottom of /css/home.css
-   ========================================================== */
 
-/* Heading centered and balanced */
 .service-delta-section .section-heading {
     width: min(920px, 100%);
     margin-inline: auto;
@@ -2056,7 +2030,7 @@
     text-wrap: balance;
 }
 
-/* Shell slightly cleaner and more premium */
+
 .service-delta-shell {
     min-height: 650px;
     overflow: hidden;
@@ -2068,7 +2042,6 @@
     padding: clamp(1rem, 2.4vw, 1.8rem);
 }
 
-/* Main pipe repositioned so it visually connects the modules better */
 .delta-main-pipe {
     left: 5%;
     top: 51%;
@@ -2077,7 +2050,6 @@
     opacity: 0.92;
 }
 
-/* Cleaner shared module style */
 .delta-module {
     z-index: 3;
 }
@@ -2104,7 +2076,7 @@
     max-width: 18rem;
 }
 
-/* Media cleaner */
+
 .delta-module-media {
     min-height: 145px;
 }
@@ -2113,7 +2085,6 @@
     object-position: center;
 }
 
-/* Better service placement — still asymmetric, but calmer */
 .delta-module-drop {
     left: 4%;
     top: 10%;
@@ -2205,7 +2176,7 @@
     transform: rotate(-12deg);
 }
 
-/* Add subtle technical corner marks */
+
 .delta-module-link::after {
     content: "";
     position: absolute;
@@ -2223,12 +2194,11 @@
     border-color: rgba(117, 168, 77, 0.5);
 }
 
-/* Cleaner hover */
+
 .delta-module:hover .delta-module-link {
     transform: translateY(-4px);
 }
 
-/* Tablet */
 @media (max-width: 1180px) {
 
     .service-delta-shell,
@@ -2266,7 +2236,7 @@
     }
 }
 
-/* Mobile/tablet stack stays clean */
+
 @media (max-width: 980px) {
     .service-delta-section .section-heading {
         text-align: left;
@@ -2322,12 +2292,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICE DELTA — LARGE DROPLET CARDS REDESIGN
-   Add to the bottom of /css/home.css
-   ========================================================== */
 
-/* Heading */
 .service-delta-section .section-heading {
     width: min(920px, 100%);
     margin-inline: auto;
@@ -2349,7 +2314,7 @@
     text-wrap: balance;
 }
 
-/* Shell */
+
 .service-delta-shell {
     min-height: auto !important;
     overflow: visible !important;
@@ -2362,7 +2327,6 @@
         rgba(4, 16, 27, 0.58);
 }
 
-/* New grid system */
 .delta-droplet-system {
     position: relative !important;
     display: grid !important;
@@ -2372,7 +2336,6 @@
     padding: clamp(0.8rem, 2vw, 1.4rem) !important;
 }
 
-/* Hide old pipe system if any remains */
 .delta-droplet-system .delta-main-pipe,
 .delta-droplet-system .delta-branch,
 .delta-droplet-system .delta-module,
@@ -2380,7 +2343,6 @@
     display: none !important;
 }
 
-/* Droplet card */
 .delta-card {
     position: relative;
     min-width: 0;
@@ -2403,7 +2365,7 @@
         filter 0.34s var(--ease);
 }
 
-/* Up droplet */
+
 .delta-card--up .delta-card-link {
     clip-path: polygon(50% 0%,
             62% 8%,
@@ -2423,7 +2385,7 @@
             38% 8%);
 }
 
-/* Down droplet */
+
 .delta-card--down .delta-card-link {
     clip-path: polygon(50% 100%,
             62% 92%,
@@ -2443,7 +2405,7 @@
             38% 92%);
 }
 
-/* Photo */
+
 .delta-card-image {
     position: absolute;
     inset: 0;
@@ -2457,7 +2419,7 @@
         filter 0.34s var(--ease);
 }
 
-/* Overlay */
+
 .delta-card-link::before {
     content: "";
     position: absolute;
@@ -2470,7 +2432,7 @@
     pointer-events: none;
 }
 
-/* Technical inner border */
+
 .delta-card-link::after {
     content: "";
     position: absolute;
@@ -2481,7 +2443,6 @@
     pointer-events: none;
 }
 
-/* Glow */
 .delta-card-glow {
     position: absolute;
     inset: 0;
@@ -2494,7 +2455,6 @@
     pointer-events: none;
 }
 
-/* Water line */
 .delta-card-line {
     position: absolute;
     right: 14%;
@@ -2519,7 +2479,7 @@
     top: 18%;
 }
 
-/* Content */
+
 .delta-card-content {
     position: relative;
     z-index: 4;
@@ -2606,7 +2566,7 @@
         background 0.24s var(--ease);
 }
 
-/* Hover */
+
 .delta-card:hover .delta-card-link {
     transform: translateY(-6px);
     box-shadow:
@@ -2630,7 +2590,7 @@
     background: rgba(117, 168, 77, 0.18);
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .delta-droplet-system {
         gap: 1rem !important;
@@ -2655,7 +2615,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 720px) {
     .service-delta-section .section-heading {
         text-align: center;
@@ -2690,7 +2650,6 @@
     }
 }
 
-/* Small mobile */
 @media (max-width: 430px) {
     .delta-card-link {
         min-height: 390px;
@@ -2721,12 +2680,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICE DELTA — 4 IN ROW COMPACT PATCH
-   Add to the bottom of /css/home.css
-   ========================================================== */
 
-/* Desktop: 4 cards in one row */
 @media (min-width: 1181px) {
     .delta-droplet-system {
         grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
@@ -2799,7 +2753,6 @@
     }
 }
 
-/* Medium desktop / tablet: 2x2, but smaller */
 @media (max-width: 1180px) and (min-width: 721px) {
     .delta-droplet-system {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -2826,7 +2779,7 @@
     }
 }
 
-/* Mobile: smaller stacked cards */
+
 @media (max-width: 720px) {
     .delta-card-link {
         min-height: clamp(300px, 88vw, 360px) !important;
@@ -2867,7 +2820,7 @@
     }
 }
 
-/* Very small phones */
+
 @media (max-width: 430px) {
     .delta-card-link {
         min-height: 285px !important;
@@ -2882,10 +2835,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICE DELTA — MOBILE SIMPLE SQUARE CARDS
-   Add to the bottom of /css/home.css
-   ========================================================== */
+
 
 @media (max-width: 720px) {
     .delta-droplet-system {
@@ -3021,7 +2971,6 @@
     }
 }
 
-/* Smaller phones */
 @media (max-width: 430px) {
     .delta-droplet-system {
         gap: 0.72rem !important;
@@ -3052,10 +3001,7 @@
     }
 }
 
-/* ==========================================================
-   LEAK PATH RIBBON — TABLET / MOBILE COMPACT SNAKE
-   Add to the bottom of /css/home.css
-   ========================================================== */
+
 
 /* Tablet: compact snake layout */
 @media (max-width: 980px) and (min-width: 641px) {
@@ -3154,7 +3100,7 @@
     }
 }
 
-/* Mobile: compact alternating snake cards */
+
 @media (max-width: 640px) {
     .leak-ribbon {
         margin-top: -4.8rem !important;
@@ -3264,7 +3210,6 @@
     }
 }
 
-/* Extra small phones */
 @media (max-width: 380px) {
     .leak-node {
         width: min(90%, 310px) !important;
@@ -3283,10 +3228,7 @@
     }
 }
 
-/* ==========================================================
-   FLOOD REPORTS — CENTER HEADING FIX
-   Add to bottom of /css/home.css
-   ========================================================== */
+
 
 .flood-reports-section .section-heading {
     width: min(920px, 100%);
@@ -3317,10 +3259,7 @@
     text-wrap: balance;
 }
 
-/* ==========================================================
-   FLOOD REPORTS — DESKTOP BIGGER HEADING
-   Add to bottom of /css/home.css
-   ========================================================== */
+
 
 @media (min-width: 981px) {
     .flood-reports-section .section-heading {
@@ -3347,9 +3286,6 @@
     }
 }
 
-/* ==========================================================
-   FLOOD REPORT CAROUSEL — SMOOTH LOOP RESET
-   ========================================================== */
 
 .report-track.is-resetting {
     transition: none !important;
@@ -3359,9 +3295,6 @@
     pointer-events: none;
 }
 
-/* ==========================================================
-   FLOOD REPORT CAROUSEL — NO JUMP LOOP FIX
-   ========================================================== */
 
 .report-track.is-resetting {
     transition: none !important;
@@ -3376,12 +3309,7 @@
     pointer-events: none;
 }
 
-/* ==========================================================
-   ZIP ATLAS + INTAKE LAB — CENTERED BIG SECTION HEADINGS
-   Add to bottom of /css/home.css
-   ========================================================== */
 
-/* Base centered heading for both sections */
 .zip-atlas-section .section-heading,
 .intake-lab-section .section-heading {
     width: min(940px, 100%);
@@ -3413,7 +3341,7 @@
     text-wrap: balance;
 }
 
-/* Correct contrast for light intake section */
+
 .intake-lab-section .section-heading h2 {
     color: var(--color-dark-heading);
 }
@@ -3426,7 +3354,7 @@
     color: var(--color-water-strong);
 }
 
-/* Desktop: make heading and intro larger */
+
 @media (min-width: 981px) {
 
     .zip-atlas-section .section-heading,
@@ -3457,7 +3385,7 @@
     }
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
 
     .zip-atlas-section .section-heading,
@@ -3472,7 +3400,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
 
     .zip-atlas-section .section-heading,

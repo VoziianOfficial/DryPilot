@@ -1,11 +1,4 @@
-/* ==========================================================
-   DRYPILOT — SERVICES PAGE
-   File: /css/services.css
-   ========================================================== */
 
-/* ==========================================================
-   SERVICES HERO — DAMAGE CATEGORY COMMAND
-   ========================================================== */
 
 .services-page .page-hero {
     min-height: clamp(560px, 78vh, 820px);
@@ -152,9 +145,6 @@
     }
 }
 
-/* ==========================================================
-   SECTION 2 — VALVE-CONTROL SERVICE CAROUSEL
-   ========================================================== */
 
 .valve-carousel-section {
     background:
@@ -455,9 +445,6 @@
     box-shadow: 0 0 14px rgba(108, 182, 200, 0.5);
 }
 
-/* ==========================================================
-   SECTION 3 — DAMAGE TYPE SELECTOR WALL
-   ========================================================== */
 
 .damage-selector-section {
     color: var(--color-dark-text);
@@ -669,9 +656,7 @@
     font-weight: 700;
 }
 
-/* ==========================================================
-   SECTION 4 — FLOOD-LEVEL GAUGE COMPARISON
-   ========================================================== */
+
 
 .gauge-comparison-section {
     color: var(--color-dark-text);
@@ -795,9 +780,7 @@
     line-height: 1.45;
 }
 
-/* ==========================================================
-   SECTION 5 — PROVIDER FIT MATRIX
-   ========================================================== */
+
 
 .provider-matrix-section {
     background:
@@ -894,9 +877,6 @@
     background: rgba(108, 182, 200, 0.45);
 }
 
-/* ==========================================================
-   SECTION 6 — PIPE CTA STRIP
-   ========================================================== */
 
 .services-pipe-cta {
     padding-block: clamp(3rem, 5vw, 4.8rem);
@@ -984,9 +964,6 @@
     padding-bottom: 1.45rem;
 }
 
-/* ==========================================================
-   RESPONSIVE — SERVICES PAGE
-   ========================================================== */
 
 @media (max-width: 1120px) {
     .services-command-grid {
@@ -1181,10 +1158,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICES PAGE — CENTERED BIG SECTION HEADINGS
-   Add to bottom of /css/services.css
-   ========================================================== */
+
 
 .valve-carousel-section .section-heading,
 .damage-selector-section .section-heading,
@@ -1241,7 +1215,7 @@
     color: var(--color-water-strong);
 }
 
-/* Desktop: bigger headings */
+
 @media (min-width: 981px) {
 
     .valve-carousel-section .section-heading,
@@ -1280,7 +1254,6 @@
     }
 }
 
-/* Tablet */
 @media (max-width: 980px) {
 
     .valve-carousel-section .section-heading,
@@ -1300,7 +1273,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
 
     .valve-carousel-section .section-heading,
@@ -1332,12 +1305,6 @@
     }
 }
 
-/* ==========================================================
-   SERVICES PAGE — TARGETED SECTION FIXES
-   Add to bottom of /css/services.css
-   ========================================================== */
-
-/* 1. Provider Matrix — make heading/text light */
 .provider-matrix-section .section-heading .section-kicker {
     color: var(--color-water) !important;
 }
@@ -1350,7 +1317,6 @@
     color: var(--color-muted) !important;
 }
 
-/* Also keep matrix content readable on dark background */
 .provider-matrix-section,
 .provider-matrix-section .matrix-shell,
 .provider-matrix-section .matrix-scroll {
@@ -1369,8 +1335,6 @@
     color: var(--color-muted);
 }
 
-
-/* 2. Valve Carousel — force heading into cleaner 2-line desktop layout */
 @media (min-width: 981px) {
     .valve-carousel-section .section-heading h2 {
         max-width: 860px !important;
@@ -1387,7 +1351,6 @@
 }
 
 
-/* 3. Gauge Comparison — make heading area bigger */
 @media (min-width: 981px) {
     .gauge-comparison-section .section-heading {
         width: min(1120px, 100%) !important;
@@ -1413,7 +1376,7 @@
     }
 }
 
-/* Optional: make gauge cards themselves a bit larger and more premium */
+
 @media (min-width: 981px) {
     .gauge-comparison-section .gauge-grid {
         gap: clamp(1rem, 1.8vw, 1.6rem) !important;
@@ -1425,10 +1388,7 @@
     }
 }
 
-/* ==========================================================
-   VALVE CAROUSEL — WIDER HEADING FOR 2 LINES
-   Add to bottom of /css/services.css
-   ========================================================== */
+
 
 @media (min-width: 981px) {
     .valve-carousel-section .section-heading {

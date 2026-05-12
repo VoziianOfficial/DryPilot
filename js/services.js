@@ -1,15 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   DRYPILOT — SERVICES PAGE JS
-   File: /js/services.js
 
-   Services behavior:
-   - Valve-Control Service Carousel
-   - Damage Type Selector Wall
-   - Flood-Level Gauge Comparison
-   - Provider Fit Matrix
-   ========================================================== */
 
 (function () {
     const APP = window.DryPilot;
@@ -32,9 +23,7 @@
         renderProviderMatrix();
     });
 
-    /* ========================================================
-       SECTION 2 — VALVE-CONTROL SERVICE CAROUSEL
-       ======================================================== */
+
 
     function initValveCarousel() {
         const shell = document.querySelector("[data-valve-carousel]");
@@ -149,9 +138,7 @@
     `;
     }
 
-    /* ========================================================
-       SECTION 3 — DAMAGE TYPE SELECTOR WALL
-       ======================================================== */
+
 
     function initDamageSelectorWall() {
         const wall = document.querySelector("[data-damage-selector]");
@@ -276,9 +263,7 @@
         return tagSets[index] || tagSets[0];
     }
 
-    /* ========================================================
-       SECTION 4 — FLOOD-LEVEL GAUGE COMPARISON
-       ======================================================== */
+
 
     function renderGaugeComparison() {
         const mount = document.querySelector("[data-gauge-grid]");
@@ -306,9 +291,7 @@
             .join("");
     }
 
-    /* ========================================================
-       SECTION 5 — PROVIDER FIT MATRIX
-       ======================================================== */
+ 
 
     function renderProviderMatrix() {
         const mount = document.querySelector("[data-provider-matrix]");
@@ -350,9 +333,7 @@
     `;
     }
 
-    /* ========================================================
-       HELPERS
-       ======================================================== */
+    
 
     function wrapIndex(index, length) {
         if (!length) return 0;

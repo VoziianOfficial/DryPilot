@@ -1,18 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   DRYPILOT — HOME PAGE JS
-   File: /js/home.js
 
-   Home behavior:
-   - Flood Report Carousel
-   - config-driven review rendering
-   - valve controls
-   - droplet pagination
-   - keyboard support
-   - mobile swipe support
-   - reduced-motion safe autoplay
-   ========================================================== */
 
 (function () {
     const APP = window.DryPilot;
@@ -38,9 +26,7 @@
         });
     }, 120));
 
-    /* ========================================================
-       FLOOD REPORT CAROUSEL
-       ======================================================== */
+ 
 
     function initReportCarousels() {
         document.querySelectorAll("[data-report-carousel]").forEach((shell) => {
@@ -137,15 +123,7 @@
 
             realCount: reviews.length,
 
-            /*
-              positionIndex includes clones:
-              0 = clone of last
-              1 = real first
-              2 = real second
-              ...
-              realCount = real last
-              realCount + 1 = clone of first
-            */
+            
             positionIndex: 1,
             realIndex: 0,
 
@@ -230,12 +208,7 @@
         });
 
         carousel.track.addEventListener("transitionend", (event) => {
-            /*
-              Important:
-              report-card also has transform transition.
-              transitionend bubbles from cards to the track.
-              We only want the track's own transform transition.
-            */
+           
             if (event.target !== carousel.track) return;
             if (event.propertyName !== "transform") return;
 
@@ -439,9 +412,6 @@
         startCarouselAutoplay(carousel);
     }
 
-    /* ========================================================
-       HOME ROUTE HOVER DETAILS
-       ======================================================== */
 
     function initHomeHoverRoutes() {
         initLeakNodeHover();
@@ -511,9 +481,7 @@
         });
     }
 
-    /* ========================================================
-       HELPERS
-       ======================================================== */
+ 
 
     function debounce(callback, delay) {
         let timerId;

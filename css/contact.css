@@ -1,11 +1,4 @@
-/* ==========================================================
-   DRYPILOT — CONTACT PAGE
-   File: /css/contact.css
-   ========================================================== */
 
-/* ==========================================================
-   CONTACT HERO — REQUEST COMMAND HERO
-   ========================================================== */
 
 .contact-page .page-hero {
     min-height: clamp(520px, 72vh, 780px);
@@ -125,9 +118,7 @@
     box-shadow: 0 0 18px rgba(117, 168, 77, 0.72);
 }
 
-/* ==========================================================
-   SECTION 2 — EMERGENCY INTAKE BOARD
-   ========================================================== */
+
 
 .emergency-intake-section {
     color: var(--color-dark-text);
@@ -294,9 +285,7 @@
     line-height: 1.35;
 }
 
-/* ==========================================================
-   SECTION 3 — CONTACT PIPE RAIL
-   ========================================================== */
+
 
 .contact-pipe-rail-section {
     padding-block: clamp(3rem, 6vw, 5rem);
@@ -422,9 +411,6 @@
     color: var(--color-water);
 }
 
-/* ==========================================================
-   SECTION 4 — STORM COVERAGE MAP
-   ========================================================== */
 
 .storm-map-section {
     color: var(--color-dark-text);
@@ -607,9 +593,7 @@
     box-shadow: 0 0 14px rgba(63, 169, 194, 0.46);
 }
 
-/* ==========================================================
-   SECTION 5 — QUESTION DROPS FAQ
-   ========================================================== */
+
 
 .question-drops-section {
     background:
@@ -658,9 +642,7 @@
     color: var(--color-water);
 }
 
-/* ==========================================================
-   SECTION 6 — FINAL WATERLINE CTA
-   ========================================================== */
+
 
 .final-waterline-cta {
     padding-block: clamp(3rem, 5vw, 4.8rem);
@@ -748,9 +730,7 @@
     padding-bottom: 1.35rem;
 }
 
-/* ==========================================================
-   CONTACT JS INTERACTION STATES
-   ========================================================== */
+
 
 .contact-pipe-node,
 .intake-side-item,
@@ -787,9 +767,7 @@
     background: rgba(228, 242, 218, 0.72);
 }
 
-/* ==========================================================
-   RESPONSIVE — CONTACT PAGE
-   ========================================================== */
+
 
 @media (max-width: 1080px) {
 
@@ -965,10 +943,7 @@
     }
 }
 
-/* ==========================================================
-   CONTACT JS EXTRA INTERACTION STATES
-   Add to the bottom of /css/contact.css
-   ========================================================== */
+
 
 .contact-pipe-rail.has-active-node .contact-pipe-node:not(.is-active) {
     opacity: 0.58;
@@ -1011,10 +986,7 @@
     border-color: rgba(63, 169, 194, 0.34);
 }
 
-/* ==========================================================
-   CONTACT PIPE NODE — CENTER ICON FIX
-   Add to bottom of /css/contact.css
-   ========================================================== */
+
 
 .contact-pipe-icon {
     display: grid !important;
@@ -1053,10 +1025,6 @@
     }
 }
 
-/* ==========================================================
-   INTAKE SIDE PANEL — BACKGROUND PHOTO + READABILITY + ICON CENTER
-   Add to bottom of /css/contact.css
-   ========================================================== */
 
 .intake-side-panel {
     position: relative;
@@ -1139,7 +1107,7 @@
     color: rgba(216, 226, 229, 0.86) !important;
 }
 
-/* Center icons perfectly inside each intake-side-icon */
+
 .intake-side-icon {
     display: grid !important;
     place-items: center !important;
@@ -1171,7 +1139,7 @@
     margin: auto !important;
 }
 
-/* Icon hover */
+
 .intake-side-item:hover .intake-side-icon {
     color: var(--color-green) !important;
     border-color: rgba(117, 168, 77, 0.46) !important;
@@ -1180,7 +1148,6 @@
         0 0 22px rgba(117, 168, 77, 0.24);
 }
 
-/* Mobile: softer hover and compact icons */
 @media (max-width: 640px) {
     .intake-side-item:hover {
         transform: none;
@@ -1199,10 +1166,6 @@
     }
 }
 
-/* ==========================================================
-   INTAKE SIDE PANEL — BRIGHTER BACKGROUND PHOTO
-   Add to bottom of /css/contact.css
-   ========================================================== */
 
 .intake-side-panel {
     background:
@@ -1212,19 +1175,18 @@
         url("../assets/images/flood-map-texture.jpg") center / cover no-repeat !important;
 }
 
-/* Dark layer becomes softer so the photo is more visible */
+
 .intake-side-panel::before {
     background:
         linear-gradient(90deg, rgba(4, 16, 27, 0.52), rgba(4, 16, 27, 0.34)),
         linear-gradient(180deg, rgba(4, 16, 27, 0.08), rgba(4, 16, 27, 0.46)) !important;
 }
 
-/* Make grid softer so it doesn't darken the image too much */
+
 .intake-side-panel::after {
     opacity: 0.18 !important;
 }
 
-/* Keep every item readable on brighter photo */
 .intake-side-item {
     background:
         linear-gradient(180deg, rgba(4, 16, 27, 0.64), rgba(4, 16, 27, 0.5)),
@@ -1242,10 +1204,7 @@
 }
 
 
-/* ==========================================================
-   CONTACT PIPE RAIL — SECTION BACKGROUND PHOTO
-   Add to bottom of /css/contact.css
-   ========================================================== */
+
 
 .contact-pipe-rail-section {
     position: relative;
@@ -1259,7 +1218,7 @@
         url("../assets/images/contact-card.jpg") center / cover no-repeat;
 }
 
-/* Dark readable overlay */
+
 .contact-pipe-rail-section::before {
     content: "";
     position: absolute;
@@ -1271,7 +1230,6 @@
         linear-gradient(180deg, rgba(4, 16, 27, 0.2), rgba(4, 16, 27, 0.78));
 }
 
-/* Technical water grid */
 .contact-pipe-rail-section::after {
     content: "";
     position: absolute;
@@ -1285,7 +1243,6 @@
     background-size: 42px 42px;
 }
 
-/* Heading readability */
 .contact-pipe-rail-section .section-heading h2 {
     color: #ffffff !important;
 }
@@ -1294,7 +1251,6 @@
     color: rgba(216, 226, 229, 0.9) !important;
 }
 
-/* Main rail panel on top of photo */
 .contact-pipe-rail {
     position: relative;
     overflow: hidden;
@@ -1308,7 +1264,7 @@
     backdrop-filter: blur(16px);
 }
 
-/* Cards readability */
+
 .contact-pipe-node {
     position: relative;
     overflow: hidden;
@@ -1345,7 +1301,7 @@
     color: rgba(216, 226, 229, 0.88) !important;
 }
 
-/* Keep icons centered and visible */
+
 .contact-pipe-icon {
     color: var(--color-water) !important;
     background: rgba(4, 16, 27, 0.58) !important;
@@ -1362,7 +1318,7 @@
         0 0 22px rgba(117, 168, 77, 0.24);
 }
 
-/* Mobile: no jump */
+
 @media (max-width: 640px) {
 
     .contact-pipe-node:hover,
@@ -1371,10 +1327,7 @@
     }
 }
 
-/* ==========================================================
-   CONTACT PIPE RAIL — BRIGHTER BACKGROUND PHOTO
-   Add after previous contact-pipe-rail-section styles
-   ========================================================== */
+
 
 .contact-pipe-rail-section {
     background:
@@ -1384,42 +1337,37 @@
         url("../assets/images/wet-glass-reports.jpg") center / cover no-repeat !important;
 }
 
-/* уменьшаем затемнение поверх фото */
 .contact-pipe-rail-section::before {
     background:
         linear-gradient(90deg, rgba(4, 16, 27, 0.46), rgba(4, 16, 27, 0.22), rgba(4, 16, 27, 0.48)),
         linear-gradient(180deg, rgba(4, 16, 27, 0.08), rgba(4, 16, 27, 0.38)) !important;
 }
 
-/* сетка меньше затемняет фото */
+
 .contact-pipe-rail-section::after {
     opacity: 0.12 !important;
 }
 
-/* сама панель чуть прозрачнее, чтобы фото сильнее просвечивало */
+
 .contact-pipe-rail {
     background:
         linear-gradient(180deg, rgba(4, 16, 27, 0.52), rgba(4, 16, 27, 0.42)),
         rgba(4, 16, 27, 0.36) !important;
 }
 
-/* карточки оставляем читаемыми */
 .contact-pipe-node {
     background:
         linear-gradient(180deg, rgba(4, 16, 27, 0.66), rgba(4, 16, 27, 0.52)),
         rgba(4, 16, 27, 0.46) !important;
 }
 
-/* Remove decorative after layer from contact command panel */
+
 .contact-command-panel::after {
     display: none !important;
     content: none !important;
 }
 
-/* ==========================================================
-   WATERLINE CTA — TABLET BUTTONS COLUMN
-   Add to bottom of /css/contact.css
-   ========================================================== */
+
 
 @media (max-width: 1024px) and (min-width: 641px) {
     .waterline-cta-actions {
@@ -1438,11 +1386,7 @@
     }
 }
 
-/* ==========================================================
-   CONTACT PIPE RAIL — TABLET/MOBILE COMPACT CARDS
-   Icons on the right
-   Add to bottom of /css/contact.css
-   ========================================================== */
+
 
 /* Tablet */
 @media (max-width: 1024px) and (min-width: 641px) {
@@ -1508,7 +1452,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .contact-pipe-rail {
         padding: 0.72rem !important;
@@ -1588,7 +1532,7 @@
     }
 }
 
-/* Extra small phones */
+
 @media (max-width: 380px) {
     .contact-pipe-node {
         grid-template-columns: minmax(0, 1fr) 1.95rem !important;
@@ -1613,10 +1557,7 @@
     }
 }
 
-/* ==========================================================
-   CONTACT PIPE NODE — TABLET/MOBILE CONTENT FIRST, ICON RIGHT
-   Add as the LAST block in /css/contact.css
-   ========================================================== */
+
 
 @media (max-width: 1024px) {
     .contact-pipe-node-grid .contact-pipe-node {
@@ -1628,7 +1569,6 @@
         text-align: left !important;
     }
 
-    /* Text/content always first, on the left */
     .contact-pipe-node-grid .contact-pipe-node p {
         grid-column: 1 !important;
         grid-row: 1 !important;
@@ -1654,7 +1594,7 @@
         overflow-wrap: anywhere !important;
     }
 
-    /* Icon always second, at the far right */
+
     .contact-pipe-node-grid .contact-pipe-node .contact-pipe-icon {
         grid-column: 2 !important;
         grid-row: 1 !important;
@@ -1668,7 +1608,6 @@
     }
 }
 
-/* Tablet compact sizes */
 @media (max-width: 1024px) and (min-width: 641px) {
     .contact-pipe-node-grid .contact-pipe-node {
         min-height: 4.45rem !important;
@@ -1683,7 +1622,6 @@
     }
 }
 
-/* Mobile compact sizes */
 @media (max-width: 640px) {
     .contact-pipe-node-grid .contact-pipe-node {
         min-height: 3.65rem !important;
@@ -1703,10 +1641,6 @@
     }
 }
 
-/* ==========================================================
-   INTAKE SIDE PANEL — MOBILE COMPACT CARDS, ICONS RIGHT
-   Add as the LAST block in /css/contact.css
-   ========================================================== */
 
 @media (max-width: 640px) {
     .intake-side-panel {
@@ -1727,7 +1661,7 @@
         border-radius: 15px !important;
     }
 
-    /* Text first, left side */
+   
     .intake-side-item p {
         grid-column: 1 !important;
         grid-row: 1 !important;
@@ -1761,7 +1695,7 @@
         text-align: left !important;
     }
 
-    /* Icon second, right side */
+
     .intake-side-icon {
         grid-column: 2 !important;
         grid-row: 1 !important;
@@ -1798,7 +1732,6 @@
     }
 }
 
-/* Extra small phones */
 @media (max-width: 380px) {
     .intake-side-item {
         grid-template-columns: minmax(0, 1fr) 1.9rem !important;
@@ -1827,10 +1760,7 @@
     }
 }
 
-/* ==========================================================
-   CONTACT COMMAND LIST — MOBILE COMPACT, ICONS RIGHT
-   Add as the LAST block in /css/contact.css
-   ========================================================== */
+
 
 @media (max-width: 640px) {
     .contact-command-list {
@@ -1851,7 +1781,6 @@
         border-radius: 15px !important;
     }
 
-    /* Text first, left side */
     .contact-command-item p {
         grid-column: 1 !important;
         grid-row: 1 !important;
@@ -1885,7 +1814,6 @@
         text-align: left !important;
     }
 
-    /* Icon second, right side */
     .contact-command-item>.svg-icon {
         grid-column: 2 !important;
         grid-row: 1 !important;
@@ -1914,7 +1842,7 @@
         height: 0.9rem !important;
     }
 
-    /* Hide status dot on mobile so it doesn't break alignment */
+
     .contact-command-status {
         display: none !important;
     }
@@ -1925,7 +1853,7 @@
     }
 }
 
-/* Extra small phones */
+
 @media (max-width: 380px) {
     .contact-command-item {
         grid-template-columns: minmax(0, 1fr) 1.9rem !important;

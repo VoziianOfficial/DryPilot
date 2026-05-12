@@ -1,15 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   DRYPILOT — LEGAL PAGE JS
-   File: /js/legal.js
-
-   Legal behavior:
-   - active legal nav link
-   - legal document section states
-   - sidebar card interaction states
-   - reduced-motion safe micro-interactions
-   ========================================================== */
 
 (function () {
     const APP = window.DryPilot;
@@ -26,9 +16,7 @@
         initLegalSidebarCards();
     });
 
-    /* ========================================================
-       ACTIVE LEGAL NAV
-       ======================================================== */
+
 
     function setActiveLegalLink() {
         const pageKey = getLegalPageKey();
@@ -60,9 +48,7 @@
         return path.split("/").pop() || "index.html";
     }
 
-    /* ========================================================
-       LEGAL SECTIONS
-       ======================================================== */
+   
 
     function initLegalSections() {
         const sections = Array.from(document.querySelectorAll(".legal-section"));
@@ -110,9 +96,6 @@
         });
     }
 
-    /* ========================================================
-       SIDEBAR CARDS
-       ======================================================== */
 
     function initLegalSidebarCards() {
         const cards = Array.from(document.querySelectorAll(".legal-sidebar-card"));

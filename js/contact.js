@@ -1,15 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   DRYPILOT — CONTACT PAGE JS
-   File: /js/contact.js
 
-   Contact behavior:
-   - contact pipe rail active states
-   - intake side board active states
-   - storm map readout micro-interactions
-   - accessible focus states
-   ========================================================== */
 
 (function () {
     const APP = window.DryPilot;
@@ -27,9 +18,7 @@
         initContactMapPin();
     });
 
-    /* ========================================================
-       CONTACT PIPE RAIL
-       ======================================================== */
+   
 
     function initContactPipeRail() {
         const rail = document.querySelector(".contact-pipe-rail");
@@ -79,9 +68,7 @@
         });
     }
 
-    /* ========================================================
-       INTAKE SIDE PANEL
-       ======================================================== */
+   
 
     function initIntakeSidePanel() {
         const panel = document.querySelector(".intake-side-panel");
@@ -132,9 +119,7 @@
         });
     }
 
-    /* ========================================================
-       STORM MAP READOUT
-       ======================================================== */
+
 
     function initStormMapReadout() {
         const readout = document.querySelector(".storm-map-readout");
@@ -185,9 +170,7 @@
         });
     }
 
-    /* ========================================================
-       MAP PIN MICRO-INTERACTION
-       ======================================================== */
+
 
     function initContactMapPin() {
         const map = document.querySelector(".storm-map-visual");

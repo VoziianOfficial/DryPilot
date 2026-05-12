@@ -1,15 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   DRYPILOT — ABOUT PAGE JS
-   File: /js/about.js
 
-   About behavior:
-   - routing node active states
-   - drainage channel hover states
-   - preparation board interaction states
-   - reduced-motion safe micro-interactions
-   ========================================================== */
 
 (function () {
     const APP = window.DryPilot;
@@ -26,9 +17,6 @@
         initPreparationBoard();
     });
 
-    /* ========================================================
-       ROUTING DIAGRAM
-       ======================================================== */
 
     function initRoutingDiagram() {
         const diagram = document.querySelector(".routing-diagram");
@@ -76,9 +64,7 @@
         });
     }
 
-    /* ========================================================
-       DRAINAGE CHANNELS
-       ======================================================== */
+ 
 
     function initDrainageChannels() {
         const shell = document.querySelector(".drainage-shell");
@@ -118,9 +104,7 @@
         });
     }
 
-    /* ========================================================
-       PREPARATION BOARD
-       ======================================================== */
+
 
     function initPreparationBoard() {
         const panels = document.querySelectorAll(".prep-panel");

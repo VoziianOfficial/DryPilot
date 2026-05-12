@@ -392,9 +392,6 @@
     text-transform: uppercase;
 }
 
-/* ==========================================================
-   CLEANUP PAGE — PROVIDER QUESTION ROUTE
-   ========================================================== */
 
 .question-route-board {
     position: relative;
@@ -503,9 +500,7 @@
     line-height: 1.35;
 }
 
-/* ==========================================================
-   DROPLET PHOTO CTA
-   ========================================================== */
+
 
 .droplet-photo-cta {
     position: relative;
@@ -732,9 +727,7 @@
     letter-spacing: -0.08em;
 }
 
-/* ==========================================================
-   FLOOD PAGE — RESTORATION ROUTING DIAGRAM
-   ========================================================== */
+
 
 .restoration-routing {
     position: relative;
@@ -828,9 +821,7 @@
     line-height: 1.35;
 }
 
-/* ==========================================================
-   BURST PIPE PAGE — PIPE BURST ILLUSTRATION
-   ========================================================== */
+
 
 .pipe-burst-board {
     position: relative;
@@ -1000,9 +991,6 @@
     line-height: 1.35;
 }
 
-/* ==========================================================
-   BURST PIPE PAGE — VALVE INFO RAIL
-   ========================================================== */
 
 .valve-info-rail {
     position: relative;
@@ -1089,9 +1077,7 @@
     line-height: 1.35;
 }
 
-/* ==========================================================
-   BURST PIPE PAGE — DAMAGE AREA MOSAIC
-   ========================================================== */
+
 
 .damage-mosaic {
     display: grid;
@@ -1153,9 +1139,7 @@
     line-height: 1.5;
 }
 
-/* ==========================================================
-   BASEMENT PAGE — BASEMENT CONDITIONS SPLIT
-   ========================================================== */
+
 
 .basement-conditions-split {
     display: grid;
@@ -1247,9 +1231,7 @@
     line-height: 1.35;
 }
 
-/* ==========================================================
-   BASEMENT PAGE — MOISTURE METER GAUGE CARDS
-   ========================================================== */
+
 
 .moisture-meter-grid {
     display: grid;
@@ -1345,9 +1327,6 @@
     line-height: 1.45;
 }
 
-/* ==========================================================
-   PROVIDER EVALUATION COLUMNS
-   ========================================================== */
 
 .provider-evaluation-columns {
     display: grid;
@@ -1417,9 +1396,7 @@
     box-shadow: 0 0 12px rgba(63, 169, 194, 0.42);
 }
 
-/* ==========================================================
-   HOMEOWNER REPORT NOTES
-   ========================================================== */
+
 
 .homeowner-report-notes {
     display: grid;
@@ -1485,9 +1462,7 @@
     line-height: 1.45;
 }
 
-/* ==========================================================
-   SERVICE FAQ + FINAL CTA
-   ========================================================== */
+
 
 .service-faq-grid {
     display: grid;
@@ -1859,10 +1834,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICE PAGES — CENTERED BIG SECTION HEADINGS
-   Add to bottom of /css/service-page.css
-   ========================================================== */
+
 
 .service-detail-page .section>.container>.section-heading {
     width: min(1040px, 100%) !important;
@@ -1892,7 +1864,7 @@
     line-height: 1.6 !important;
 }
 
-/* Light service sections: keep text readable */
+
 .service-detail-page .service-light-section .section-heading h2,
 .service-detail-page .section-light .section-heading h2 {
     color: var(--color-dark-heading) !important;
@@ -1903,7 +1875,6 @@
     color: var(--color-dark-muted) !important;
 }
 
-/* Dark service sections */
 .service-detail-page .section:not(.service-light-section):not(.section-light) .section-heading h2 {
     color: var(--color-heading) !important;
 }
@@ -1912,7 +1883,7 @@
     color: var(--color-muted) !important;
 }
 
-/* Desktop: make section heading bigger */
+
 @media (min-width: 981px) {
     .service-detail-page .section>.container>.section-heading {
         width: min(1240px, 100%) !important;
@@ -1938,7 +1909,7 @@
     }
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .service-detail-page .section>.container>.section-heading {
         width: min(760px, 100%) !important;
@@ -1952,7 +1923,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-detail-page .section>.container>.section-heading {
         width: 100% !important;
@@ -1975,10 +1946,7 @@
     }
 }
 
-/* ==========================================================
-   SERVICE PAGES — SCOPE BOARD MAIN PHOTO BACKGROUND
-   Add to bottom of /css/service-page.css
-   ========================================================== */
+
 
 .service-detail-page .service-panel.scope-board-main {
     position: relative;
@@ -1998,7 +1966,7 @@
         0 0 0 1px rgba(108, 182, 200, 0.08) !important;
 }
 
-/* Extra dark overlay for readability */
+
 .service-detail-page .service-panel.scope-board-main::before {
     content: "";
     position: absolute;
@@ -2011,7 +1979,6 @@
         linear-gradient(180deg, rgba(4, 16, 27, 0.18), rgba(4, 16, 27, 0.78));
 }
 
-/* Subtle premium grid / water texture */
 .service-detail-page .service-panel.scope-board-main::after {
     content: "";
     position: absolute;
@@ -2026,14 +1993,13 @@
     background-size: 38px 38px;
 }
 
-/* Keep content above photo and overlays */
 .service-detail-page .service-panel.scope-board-main .service-panel-content,
 .service-detail-page .service-panel.scope-board-main .scope-board-waterline {
     position: relative;
     z-index: 3;
 }
 
-/* Text readability */
+
 .service-detail-page .service-panel.scope-board-main h2 {
     color: #ffffff !important;
     text-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
@@ -2048,18 +2014,13 @@
     color: var(--color-water) !important;
 }
 
-/* Make waterline visible on dark photo */
+
 .service-detail-page .service-panel.scope-board-main .scope-board-waterline {
     background: linear-gradient(90deg, var(--color-water), var(--color-green), transparent) !important;
     opacity: 0.95 !important;
 }
 
-/* ==========================================================
-   SERVICE PAGES — DIFFERENT BRIGHT PHOTOS FOR SCOPE BOARD
-   Add to bottom of /css/service-page.css
-   ========================================================== */
 
-/* Base style for all service scope boards */
 .service-detail-page .service-panel.scope-board-main {
     position: relative;
     isolation: isolate;
@@ -2077,7 +2038,7 @@
         0 0 0 1px rgba(108, 182, 200, 0.08) !important;
 }
 
-/* Brighter photo layer effect through lighter dark gradient */
+
 .service-detail-page .service-panel.scope-board-main::before {
     content: "";
     position: absolute;
@@ -2090,7 +2051,7 @@
         linear-gradient(180deg, rgba(4, 16, 27, 0.08), rgba(4, 16, 27, 0.58));
 }
 
-/* Soft water/technical layer */
+
 .service-detail-page .service-panel.scope-board-main::after {
     content: "";
     position: absolute;
@@ -2130,10 +2091,7 @@
     opacity: 1 !important;
 }
 
-/* ==========================================================
-   UNIQUE PHOTOS BY SERVICE PAGE
-   ВАЖНО: data-service-id должен совпадать с body
-   ========================================================== */
+
 
 body[data-service-id="basement-water"] .service-panel.scope-board-main {
     background-image:
@@ -2165,24 +2123,19 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
         url("../assets/images/service-moisture-damage.jpg") !important;
 }
 
-/* Fallback photo if service id does not match */
+
 .service-detail-page .service-panel.scope-board-main {
     background-image:
         linear-gradient(180deg, rgba(4, 16, 27, 0.16), rgba(4, 16, 27, 0.66)),
         url("../assets/images/hero-services-damage.jpg");
 }
 
-/* Remove decorative before layer from every water checklist row */
 .water-check-row::before {
     display: none !important;
     content: none !important;
 }
 
-/* ==========================================================
-   STANDING WATER CHECKLIST — MOBILE COMPACT CARDS
-   Icon + status on top right
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+
 
 @media (max-width: 640px) {
     .service-detail-page .standing-water-checklist {
@@ -2231,7 +2184,6 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
         text-align: left !important;
     }
 
-    /* Main icon — top right */
     .service-detail-page .standing-water-checklist .water-check-icon {
         position: absolute !important;
         top: 0.58rem !important;
@@ -2253,7 +2205,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
         height: 0.86rem !important;
     }
 
-    /* Status badge — second item on top right */
+
     .service-detail-page .standing-water-checklist .water-check-status {
         position: absolute !important;
         top: 0.66rem !important;
@@ -2279,7 +2231,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Extra small phones */
+
 @media (max-width: 380px) {
     .service-detail-page .standing-water-checklist .water-check-row {
         min-height: 3.45rem !important;
@@ -2318,10 +2270,6 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   STANDING WATER CHECKLIST — HIDE STATUS ON MOBILE
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
 
 @media (max-width: 640px) {
     .service-detail-page .standing-water-checklist .water-check-status {
@@ -2347,13 +2295,9 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   QUESTION ROUTE NODES — TABLET/MOBILE COMPACT CARDS
-   Icon on the right
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
 
-/* Tablet */
+
+
 @media (max-width: 1024px) and (min-width: 641px) {
     .service-detail-page .question-route-nodes {
         display: grid !important;
@@ -2432,7 +2376,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-detail-page .question-route-nodes {
         display: grid !important;
@@ -2514,7 +2458,6 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Extra small phones */
 @media (max-width: 380px) {
     .service-detail-page .question-route-node {
         grid-template-columns: minmax(0, 1fr) 1.82rem !important;
@@ -2543,12 +2486,8 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   QUESTION ROUTE BOARD — TABLET/MOBILE COMPACT HEIGHT
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
 
-/* Tablet */
+
 @media (max-width: 1024px) and (min-width: 641px) {
     .service-detail-page .question-route-board {
         min-height: auto !important;
@@ -2566,7 +2505,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-detail-page .question-route-board {
         min-height: auto !important;
@@ -2588,7 +2527,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Extra small phones */
+
 @media (max-width: 380px) {
     .service-detail-page .question-route-board {
         padding: 0.68rem !important;
@@ -2596,12 +2535,8 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   SCOPE BOARD LIST — ALTERNATIVE COMPACT MOSAIC LAYOUT
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
 
-/* Tablet: 3 cards top, 2 cards centered below */
+
 @media (max-width: 1024px) and (min-width: 641px) {
     .service-detail-page .scope-board-list {
         display: grid !important;
@@ -2685,7 +2620,6 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Mobile: 2-column compact chips, last card full width */
 @media (max-width: 640px) {
     .service-detail-page .scope-board-list {
         display: grid !important;
@@ -2762,7 +2696,6 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Extra small phones */
 @media (max-width: 380px) {
     .service-detail-page .scope-board-list {
         gap: 0.42rem !important;
@@ -2795,10 +2728,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   STANDING WATER CHECKLIST — CARD HOVERS
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+
 
 .service-detail-page .standing-water-checklist .water-check-row {
     position: relative !important;
@@ -2812,13 +2742,13 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
         box-shadow 0.28s var(--ease);
 }
 
-/* чтобы старый декоративный ::before точно не мешал */
+
 .service-detail-page .standing-water-checklist .water-check-row::before {
     display: none !important;
     content: none !important;
 }
 
-/* новый hover-glow слой */
+
 .service-detail-page .standing-water-checklist .water-check-row::after {
     content: "";
     position: absolute;
@@ -2874,7 +2804,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
         0 0 24px rgba(117, 168, 77, 0.26) !important;
 }
 
-/* Text hover */
+
 .service-detail-page .standing-water-checklist .water-check-row:hover .water-check-text strong,
 .service-detail-page .standing-water-checklist .water-check-row:focus-within .water-check-text strong {
     color: #ffffff !important;
@@ -2885,7 +2815,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     color: rgba(216, 226, 229, 0.9) !important;
 }
 
-/* Status hover */
+
 .service-detail-page .standing-water-checklist .water-check-status {
     transition:
         color 0.28s var(--ease),
@@ -2902,7 +2832,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     box-shadow: 0 0 18px rgba(117, 168, 77, 0.2) !important;
 }
 
-/* Mobile: без прыжка, только подсветка */
+
 @media (max-width: 640px) {
 
     .service-detail-page .standing-water-checklist .water-check-row:hover,
@@ -2916,10 +2846,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   BASEMENT CONDITION LIST — CENTER ICONS INSIDE CARDS
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+
 
 .service-detail-page .basement-condition-list .basement-condition-item {
     align-items: center !important;
@@ -2967,10 +2894,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     margin: 0 !important;
 }
 
-/* ==========================================================
-   BASEMENT CONDITION LIST — CARD HOVERS
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+
 
 .service-detail-page .basement-condition-list .basement-condition-item {
     position: relative !important;
@@ -3035,7 +2959,6 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     opacity: 1;
 }
 
-/* Icon hover */
 .service-detail-page .basement-condition-list .basement-condition-icon {
     transition:
         transform 0.28s var(--ease),
@@ -3057,7 +2980,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
         0 0 24px rgba(117, 168, 77, 0.26) !important;
 }
 
-/* Text hover */
+
 .service-detail-page .basement-condition-list .basement-condition-item:hover strong,
 .service-detail-page .basement-condition-list .basement-condition-item:focus-within strong {
     color: #ffffff !important;
@@ -3068,7 +2991,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     color: rgba(216, 226, 229, 0.9) !important;
 }
 
-/* Mobile: no jump, only glow */
+
 @media (max-width: 640px) {
 
     .service-detail-page .basement-condition-list .basement-condition-item:hover,
@@ -3082,15 +3005,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   PROVIDER SCAN BOARD + PROVIDER FIT ROUTE
-   Replace old provider column sections
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
 
-/* =========================
-   SECTION 4 — PROVIDER SCAN
-   ========================= */
 
 .service-detail-page .provider-scan-section {
     position: relative;
@@ -3378,9 +3293,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     box-shadow: 0 0 12px rgba(117, 168, 77, 0.52);
 }
 
-/* =========================
-   SECTION 5 — FIT ROUTE
-   ========================= */
+
 
 .service-detail-page .provider-fit-route-section {
     position: relative;
@@ -3629,9 +3542,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     color: rgba(216, 226, 229, 0.82);
 }
 
-/* =========================
-   RESPONSIVE
-   ========================= */
+
 
 @media (max-width: 1180px) {
     .service-detail-page .provider-fit-route-board {
@@ -3772,10 +3683,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   PIPE BURST BOARD — COMPACT PHOTO BACKGROUND VERSION
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+
 
 .service-detail-page .pipe-burst-board {
     position: relative !important;
@@ -3799,7 +3707,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
         inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
 }
 
-/* Dark overlay + subtle grid */
+
 .service-detail-page .pipe-burst-board::before {
     content: "" !important;
     position: absolute !important;
@@ -3815,7 +3723,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     opacity: 0.95 !important;
 }
 
-/* Make old illustration less massive */
+
 .service-detail-page .pipe-burst-main {
     position: absolute !important;
     left: 6% !important;
@@ -3831,7 +3739,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     pointer-events: none !important;
 }
 
-/* Crack smaller and cleaner */
+
 .service-detail-page .pipe-burst-crack {
     position: absolute !important;
     top: 50% !important;
@@ -3857,7 +3765,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     pointer-events: none !important;
 }
 
-/* Notes layout */
+
 .service-detail-page .pipe-burst-notes {
     position: relative !important;
     z-index: 4 !important;
@@ -3870,7 +3778,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     align-items: center !important;
 }
 
-/* Cards */
+
 .service-detail-page .pipe-burst-note {
     position: relative !important;
     isolation: isolate !important;
@@ -3944,7 +3852,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     text-align: center !important;
 }
 
-/* Hover */
+
 .service-detail-page .pipe-burst-note:hover,
 .service-detail-page .pipe-burst-note:focus-within {
     transform: translateY(-4px) !important;
@@ -3963,7 +3871,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     opacity: 1 !important;
 }
 
-/* Tablet: compact 2-column mosaic */
+
 @media (max-width: 1024px) and (min-width: 641px) {
     .service-detail-page .pipe-burst-board {
         min-height: auto !important;
@@ -4011,7 +3919,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Mobile: simple compact cards */
+
 @media (max-width: 640px) {
     .service-detail-page .pipe-burst-board {
         min-height: auto !important;
@@ -4067,7 +3975,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Extra small phones */
+
 @media (max-width: 380px) {
     .service-detail-page .pipe-burst-board {
         padding: 0.58rem !important;
@@ -4087,10 +3995,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   PIPE BURST BOARD — TABLET/MOBILE TRUE CONTENT HEIGHT
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+
 
 @media (max-width: 1024px) {
     .service-detail-page .pipe-burst-board {
@@ -4116,7 +4021,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Tablet — board высотой только по карточкам */
+
 @media (max-width: 1024px) and (min-width: 641px) {
     .service-detail-page .pipe-burst-board {
         padding: 0.85rem !important;
@@ -4153,7 +4058,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Mobile — максимально компактно */
+
 @media (max-width: 640px) {
     .service-detail-page .pipe-burst-board {
         padding: 0.58rem !important;
@@ -4185,7 +4090,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Very small phones */
+
 @media (max-width: 380px) {
     .service-detail-page .pipe-burst-board {
         padding: 0.48rem !important;
@@ -4205,10 +4110,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   DAMAGE ZONES SECTION — FULL PHOTO CARD REDESIGN
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+
 
 .service-detail-page .damage-zones-section {
     position: relative;
@@ -4275,7 +4177,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Main grid */
+
 .service-detail-page .damage-zones-grid {
     position: relative;
     z-index: 2;
@@ -4285,7 +4187,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     gap: clamp(0.85rem, 2vw, 1.2rem);
 }
 
-/* Cards */
+
 .service-detail-page .damage-zone-card {
     position: relative;
     isolation: isolate;
@@ -4346,7 +4248,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     opacity: 0.6;
 }
 
-/* Desktop layout */
+
 .service-detail-page .damage-zone-card.zone-ceiling {
     grid-column: span 7;
     grid-row: span 2;
@@ -4368,7 +4270,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     min-height: 190px;
 }
 
-/* Card number */
+
 .service-detail-page .damage-zone-number {
     position: absolute;
     top: 1rem;
@@ -4392,7 +4294,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     line-height: 1;
 }
 
-/* Text */
+
 .service-detail-page .damage-zone-content {
     display: grid;
     gap: 0.55rem;
@@ -4430,7 +4332,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     line-height: 1.55;
 }
 
-/* Hover */
+
 .service-detail-page .damage-zone-card:hover,
 .service-detail-page .damage-zone-card:focus-within {
     transform: translateY(-5px);
@@ -4446,7 +4348,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     opacity: 0.94;
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .service-detail-page .damage-zones-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4489,7 +4391,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-detail-page .damage-zones-section .section-heading {
         margin-bottom: 1.7rem;
@@ -4554,7 +4456,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Extra small */
+
 @media (max-width: 380px) {
 
     .service-detail-page .damage-zone-card.zone-ceiling,
@@ -4577,10 +4479,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   PROVIDER DECISION LEDGER — UNIQUE SECTION REDESIGN
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+*/
 
 .service-detail-page .provider-ledger-section {
     position: relative;
@@ -4617,7 +4516,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     color: var(--color-muted) !important;
 }
 
-/* Board */
+
 .service-detail-page .provider-ledger-board {
     position: relative;
     z-index: 2;
@@ -4627,7 +4526,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     align-items: stretch;
 }
 
-/* Left panel */
+
 .service-detail-page .provider-ledger-aside {
     position: relative;
     isolation: isolate;
@@ -4710,13 +4609,13 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     font-weight: 800;
 }
 
-/* Ledger table */
+
 .service-detail-page .provider-ledger-table {
     display: grid;
     gap: 0.85rem;
 }
 
-/* Rows */
+
 .service-detail-page .provider-ledger-row {
     position: relative;
     isolation: isolate;
@@ -4784,7 +4683,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     opacity: 1;
 }
 
-/* Index */
+
 .service-detail-page .provider-ledger-index {
     display: grid;
     width: 3.2rem;
@@ -4799,7 +4698,6 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     font-weight: 850;
 }
 
-/* Copy */
 .service-detail-page .provider-ledger-copy {
     display: grid;
     gap: 0.38rem;
@@ -4830,7 +4728,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     line-height: 1.48;
 }
 
-/* Checks */
+
 .service-detail-page .provider-ledger-checks {
     display: grid;
     gap: 0.42rem;
@@ -4861,7 +4759,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     box-shadow: 0 0 12px rgba(117, 168, 77, 0.55);
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .service-detail-page .provider-ledger-board {
         grid-template-columns: 1fr;
@@ -4903,7 +4801,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-detail-page .provider-ledger-section .section-heading {
         margin-bottom: 1.8rem !important;
@@ -4997,7 +4895,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Extra small phones */
+
 @media (max-width: 380px) {
     .service-detail-page .provider-ledger-aside {
         min-height: 220px;
@@ -5025,10 +4923,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   DAMAGE ZONES GRID — TABLET EVEN 2x2 LAYOUT
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+
 
 @media (max-width: 1024px) and (min-width: 641px) {
     .service-detail-page .damage-zones-grid {
@@ -5081,12 +4976,9 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
 }
 
 
-/* ==========================================================
-   RESTORATION ROUTING — COMPACT TABLET/MOBILE CARDS + HOVERS
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
 
-/* Base hover setup */
+
+
 .service-detail-page .restoration-node {
     position: relative;
     isolation: isolate;
@@ -5152,7 +5044,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     color: rgba(216, 226, 229, 0.9) !important;
 }
 
-/* Tablet: compact 2-column cards, icons on the right */
+
 @media (max-width: 1024px) and (min-width: 641px) {
     .service-detail-page .restoration-routing {
         min-height: auto !important;
@@ -5280,7 +5172,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Mobile: very compact cards, text first, icon on the right */
+
 @media (max-width: 640px) {
     .service-detail-page .restoration-routing {
         min-height: auto !important;
@@ -5408,7 +5300,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Extra small phones */
+
 @media (max-width: 380px) {
     .service-detail-page .restoration-routing {
         padding: 0.5rem !important;
@@ -5443,10 +5335,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
 }
 
 
-/* ==========================================================
-   HORIZONTAL REPORT PANELS — FINAL SWIPER
-   Desktop: 3 cards / Tablet: 2 cards / Mobile: 1 card
-   ========================================================== */
+
 
 .service-detail-page .horizontal-report-rail,
 .service-detail-page .horizontal-report-rail.is-infinite-swiper {
@@ -5487,7 +5376,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     cursor: grabbing !important;
 }
 
-/* Cards */
+
 .service-detail-page .horizontal-report-rail>.report-panel.report-panel,
 .service-detail-page .horizontal-report-rail.is-infinite-swiper>.report-panel.report-panel {
     flex: 0 0 var(--report-panel-width, calc((100% - 2rem) / 3)) !important;
@@ -5540,7 +5429,6 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     font-size: 2.8rem !important;
 }
 
-/* Tablet: exactly 2 cards visible */
 @media (max-width: 1024px) and (min-width: 641px) {
 
     .service-detail-page .horizontal-report-rail,
@@ -5570,7 +5458,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Mobile: exactly 1 card visible */
+
 @media (max-width: 640px) {
 
     .service-detail-page .horizontal-report-rail,
@@ -5632,10 +5520,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   REPORT PANELS — REAL SWIPER
-   Desktop: 3 / Tablet: 2 / Mobile: 1
-   ========================================================== */
+
 
 .service-detail-page .report-swiper-shell {
     position: relative;
@@ -5759,7 +5644,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     line-height: 1;
 }
 
-/* Controls */
+
 
 .service-detail-page .report-swiper-controls {
     display: flex;
@@ -5827,7 +5712,6 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     background: var(--color-water);
 }
 
-/* Tablet: 2 cards */
 
 @media (max-width: 1024px) and (min-width: 641px) {
     .service-detail-page .report-panel {
@@ -5850,8 +5734,6 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
         font-size: 2.25rem;
     }
 }
-
-/* Mobile: 1 card */
 
 @media (max-width: 640px) {
     .service-detail-page .report-swiper-shell {
@@ -5948,11 +5830,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     pointer-events: none !important;
 }
 
-/* ==========================================================
-   SERVICE COMMAND LIST — MOBILE/TABLET COMPACT CARDS
-   Icon right, text left, compact height, hover
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+
 
 .service-detail-page .service-command-list .service-command-item {
     position: relative !important;
@@ -6018,7 +5896,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     color: rgba(216, 226, 229, 0.9) !important;
 }
 
-/* Tablet + mobile: icon right, text left */
+
 @media (max-width: 760px) {
     .service-detail-page .service-command-list {
         gap: 0.52rem !important;
@@ -6117,7 +5995,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Very small phones */
+
 @media (max-width: 380px) {
     .service-detail-page .service-command-list .service-command-item {
         grid-template-columns: minmax(0, 1fr) 1.75rem !important;
@@ -6164,10 +6042,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   HOMEOWNER NOTE MAIN — PHOTO BACKGROUND CARD
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+
 
 .service-detail-page .service-panel.dark.homeowner-note-main {
     position: relative !important;
@@ -6208,7 +6083,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
         linear-gradient(180deg, rgba(4, 16, 27, 0.06), rgba(4, 16, 27, 0.72)) !important;
 }
 
-/* Subtle technical grid */
+
 .service-detail-page .service-panel.dark.homeowner-note-main::after {
     content: "" !important;
     position: absolute !important;
@@ -6223,7 +6098,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     background-size: 38px 38px !important;
 }
 
-/* Content above image */
+
 .service-detail-page .service-panel.dark.homeowner-note-main>* {
     position: relative !important;
     z-index: 2 !important;
@@ -6245,12 +6120,12 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     text-shadow: 0 8px 24px rgba(0, 0, 0, 0.36) !important;
 }
 
-/* Buttons inside photo card */
+
 .service-detail-page .service-panel.dark.homeowner-note-main .hero-actions {
     margin-top: 0.35rem !important;
 }
 
-/* Tablet */
+
 @media (max-width: 1024px) {
     .service-detail-page .service-panel.dark.homeowner-note-main {
         min-height: 360px !important;
@@ -6258,7 +6133,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .service-detail-page .service-panel.dark.homeowner-note-main {
         min-height: 320px !important;
@@ -6292,10 +6167,7 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
-/* ==========================================================
-   DAMAGE ZONES — BACKGROUND PHOTOS WITHOUT JS
-   Add as the LAST block in /css/service-page.css
-   ========================================================== */
+
 
 .service-detail-page .damage-zones-grid .damage-zone-card {
     background:
@@ -6308,27 +6180,24 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     background-repeat: no-repeat !important;
 }
 
-/* Card 01 */
+
 .service-detail-page .damage-zones-grid .damage-zone-card:nth-child(1) {
     --zone-bg: url("../assets/images/hero-services-damage.jpg") !important;
 }
 
-/* Card 02 */
 .service-detail-page .damage-zones-grid .damage-zone-card:nth-child(2) {
     --zone-bg: url("../assets/images/water-lab-bg.jpg") !important;
 }
 
-/* Card 03 */
 .service-detail-page .damage-zones-grid .damage-zone-card:nth-child(3) {
     --zone-bg: url("../assets/images/service-burst-pipe.jpg") !important;
 }
 
-/* Card 04 */
 .service-detail-page .damage-zones-grid .damage-zone-card:nth-child(4) {
     --zone-bg: url("../assets/images/wet-glass-reports.jpg") !important;
 }
 
-/* If there are more cards later */
+
 .service-detail-page .damage-zones-grid .damage-zone-card:nth-child(5) {
     --zone-bg: url("../assets/images/service-water-cleanup.jpg") !important;
 }
