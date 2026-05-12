@@ -3375,3 +3375,123 @@
 .report-card[data-report-clone] {
     pointer-events: none;
 }
+
+/* ==========================================================
+   ZIP ATLAS + INTAKE LAB — CENTERED BIG SECTION HEADINGS
+   Add to bottom of /css/home.css
+   ========================================================== */
+
+/* Base centered heading for both sections */
+.zip-atlas-section .section-heading,
+.intake-lab-section .section-heading {
+    width: min(940px, 100%);
+    margin-inline: auto;
+    margin-bottom: clamp(2.3rem, 5vw, 4.2rem);
+    text-align: center;
+    justify-items: center;
+}
+
+.zip-atlas-section .section-heading .section-kicker,
+.intake-lab-section .section-heading .section-kicker {
+    justify-content: center;
+}
+
+.zip-atlas-section .section-heading h2,
+.intake-lab-section .section-heading h2 {
+    max-width: 900px;
+    margin-inline: auto;
+    line-height: 1.02;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.zip-atlas-section .section-heading p,
+.intake-lab-section .section-heading p {
+    max-width: 740px;
+    margin-inline: auto;
+    text-align: center;
+    text-wrap: balance;
+}
+
+/* Correct contrast for light intake section */
+.intake-lab-section .section-heading h2 {
+    color: var(--color-dark-heading);
+}
+
+.intake-lab-section .section-heading p {
+    color: var(--color-dark-muted);
+}
+
+.intake-lab-section .section-heading .section-kicker {
+    color: var(--color-water-strong);
+}
+
+/* Desktop: make heading and intro larger */
+@media (min-width: 981px) {
+
+    .zip-atlas-section .section-heading,
+    .intake-lab-section .section-heading {
+        width: min(1080px, 100%);
+        margin-bottom: clamp(3rem, 5vw, 5rem);
+    }
+
+    .zip-atlas-section .section-heading .section-kicker,
+    .intake-lab-section .section-heading .section-kicker {
+        font-size: 0.82rem;
+        letter-spacing: 0.2em;
+    }
+
+    .zip-atlas-section .section-heading h2,
+    .intake-lab-section .section-heading h2 {
+        max-width: 1000px;
+        font-size: clamp(2.8rem, 4.4vw, 4.35rem);
+        line-height: 0.96;
+        letter-spacing: -0.075em;
+    }
+
+    .zip-atlas-section .section-heading p,
+    .intake-lab-section .section-heading p {
+        max-width: 800px;
+        font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+        line-height: 1.6;
+    }
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+
+    .zip-atlas-section .section-heading,
+    .intake-lab-section .section-heading {
+        width: min(760px, 100%);
+        margin-bottom: 2.2rem;
+    }
+
+    .zip-atlas-section .section-heading h2,
+    .intake-lab-section .section-heading h2 {
+        font-size: clamp(2rem, 6vw, 3rem);
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+
+    .zip-atlas-section .section-heading,
+    .intake-lab-section .section-heading {
+        width: 100%;
+        margin-bottom: 1.8rem;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .zip-atlas-section .section-heading h2,
+    .intake-lab-section .section-heading h2 {
+        font-size: clamp(1.85rem, 9vw, 2.55rem);
+        line-height: 1;
+    }
+
+    .zip-atlas-section .section-heading p,
+    .intake-lab-section .section-heading p {
+        font-size: 0.98rem;
+        line-height: 1.55;
+    }
+}

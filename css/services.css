@@ -1180,3 +1180,275 @@
         padding-bottom: 0;
     }
 }
+
+/* ==========================================================
+   SERVICES PAGE — CENTERED BIG SECTION HEADINGS
+   Add to bottom of /css/services.css
+   ========================================================== */
+
+.valve-carousel-section .section-heading,
+.damage-selector-section .section-heading,
+.gauge-comparison-section .section-heading,
+.provider-matrix-section .section-heading {
+    width: min(940px, 100%);
+    margin-inline: auto;
+    margin-bottom: clamp(2.3rem, 5vw, 4.2rem);
+    text-align: center;
+    justify-items: center;
+}
+
+.valve-carousel-section .section-heading .section-kicker,
+.damage-selector-section .section-heading .section-kicker,
+.gauge-comparison-section .section-heading .section-kicker,
+.provider-matrix-section .section-heading .section-kicker {
+    justify-content: center;
+}
+
+.valve-carousel-section .section-heading h2,
+.damage-selector-section .section-heading h2,
+.gauge-comparison-section .section-heading h2,
+.provider-matrix-section .section-heading h2 {
+    max-width: 900px;
+    margin-inline: auto;
+    line-height: 1.02;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.valve-carousel-section .section-heading p,
+.damage-selector-section .section-heading p,
+.gauge-comparison-section .section-heading p,
+.provider-matrix-section .section-heading p {
+    max-width: 760px;
+    margin-inline: auto;
+    text-align: center;
+    text-wrap: balance;
+}
+
+/* If these sections are light/gray, keep text readable */
+.gauge-comparison-section .section-heading h2,
+.provider-matrix-section .section-heading h2 {
+    color: var(--color-dark-heading);
+}
+
+.gauge-comparison-section .section-heading p,
+.provider-matrix-section .section-heading p {
+    color: var(--color-dark-muted);
+}
+
+.gauge-comparison-section .section-heading .section-kicker,
+.provider-matrix-section .section-heading .section-kicker {
+    color: var(--color-water-strong);
+}
+
+/* Desktop: bigger headings */
+@media (min-width: 981px) {
+
+    .valve-carousel-section .section-heading,
+    .damage-selector-section .section-heading,
+    .gauge-comparison-section .section-heading,
+    .provider-matrix-section .section-heading {
+        width: min(1080px, 100%);
+        margin-bottom: clamp(3rem, 5vw, 5rem);
+    }
+
+    .valve-carousel-section .section-heading .section-kicker,
+    .damage-selector-section .section-heading .section-kicker,
+    .gauge-comparison-section .section-heading .section-kicker,
+    .provider-matrix-section .section-heading .section-kicker {
+        font-size: 0.82rem;
+        letter-spacing: 0.2em;
+    }
+
+    .valve-carousel-section .section-heading h2,
+    .damage-selector-section .section-heading h2,
+    .gauge-comparison-section .section-heading h2,
+    .provider-matrix-section .section-heading h2 {
+        max-width: 1000px;
+        font-size: clamp(2.8rem, 4.4vw, 4.35rem);
+        line-height: 0.96;
+        letter-spacing: -0.075em;
+    }
+
+    .valve-carousel-section .section-heading p,
+    .damage-selector-section .section-heading p,
+    .gauge-comparison-section .section-heading p,
+    .provider-matrix-section .section-heading p {
+        max-width: 820px;
+        font-size: clamp(1.08rem, 1.35vw, 1.28rem);
+        line-height: 1.6;
+    }
+}
+
+/* Tablet */
+@media (max-width: 980px) {
+
+    .valve-carousel-section .section-heading,
+    .damage-selector-section .section-heading,
+    .gauge-comparison-section .section-heading,
+    .provider-matrix-section .section-heading {
+        width: min(760px, 100%);
+        margin-bottom: 2.2rem;
+    }
+
+    .valve-carousel-section .section-heading h2,
+    .damage-selector-section .section-heading h2,
+    .gauge-comparison-section .section-heading h2,
+    .provider-matrix-section .section-heading h2 {
+        font-size: clamp(2rem, 6vw, 3rem);
+        line-height: 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+
+    .valve-carousel-section .section-heading,
+    .damage-selector-section .section-heading,
+    .gauge-comparison-section .section-heading,
+    .provider-matrix-section .section-heading {
+        width: 100%;
+        margin-bottom: 1.8rem;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .valve-carousel-section .section-heading h2,
+    .damage-selector-section .section-heading h2,
+    .gauge-comparison-section .section-heading h2,
+    .provider-matrix-section .section-heading h2 {
+        font-size: clamp(1.85rem, 9vw, 2.55rem);
+        line-height: 1;
+        letter-spacing: -0.055em;
+    }
+
+    .valve-carousel-section .section-heading p,
+    .damage-selector-section .section-heading p,
+    .gauge-comparison-section .section-heading p,
+    .provider-matrix-section .section-heading p {
+        max-width: 94%;
+        font-size: 0.98rem;
+        line-height: 1.55;
+    }
+}
+
+/* ==========================================================
+   SERVICES PAGE — TARGETED SECTION FIXES
+   Add to bottom of /css/services.css
+   ========================================================== */
+
+/* 1. Provider Matrix — make heading/text light */
+.provider-matrix-section .section-heading .section-kicker {
+    color: var(--color-water) !important;
+}
+
+.provider-matrix-section .section-heading h2 {
+    color: var(--color-heading) !important;
+}
+
+.provider-matrix-section .section-heading p {
+    color: var(--color-muted) !important;
+}
+
+/* Also keep matrix content readable on dark background */
+.provider-matrix-section,
+.provider-matrix-section .matrix-shell,
+.provider-matrix-section .matrix-scroll {
+    color: var(--color-text);
+}
+
+.provider-matrix-section h3,
+.provider-matrix-section strong,
+.provider-matrix-section th {
+    color: var(--color-heading);
+}
+
+.provider-matrix-section p,
+.provider-matrix-section td,
+.provider-matrix-section li {
+    color: var(--color-muted);
+}
+
+
+/* 2. Valve Carousel — force heading into cleaner 2-line desktop layout */
+@media (min-width: 981px) {
+    .valve-carousel-section .section-heading h2 {
+        max-width: 860px !important;
+        margin-inline: auto !important;
+        font-size: clamp(2.8rem, 4.2vw, 4.15rem) !important;
+        line-height: 0.98 !important;
+        text-align: center !important;
+        text-wrap: balance !important;
+    }
+
+    .valve-carousel-section .section-heading p {
+        max-width: 760px !important;
+    }
+}
+
+
+/* 3. Gauge Comparison — make heading area bigger */
+@media (min-width: 981px) {
+    .gauge-comparison-section .section-heading {
+        width: min(1120px, 100%) !important;
+        margin-bottom: clamp(3.4rem, 5vw, 5.4rem) !important;
+    }
+
+    .gauge-comparison-section .section-heading .section-kicker {
+        font-size: 0.86rem !important;
+        letter-spacing: 0.22em !important;
+    }
+
+    .gauge-comparison-section .section-heading h2 {
+        max-width: 1080px !important;
+        font-size: clamp(3.25rem, 5vw, 5rem) !important;
+        line-height: 0.94 !important;
+        letter-spacing: -0.08em !important;
+    }
+
+    .gauge-comparison-section .section-heading p {
+        max-width: 860px !important;
+        font-size: clamp(1.12rem, 1.45vw, 1.34rem) !important;
+        line-height: 1.62 !important;
+    }
+}
+
+/* Optional: make gauge cards themselves a bit larger and more premium */
+@media (min-width: 981px) {
+    .gauge-comparison-section .gauge-grid {
+        gap: clamp(1rem, 1.8vw, 1.6rem) !important;
+    }
+
+    .gauge-comparison-section .gauge-card,
+    .gauge-comparison-section [data-gauge-grid]>* {
+        min-height: 320px;
+    }
+}
+
+/* ==========================================================
+   VALVE CAROUSEL — WIDER HEADING FOR 2 LINES
+   Add to bottom of /css/services.css
+   ========================================================== */
+
+@media (min-width: 981px) {
+    .valve-carousel-section .section-heading {
+        width: min(1180px, 100%) !important;
+        max-width: 1180px !important;
+    }
+
+    .valve-carousel-section .section-heading h2 {
+        max-width: 1120px !important;
+        width: 100% !important;
+        margin-inline: auto !important;
+        font-size: clamp(2.9rem, 4.1vw, 4.25rem) !important;
+        line-height: 0.98 !important;
+        letter-spacing: -0.075em !important;
+        text-align: center !important;
+        text-wrap: balance !important;
+    }
+
+    .valve-carousel-section .section-heading p {
+        max-width: 820px !important;
+        margin-inline: auto !important;
+    }
+}
