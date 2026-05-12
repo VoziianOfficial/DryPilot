@@ -4237,3 +4237,877 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
     }
 }
 
+/* ==========================================================
+   DAMAGE ZONES SECTION — FULL PHOTO CARD REDESIGN
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+.service-detail-page .damage-zones-section {
+    position: relative;
+    overflow: hidden;
+    color: var(--color-heading);
+    background:
+        radial-gradient(circle at 12% 16%, rgba(108, 182, 200, 0.16), transparent 32rem),
+        radial-gradient(circle at 88% 80%, rgba(117, 168, 77, 0.12), transparent 30rem),
+        linear-gradient(180deg, #04101b, #071827);
+}
+
+.service-detail-page .damage-zones-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+    opacity: 0.48;
+}
+
+.service-detail-page .damage-zones-section .section-heading {
+    position: relative;
+    z-index: 2;
+    width: min(1120px, 100%);
+    margin-inline: auto;
+    margin-bottom: clamp(2.3rem, 5vw, 4.6rem);
+    text-align: center;
+    justify-items: center;
+}
+
+.service-detail-page .damage-zones-section .section-heading .section-kicker {
+    justify-content: center;
+}
+
+.service-detail-page .damage-zones-section .section-heading h2 {
+    max-width: 1040px;
+    margin-inline: auto;
+    color: var(--color-heading);
+    text-align: center;
+    text-wrap: balance;
+}
+
+.service-detail-page .damage-zones-section .section-heading p {
+    max-width: 760px;
+    margin-inline: auto;
+    color: var(--color-muted);
+    text-align: center;
+    text-wrap: balance;
+}
+
+@media (min-width: 981px) {
+    .service-detail-page .damage-zones-section .section-heading h2 {
+        font-size: clamp(3.2rem, 5.4vw, 5.8rem);
+        line-height: 0.9;
+        letter-spacing: -0.085em;
+    }
+
+    .service-detail-page .damage-zones-section .section-heading p {
+        font-size: clamp(1.06rem, 1.35vw, 1.24rem);
+        line-height: 1.6;
+    }
+}
+
+/* Main grid */
+.service-detail-page .damage-zones-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-auto-rows: 210px;
+    gap: clamp(0.85rem, 2vw, 1.2rem);
+}
+
+/* Cards */
+.service-detail-page .damage-zone-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: grid;
+    align-content: end;
+
+    min-height: 100%;
+    padding: clamp(1rem, 2vw, 1.35rem);
+
+    border: 1px solid rgba(108, 182, 200, 0.2);
+    border-radius: var(--radius-xl);
+
+    color: var(--color-heading);
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.1), rgba(4, 16, 27, 0.88)),
+        linear-gradient(90deg, rgba(4, 16, 27, 0.78), rgba(4, 16, 27, 0.28)),
+        var(--zone-bg);
+    background-size: cover;
+    background-position: center;
+
+    box-shadow:
+        0 22px 56px rgba(0, 0, 0, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    transition:
+        transform 0.32s var(--ease),
+        border-color 0.32s var(--ease),
+        box-shadow 0.32s var(--ease),
+        filter 0.32s var(--ease);
+}
+
+.service-detail-page .damage-zone-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(circle at 18% 16%, rgba(108, 182, 200, 0.22), transparent 15rem),
+        radial-gradient(circle at 88% 82%, rgba(117, 168, 77, 0.14), transparent 15rem),
+        linear-gradient(180deg, transparent, rgba(4, 16, 27, 0.72));
+    opacity: 0.72;
+
+    transition: opacity 0.32s var(--ease);
+}
+
+.service-detail-page .damage-zone-card::after {
+    content: "";
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(108, 182, 200, 0.72), transparent);
+    opacity: 0.6;
+}
+
+/* Desktop layout */
+.service-detail-page .damage-zone-card.zone-ceiling {
+    grid-column: span 7;
+    grid-row: span 2;
+}
+
+.service-detail-page .damage-zone-card.zone-wall {
+    grid-column: span 5;
+    grid-row: span 1;
+}
+
+.service-detail-page .damage-zone-card.zone-floor {
+    grid-column: span 5;
+    grid-row: span 1;
+}
+
+.service-detail-page .damage-zone-card.zone-rooms {
+    grid-column: span 12;
+    grid-row: span 1;
+    min-height: 190px;
+}
+
+/* Card number */
+.service-detail-page .damage-zone-number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    display: grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    place-items: center;
+
+    border: 1px solid rgba(108, 182, 200, 0.34);
+    border-radius: 999px;
+
+    color: var(--color-water);
+    background: rgba(4, 16, 27, 0.58);
+    backdrop-filter: blur(12px);
+
+    font-family: var(--font-heading);
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* Text */
+.service-detail-page .damage-zone-content {
+    display: grid;
+    gap: 0.55rem;
+    max-width: 620px;
+}
+
+.service-detail-page .damage-zone-label {
+    width: max-content;
+    padding: 0.38rem 0.56rem;
+    border: 1px solid rgba(117, 168, 77, 0.3);
+    border-radius: 999px;
+    color: var(--color-green);
+    background: rgba(117, 168, 77, 0.1);
+
+    font-size: 0.66rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.service-detail-page .damage-zone-card h3 {
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: clamp(1.45rem, 2.8vw, 3.1rem);
+    line-height: 0.94;
+    letter-spacing: -0.07em;
+    text-wrap: balance;
+}
+
+.service-detail-page .damage-zone-card p {
+    max-width: 560px;
+    color: rgba(216, 226, 229, 0.86);
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+/* Hover */
+.service-detail-page .damage-zone-card:hover,
+.service-detail-page .damage-zone-card:focus-within {
+    transform: translateY(-5px);
+    border-color: rgba(108, 182, 200, 0.46);
+    box-shadow:
+        0 30px 74px rgba(0, 0, 0, 0.36),
+        0 0 34px rgba(108, 182, 200, 0.16);
+    filter: saturate(1.08);
+}
+
+.service-detail-page .damage-zone-card:hover::before,
+.service-detail-page .damage-zone-card:focus-within::before {
+    opacity: 0.94;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .service-detail-page .damage-zones-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: auto;
+        gap: 0.72rem;
+    }
+
+    .service-detail-page .damage-zone-card.zone-ceiling,
+    .service-detail-page .damage-zone-card.zone-wall,
+    .service-detail-page .damage-zone-card.zone-floor,
+    .service-detail-page .damage-zone-card.zone-rooms {
+        grid-column: auto;
+        grid-row: auto;
+        min-height: 220px;
+    }
+
+    .service-detail-page .damage-zone-card.zone-rooms {
+        grid-column: 1 / -1;
+        min-height: 190px;
+    }
+
+    .service-detail-page .damage-zone-card {
+        border-radius: 22px;
+        padding: 1rem;
+    }
+
+    .service-detail-page .damage-zone-number {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 0.66rem;
+    }
+
+    .service-detail-page .damage-zone-card h3 {
+        font-size: clamp(1.35rem, 4vw, 2.2rem);
+    }
+
+    .service-detail-page .damage-zone-card p {
+        font-size: 0.82rem;
+        line-height: 1.42;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .service-detail-page .damage-zones-section .section-heading {
+        margin-bottom: 1.7rem;
+    }
+
+    .service-detail-page .damage-zones-grid {
+        grid-template-columns: 1fr;
+        gap: 0.52rem;
+    }
+
+    .service-detail-page .damage-zone-card.zone-ceiling,
+    .service-detail-page .damage-zone-card.zone-wall,
+    .service-detail-page .damage-zone-card.zone-floor,
+    .service-detail-page .damage-zone-card.zone-rooms {
+        min-height: 128px;
+        grid-column: auto;
+    }
+
+    .service-detail-page .damage-zone-card {
+        padding: 0.72rem 3rem 0.72rem 0.78rem;
+        border-radius: 16px;
+        background-position: center;
+    }
+
+    .service-detail-page .damage-zone-number {
+        top: 0.72rem;
+        right: 0.72rem;
+        width: 1.9rem;
+        height: 1.9rem;
+        font-size: 0.58rem;
+    }
+
+    .service-detail-page .damage-zone-content {
+        gap: 0.34rem;
+    }
+
+    .service-detail-page .damage-zone-label {
+        padding: 0.28rem 0.42rem;
+        font-size: 0.54rem;
+        letter-spacing: 0.1em;
+    }
+
+    .service-detail-page .damage-zone-card h3 {
+        font-size: 1rem;
+        line-height: 1;
+        letter-spacing: -0.045em;
+    }
+
+    .service-detail-page .damage-zone-card p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        font-size: 0.66rem;
+        line-height: 1.18;
+    }
+
+    .service-detail-page .damage-zone-card:hover,
+    .service-detail-page .damage-zone-card:focus-within {
+        transform: none;
+    }
+}
+
+/* Extra small */
+@media (max-width: 380px) {
+
+    .service-detail-page .damage-zone-card.zone-ceiling,
+    .service-detail-page .damage-zone-card.zone-wall,
+    .service-detail-page .damage-zone-card.zone-floor,
+    .service-detail-page .damage-zone-card.zone-rooms {
+        min-height: 112px;
+    }
+
+    .service-detail-page .damage-zone-card {
+        padding: 0.62rem 2.75rem 0.62rem 0.68rem;
+    }
+
+    .service-detail-page .damage-zone-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .service-detail-page .damage-zone-card p {
+        font-size: 0.6rem;
+    }
+}
+
+/* ==========================================================
+   PROVIDER DECISION LEDGER — UNIQUE SECTION REDESIGN
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+.service-detail-page .provider-ledger-section {
+    position: relative;
+    overflow: hidden;
+    color: var(--color-heading);
+    background:
+        radial-gradient(circle at 12% 20%, rgba(108, 182, 200, 0.16), transparent 34rem),
+        radial-gradient(circle at 88% 78%, rgba(117, 168, 77, 0.12), transparent 30rem),
+        linear-gradient(180deg, #071827, #04101b);
+}
+
+.service-detail-page .provider-ledger-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.45;
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.035) 1px, transparent 1px);
+    background-size: 42px 42px;
+}
+
+.service-detail-page .provider-ledger-section .section-heading {
+    position: relative;
+    z-index: 2;
+}
+
+.service-detail-page .provider-ledger-section .section-heading h2 {
+    color: var(--color-heading) !important;
+}
+
+.service-detail-page .provider-ledger-section .section-heading p {
+    color: var(--color-muted) !important;
+}
+
+/* Board */
+.service-detail-page .provider-ledger-board {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(280px, 0.38fr) minmax(0, 1fr);
+    gap: clamp(1rem, 2.6vw, 1.7rem);
+    align-items: stretch;
+}
+
+/* Left panel */
+.service-detail-page .provider-ledger-aside {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    align-content: end;
+    gap: 0.9rem;
+    min-height: 520px;
+    overflow: hidden;
+    padding: clamp(1.1rem, 2.5vw, 1.6rem);
+    border: 1px solid rgba(108, 182, 200, 0.22);
+    border-radius: var(--radius-xl);
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.42), rgba(4, 16, 27, 0.94)),
+        radial-gradient(circle at 20% 18%, rgba(108, 182, 200, 0.22), transparent 18rem),
+        url("../assets/images/service-burst-pipe.jpg") center / cover no-repeat;
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.34),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.service-detail-page .provider-ledger-aside::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background:
+        linear-gradient(90deg, rgba(4, 16, 27, 0.92), rgba(4, 16, 27, 0.34)),
+        radial-gradient(circle at 86% 82%, rgba(117, 168, 77, 0.16), transparent 16rem);
+}
+
+.service-detail-page .provider-ledger-eyebrow {
+    width: max-content;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid rgba(108, 182, 200, 0.34);
+    border-radius: 999px;
+    color: var(--color-water);
+    background: rgba(4, 16, 27, 0.56);
+    backdrop-filter: blur(12px);
+    font-size: 0.68rem;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.service-detail-page .provider-ledger-aside h3 {
+    max-width: 420px;
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.6vw, 3.8rem);
+    line-height: 0.92;
+    letter-spacing: -0.075em;
+}
+
+.service-detail-page .provider-ledger-aside p:not(.provider-ledger-eyebrow) {
+    max-width: 430px;
+    color: rgba(216, 226, 229, 0.88);
+    font-size: 0.92rem;
+    line-height: 1.62;
+}
+
+.service-detail-page .provider-ledger-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 0.25rem;
+}
+
+.service-detail-page .provider-ledger-pills span {
+    display: inline-flex;
+    min-height: 1.95rem;
+    align-items: center;
+    padding: 0.42rem 0.65rem;
+    border: 1px solid rgba(117, 168, 77, 0.3);
+    border-radius: 999px;
+    color: var(--color-green);
+    background: rgba(117, 168, 77, 0.09);
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+
+/* Ledger table */
+.service-detail-page .provider-ledger-table {
+    display: grid;
+    gap: 0.85rem;
+}
+
+/* Rows */
+.service-detail-page .provider-ledger-row {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    grid-template-columns: 3.8rem minmax(0, 1fr) minmax(220px, 0.38fr);
+    gap: 1rem;
+    align-items: center;
+    min-height: 158px;
+    overflow: hidden;
+    padding: 1rem;
+    border: 1px solid rgba(108, 182, 200, 0.17);
+    border-radius: var(--radius-lg);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.065), rgba(255, 255, 255, 0.025)),
+        rgba(17, 24, 32, 0.82);
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.2);
+    transition:
+        transform 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+.service-detail-page .provider-ledger-row::before {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    z-index: -1;
+    width: 3px;
+    opacity: 0;
+    background: linear-gradient(180deg, var(--color-water), var(--color-green));
+    transition: opacity 0.28s var(--ease);
+}
+
+.service-detail-page .provider-ledger-row::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    opacity: 0;
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(108, 182, 200, 0.18), transparent 13rem),
+        radial-gradient(circle at 88% 82%, rgba(117, 168, 77, 0.13), transparent 14rem);
+    transition: opacity 0.28s var(--ease);
+}
+
+.service-detail-page .provider-ledger-row:hover,
+.service-detail-page .provider-ledger-row:focus-within {
+    transform: translateY(-4px);
+    border-color: rgba(108, 182, 200, 0.44);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.035)),
+        rgba(17, 24, 32, 0.92);
+    box-shadow:
+        0 24px 58px rgba(0, 0, 0, 0.3),
+        0 0 32px rgba(108, 182, 200, 0.14);
+}
+
+.service-detail-page .provider-ledger-row:hover::before,
+.service-detail-page .provider-ledger-row:hover::after,
+.service-detail-page .provider-ledger-row:focus-within::before,
+.service-detail-page .provider-ledger-row:focus-within::after {
+    opacity: 1;
+}
+
+/* Index */
+.service-detail-page .provider-ledger-index {
+    display: grid;
+    width: 3.2rem;
+    height: 3.2rem;
+    place-items: center;
+    border: 1px solid rgba(108, 182, 200, 0.32);
+    border-radius: 999px;
+    color: var(--color-water);
+    background: rgba(108, 182, 200, 0.08);
+    font-family: var(--font-heading);
+    font-size: 0.82rem;
+    font-weight: 850;
+}
+
+/* Copy */
+.service-detail-page .provider-ledger-copy {
+    display: grid;
+    gap: 0.38rem;
+    min-width: 0;
+}
+
+.service-detail-page .provider-ledger-label {
+    color: var(--color-green);
+    font-size: 0.68rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.service-detail-page .provider-ledger-copy h3 {
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: clamp(1.25rem, 2vw, 1.75rem);
+    line-height: 1;
+    letter-spacing: -0.055em;
+}
+
+.service-detail-page .provider-ledger-copy p:not(.provider-ledger-label) {
+    max-width: 620px;
+    color: rgba(216, 226, 229, 0.78);
+    font-size: 0.86rem;
+    line-height: 1.48;
+}
+
+/* Checks */
+.service-detail-page .provider-ledger-checks {
+    display: grid;
+    gap: 0.42rem;
+}
+
+.service-detail-page .provider-ledger-checks li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.52rem;
+    min-height: 2rem;
+    padding: 0.42rem 0.55rem;
+    border: 1px solid rgba(216, 226, 229, 0.09);
+    border-radius: 999px;
+    color: rgba(216, 226, 229, 0.84);
+    background: rgba(255, 255, 255, 0.04);
+    font-size: 0.76rem;
+    line-height: 1.2;
+}
+
+.service-detail-page .provider-ledger-checks li::before {
+    content: "";
+    width: 0.38rem;
+    height: 0.38rem;
+    flex: 0 0 auto;
+    border-radius: 999px;
+    background: var(--color-green);
+    box-shadow: 0 0 12px rgba(117, 168, 77, 0.55);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .service-detail-page .provider-ledger-board {
+        grid-template-columns: 1fr;
+    }
+
+    .service-detail-page .provider-ledger-aside {
+        min-height: 330px;
+        border-radius: 24px;
+    }
+
+    .service-detail-page .provider-ledger-table {
+        gap: 0.7rem;
+    }
+
+    .service-detail-page .provider-ledger-row {
+        grid-template-columns: 3rem minmax(0, 1fr);
+        min-height: auto;
+        padding: 0.85rem;
+        border-radius: 18px;
+    }
+
+    .service-detail-page .provider-ledger-index {
+        width: 2.65rem;
+        height: 2.65rem;
+        font-size: 0.72rem;
+    }
+
+    .service-detail-page .provider-ledger-checks {
+        grid-column: 1 / -1;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
+    .service-detail-page .provider-ledger-checks li {
+        justify-content: center;
+        border-radius: 14px;
+        text-align: center;
+        font-size: 0.72rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .service-detail-page .provider-ledger-section .section-heading {
+        margin-bottom: 1.8rem !important;
+    }
+
+    .service-detail-page .provider-ledger-board {
+        gap: 0.72rem;
+    }
+
+    .service-detail-page .provider-ledger-aside {
+        min-height: 250px;
+        padding: 0.9rem;
+        border-radius: 18px;
+    }
+
+    .service-detail-page .provider-ledger-eyebrow {
+        padding: 0.34rem 0.5rem;
+        font-size: 0.56rem;
+    }
+
+    .service-detail-page .provider-ledger-aside h3 {
+        font-size: clamp(1.45rem, 8vw, 2.25rem);
+        line-height: 0.95;
+    }
+
+    .service-detail-page .provider-ledger-aside p:not(.provider-ledger-eyebrow) {
+        font-size: 0.74rem;
+        line-height: 1.38;
+    }
+
+    .service-detail-page .provider-ledger-pills {
+        gap: 0.38rem;
+    }
+
+    .service-detail-page .provider-ledger-pills span {
+        min-height: 1.55rem;
+        padding: 0.28rem 0.48rem;
+        font-size: 0.58rem;
+    }
+
+    .service-detail-page .provider-ledger-row {
+        grid-template-columns: 2.1rem minmax(0, 1fr);
+        gap: 0.62rem;
+        padding: 0.62rem;
+        border-radius: 15px;
+    }
+
+    .service-detail-page .provider-ledger-index {
+        width: 2rem;
+        height: 2rem;
+        font-size: 0.58rem;
+    }
+
+    .service-detail-page .provider-ledger-label {
+        font-size: 0.54rem;
+        letter-spacing: 0.1em;
+    }
+
+    .service-detail-page .provider-ledger-copy h3 {
+        font-size: 0.9rem;
+        line-height: 1.05;
+    }
+
+    .service-detail-page .provider-ledger-copy p:not(.provider-ledger-label) {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 0.64rem;
+        line-height: 1.18;
+    }
+
+    .service-detail-page .provider-ledger-checks {
+        grid-template-columns: 1fr;
+        gap: 0.34rem;
+        margin-top: 0.2rem;
+    }
+
+    .service-detail-page .provider-ledger-checks li {
+        justify-content: flex-start;
+        min-height: 1.65rem;
+        padding: 0.32rem 0.46rem;
+        border-radius: 999px;
+        font-size: 0.58rem;
+        text-align: left;
+    }
+
+    .service-detail-page .provider-ledger-row:hover,
+    .service-detail-page .provider-ledger-row:focus-within {
+        transform: none;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .service-detail-page .provider-ledger-aside {
+        min-height: 220px;
+        padding: 0.78rem;
+    }
+
+    .service-detail-page .provider-ledger-row {
+        grid-template-columns: 1.85rem minmax(0, 1fr);
+        padding: 0.52rem;
+    }
+
+    .service-detail-page .provider-ledger-index {
+        width: 1.78rem;
+        height: 1.78rem;
+        font-size: 0.52rem;
+    }
+
+    .service-detail-page .provider-ledger-copy h3 {
+        font-size: 0.82rem;
+    }
+
+    .service-detail-page .provider-ledger-copy p:not(.provider-ledger-label),
+    .service-detail-page .provider-ledger-checks li {
+        font-size: 0.54rem;
+    }
+}
+
+/* ==========================================================
+   DAMAGE ZONES GRID — TABLET EVEN 2x2 LAYOUT
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+@media (max-width: 1024px) and (min-width: 641px) {
+    .service-detail-page .damage-zones-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-auto-rows: 1fr !important;
+        gap: 0.85rem !important;
+        align-items: stretch !important;
+    }
+
+    .service-detail-page .damage-zones-grid .damage-zone-card,
+    .service-detail-page .damage-zones-grid .damage-zone-card.zone-ceiling,
+    .service-detail-page .damage-zones-grid .damage-zone-card.zone-wall,
+    .service-detail-page .damage-zones-grid .damage-zone-card.zone-floor,
+    .service-detail-page .damage-zones-grid .damage-zone-card.zone-rooms {
+        grid-column: auto !important;
+        grid-row: auto !important;
+
+        width: 100% !important;
+        min-height: 230px !important;
+        height: 100% !important;
+
+        display: grid !important;
+        align-content: end !important;
+
+        padding: 1rem !important;
+        border-radius: 22px !important;
+    }
+
+    .service-detail-page .damage-zones-grid .damage-zone-content {
+        max-width: 100% !important;
+        gap: 0.42rem !important;
+    }
+
+    .service-detail-page .damage-zones-grid .damage-zone-card h3 {
+        font-size: clamp(1.25rem, 3.4vw, 2rem) !important;
+        line-height: 0.98 !important;
+    }
+
+    .service-detail-page .damage-zones-grid .damage-zone-card p {
+        font-size: 0.78rem !important;
+        line-height: 1.34 !important;
+    }
+
+    .service-detail-page .damage-zones-grid .damage-zone-number {
+        width: 2.25rem !important;
+        height: 2.25rem !important;
+        font-size: 0.66rem !important;
+    }
+}
