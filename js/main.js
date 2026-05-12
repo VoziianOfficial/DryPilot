@@ -1,20 +1,6 @@
 "use strict";
 
-/* ==========================================================
-   DRYPILOT — MAIN JS
-   File: /js/main.js
 
-   Shared behavior:
-   - config injection
-   - header/footer rendering
-   - mobile menu
-   - service rendering
-   - FAQ rendering + JSON-LD
-   - form validation
-   - cookie banner
-   - accessibility helpers
-   - hardcoded business data audit
-   ========================================================== */
 
 (function () {
     const CONFIG = window.SITE_CONFIG;
@@ -46,28 +32,35 @@
         lastFocusedElement: null,
         activeCarouselIndex: 0
     };
+  document.addEventListener("DOMContentLoaded", () => {
+    applyPageMeta();
+    ensureSharedMounts();
+    renderHeader();
+    renderFooter();
+    applyConfig();
+    renderServiceCollections();
+    renderFaqs();
+    renderCookieBanner();
+    initForms();
+    initMobileMenu();
+    initFaqAccordions();
+    initAnchorLinks();
+    initInteractiveIcons();
+    initReducedMotionSafety();
+    auditHardcodedBusinessData();
 
-    document.addEventListener("DOMContentLoaded", () => {
-        applyPageMeta();
-        ensureSharedMounts();
-        renderHeader();
-        renderFooter();
-        applyConfig();
-        renderServiceCollections();
-        renderFaqs();
-        renderCookieBanner();
-        initForms();
-        initMobileMenu();
-        initFaqAccordions();
-        initAnchorLinks();
-        initInteractiveIcons();
-        initReducedMotionSafety();
-        auditHardcodedBusinessData();
-    });
+    enforceDynamicBusinessData();
 
-    /* ========================================================
-       BASIC HELPERS
-       ======================================================== */
+    setTimeout(enforceDynamicBusinessData, 150);
+    setTimeout(enforceDynamicBusinessData, 700);
+  });
+
+  window.addEventListener("load", () => {
+    applyConfig();
+    enforceDynamicBusinessData();
+  });
+
+
 
     function getCurrentPageKey() {
         const path = window.location.pathname;
@@ -135,9 +128,7 @@
             .replaceAll("'", "&#039;");
     }
 
-    /* ========================================================
-       SVG ICON SYSTEM
-       ======================================================== */
+
 
     function iconSvg(name, extraClass = "") {
         const iconName = safeText(name).toLowerCase();
@@ -314,9 +305,7 @@
     `;
     }
 
-    /* ========================================================
-       PAGE META
-       ======================================================== */
+   
 
     function applyPageMeta() {
         const pageKey = getCurrentPageKey();
@@ -342,9 +331,7 @@
         description.setAttribute("content", meta.description || "");
     }
 
-    /* ========================================================
-       SHARED MOUNTS
-       ======================================================== */
+
 
     function ensureSharedMounts() {
         if (!document.querySelector(SELECTORS.headerMount)) {
@@ -366,9 +353,7 @@
         }
     }
 
-    /* ========================================================
-       HEADER
-       ======================================================== */
+  
 
     function renderHeader() {
         const mount = document.querySelector(SELECTORS.headerMount);
@@ -502,9 +487,7 @@
             .join("");
     }
 
-    /* ========================================================
-       FOOTER
-       ======================================================== */
+
 
     function renderFooter() {
         const mount = document.querySelector(SELECTORS.footerMount);
@@ -627,9 +610,7 @@
     `;
     }
 
-    /* ========================================================
-       CONFIG INJECTION
-       ======================================================== */
+   
 
     function applyConfig() {
         setTextAll("[data-company-name]", CONFIG.companyName);
@@ -667,9 +648,7 @@
         });
     }
 
-    /* ========================================================
-       SERVICE RENDERING
-       ======================================================== */
+
 
     function renderServiceCollections() {
         document.querySelectorAll(SELECTORS.serviceCards).forEach((mount) => {
@@ -768,9 +747,7 @@
     `;
   }
 
-    /* ========================================================
-       FAQ
-       ======================================================== */
+
 
     function renderFaqs() {
         document.querySelectorAll(SELECTORS.faqList).forEach((mount) => {
@@ -859,9 +836,6 @@
         });
     }
 
-    /* ========================================================
-       FORMS
-       ======================================================== */
 
     function initForms() {
         document.querySelectorAll(SELECTORS.leadForm).forEach((form) => {
@@ -987,9 +961,6 @@
         form.reset();
     }
 
-    /* ========================================================
-       COOKIE BANNER
-       ======================================================== */
 
     function renderCookieBanner() {
         const mount = document.querySelector(SELECTORS.cookieMount);
@@ -1046,9 +1017,6 @@
         });
     }
 
-    /* ========================================================
-       MOBILE MENU
-       ======================================================== */
 
     function initMobileMenu() {
         const menu = document.querySelector("[data-mobile-menu]");
@@ -1149,9 +1117,7 @@
         }
     }
 
-    /* ========================================================
-       SMALL INTERACTIONS
-       ======================================================== */
+ 
 
     function initAnchorLinks() {
         document.querySelectorAll('a[href^="#"]').forEach((link) => {
@@ -1187,9 +1153,147 @@
         }
     }
 
-    /* ========================================================
-       HARD-CODED BUSINESS DATA AUDIT
-       ======================================================== */
+  function enforceDynamicBusinessData() {
+    applyConfig();
+
+    const replacements = getBusinessReplacementPairs();
+
+    replaceDocumentTitle(replacements);
+    replaceMetaDescription(replacements);
+    replaceTextNodes(document.body, replacements);
+    replaceCommonAttributes(replacements);
+  }
+
+  function getBusinessReplacementPairs() {
+    const phoneText = CONFIG.phoneButtonText || CONFIG.phone;
+    const phoneHref = CONFIG.phoneHref || "";
+    const phoneHrefNumber = phoneHref.replace(/^tel:/, "");
+
+    const cityCommaStateZip = [
+      CONFIG.address.city,
+      CONFIG.address.state,
+      CONFIG.address.zip
+    ].filter(Boolean).join(", ").replace(", " + CONFIG.address.zip, " " + CONFIG.address.zip);
+
+    return [
+      ["DryPilot Provider Matching LLC", CONFIG.companyId],
+      ["DryPilot Home Services Matching LLC", CONFIG.companyId],
+      ["DryPilot Matching LLC", CONFIG.companyId],
+
+      ["Call DryPilot at (866) 217-1347", CONFIG.phoneLabel],
+      ["Call DryPilot", `Call ${CONFIG.companyName}`],
+      ["Email DryPilot", `Email ${CONFIG.companyName}`],
+
+      ["hello@drypilot.com", CONFIG.email],
+      ["mailto:hello@drypilot.com", `mailto:${CONFIG.email}`],
+
+      ["tel:+18662171347", phoneHref],
+      ["+18662171347", phoneHrefNumber],
+      ["(866) 217-1347", phoneText],
+      ["866-217-1347", phoneText],
+
+      ["120 Riverfront Blvd, Charleston, SC 29401, USA", CONFIG.address.full],
+      ["120 Riverfront Blvd", CONFIG.address.line1],
+      ["Charleston, SC 29401", `${CONFIG.address.city}, ${CONFIG.address.state} ${CONFIG.address.zip}`],
+      ["29401 Charleston, SC", `${CONFIG.address.zip} ${CONFIG.address.city}, ${CONFIG.address.state}`],
+
+      ["DryPilot", CONFIG.companyName]
+    ].filter(([oldValue, newValue]) => {
+      return oldValue && newValue && oldValue !== newValue;
+    });
+  }
+
+  function replaceDocumentTitle(replacements) {
+    document.title = replaceStringValues(document.title, replacements);
+  }
+
+  function replaceMetaDescription(replacements) {
+    document
+      .querySelectorAll('meta[name="description"], meta[property="og:title"], meta[property="og:description"]')
+      .forEach((meta) => {
+        const content = meta.getAttribute("content");
+
+        if (content) {
+          meta.setAttribute("content", replaceStringValues(content, replacements));
+        }
+      });
+  }
+
+  function replaceTextNodes(root, replacements) {
+    if (!root) return;
+
+    const walker = document.createTreeWalker(
+      root,
+      NodeFilter.SHOW_TEXT,
+      {
+        acceptNode(node) {
+          const parent = node.parentElement;
+
+          if (!parent) return NodeFilter.FILTER_REJECT;
+
+          if (
+            parent.closest("script, style, noscript, template, svg") ||
+            parent.closest("[data-allow-static]") ||
+            parent.closest("[data-no-config-replace]")
+          ) {
+            return NodeFilter.FILTER_REJECT;
+          }
+
+          const text = node.nodeValue || "";
+          const hasMatch = replacements.some(([oldValue]) => text.includes(oldValue));
+
+          return hasMatch ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP;
+        }
+      }
+    );
+
+    const nodes = [];
+
+    while (walker.nextNode()) {
+      nodes.push(walker.currentNode);
+    }
+
+    nodes.forEach((node) => {
+      node.nodeValue = replaceStringValues(node.nodeValue, replacements);
+    });
+  }
+
+  function replaceCommonAttributes(replacements) {
+    const attributes = [
+      "href",
+      "aria-label",
+      "title",
+      "alt",
+      "placeholder",
+      "value",
+      "content"
+    ];
+
+    document.querySelectorAll("*").forEach((el) => {
+      if (el.closest("script, style, noscript, template")) return;
+
+      attributes.forEach((attr) => {
+        if (!el.hasAttribute(attr)) return;
+
+        const currentValue = el.getAttribute(attr);
+        const nextValue = replaceStringValues(currentValue, replacements);
+
+        if (currentValue !== nextValue) {
+          el.setAttribute(attr, nextValue);
+        }
+      });
+    });
+  }
+
+  function replaceStringValues(value, replacements) {
+    let nextValue = safeText(value);
+
+    replacements.forEach(([oldValue, newValue]) => {
+      nextValue = nextValue.split(oldValue).join(newValue);
+    });
+
+    return nextValue;
+  }
 
     function auditHardcodedBusinessData() {
         const forbidden = [
@@ -1238,9 +1342,6 @@
         return allowedAttributes.some((attr) => el.hasAttribute(attr));
     }
 
-    /* ========================================================
-       PUBLIC HELPERS FOR PAGE-SPECIFIC JS
-       ======================================================== */
 
     window.DryPilot = {
         config: CONFIG,
