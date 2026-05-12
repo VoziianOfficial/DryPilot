@@ -724,58 +724,49 @@
     `;
     }
 
-    function renderServiceDelta() {
-        return `
-      <div class="delta-system">
-        <div class="delta-main-pipe" aria-hidden="true">
-          <span class="pipe-line"></span>
-          <span class="pipe-flow"></span>
-          <span class="pipe-drop"></span>
-        </div>
-
+  function renderServiceDelta() {
+    return `
+      <div class="delta-system delta-droplet-system">
         ${CONFIG.services
-                .map((service, index) => {
-                    const shapeClass = [
-                        "delta-module-drop",
-                        "delta-module-gauge",
-                        "delta-module-bend",
-                        "delta-module-report"
-                    ][index] || "delta-module-report";
+        .map((service, index) => {
+          const directionClass = index % 2 === 0 ? "delta-card--up" : "delta-card--down";
 
-                    return `
-              <article class="delta-module ${shapeClass}" data-delta-module="${escapeHtml(service.id)}">
-                <div class="delta-branch" aria-hidden="true">
-                  <span class="delta-branch-line"></span>
-                  <span class="delta-branch-flow"></span>
-                </div>
+          return `
+                  <article class="delta-card ${directionClass}" data-delta-card="${escapeHtml(service.id)}">
+                    <a class="delta-card-link" href="${escapeHtml(service.href)}">
+                      <img
+                        class="delta-card-image"
+                        src="${escapeHtml(service.image)}"
+                        alt=""
+                        loading="lazy"
+                      >
 
-                <a class="delta-module-link" href="${escapeHtml(service.href)}">
-                  <div class="delta-module-media">
-                    <img src="${escapeHtml(service.image)}" alt="" loading="lazy">
-                  </div>
+                      <span class="delta-card-glow" aria-hidden="true"></span>
+                      <span class="delta-card-line" aria-hidden="true"></span>
 
-                  <div class="delta-module-content">
-                    <div class="delta-module-topline">
-                      ${iconSvg(service.icon)}
-                      <span>${escapeHtml(service.technicalLabel)}</span>
-                    </div>
+                      <div class="delta-card-content">
+                        <div class="delta-card-topline">
+                          ${iconSvg(service.icon)}
+                          <span>${escapeHtml(service.technicalLabel || service.eyebrow || "Service route")}</span>
+                        </div>
 
-                    <h3>${escapeHtml(service.title)}</h3>
-                    <p>${escapeHtml(service.moduleText || service.summary)}</p>
+                        <h3>${escapeHtml(service.title)}</h3>
 
-                    <span class="delta-module-cta">
-                      ${escapeHtml(service.cta || "Explore options")}
-                      ${iconSvg("arrow", "inline-arrow")}
-                    </span>
-                  </div>
-                </a>
-              </article>
-            `;
-                })
-                .join("")}
+                        <p>${escapeHtml(service.moduleText || service.summary)}</p>
+
+                        <span class="delta-card-cta">
+                          ${escapeHtml(service.cta || "Explore options")}
+                          ${iconSvg("arrow", "inline-arrow")}
+                        </span>
+                      </div>
+                    </a>
+                  </article>
+                `;
+        })
+        .join("")}
       </div>
     `;
-    }
+  }
 
     /* ========================================================
        FAQ

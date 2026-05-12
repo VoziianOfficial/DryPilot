@@ -2028,3 +2028,1257 @@
         grid-template-columns: 1.2rem minmax(0, 1fr);
     }
 }
+
+/* ==========================================================
+   SERVICE DELTA — REFINED LAYOUT PATCH
+   Add to the bottom of /css/home.css
+   ========================================================== */
+
+/* Heading centered and balanced */
+.service-delta-section .section-heading {
+    width: min(920px, 100%);
+    margin-inline: auto;
+    margin-bottom: clamp(2.4rem, 5vw, 4.2rem);
+    text-align: center;
+    justify-items: center;
+}
+
+.service-delta-section .section-heading h2 {
+    max-width: 860px;
+    margin-inline: auto;
+    text-wrap: balance;
+    line-height: 1.02;
+}
+
+.service-delta-section .section-heading p {
+    max-width: 720px;
+    margin-inline: auto;
+    text-wrap: balance;
+}
+
+/* Shell slightly cleaner and more premium */
+.service-delta-shell {
+    min-height: 650px;
+    overflow: hidden;
+    border-radius: clamp(1.4rem, 3vw, var(--radius-xl));
+}
+
+.delta-system {
+    min-height: 650px;
+    padding: clamp(1rem, 2.4vw, 1.8rem);
+}
+
+/* Main pipe repositioned so it visually connects the modules better */
+.delta-main-pipe {
+    left: 5%;
+    top: 51%;
+    width: 42%;
+    height: 1.1rem;
+    opacity: 0.92;
+}
+
+/* Cleaner shared module style */
+.delta-module {
+    z-index: 3;
+}
+
+.delta-module-link {
+    min-height: 100%;
+    border-color: rgba(216, 226, 229, 0.14);
+    background:
+        radial-gradient(circle at 16% 10%, rgba(108, 182, 200, 0.13), transparent 14rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.025)),
+        rgba(14, 25, 35, 0.9);
+}
+
+.delta-module-content {
+    gap: 0.58rem;
+    padding: clamp(0.9rem, 1.4vw, 1.1rem);
+}
+
+.delta-module h3 {
+    max-width: 13rem;
+}
+
+.delta-module p {
+    max-width: 18rem;
+}
+
+/* Media cleaner */
+.delta-module-media {
+    min-height: 145px;
+}
+
+.delta-module-media img {
+    object-position: center;
+}
+
+/* Better service placement — still asymmetric, but calmer */
+.delta-module-drop {
+    left: 4%;
+    top: 10%;
+    bottom: auto;
+    width: min(330px, 29%);
+}
+
+.delta-module-drop .delta-module-link {
+    border-radius: 34px 90px 42px 34px;
+}
+
+.delta-module-drop .delta-module-media {
+    aspect-ratio: 16 / 10;
+}
+
+.delta-module-drop .delta-branch {
+    left: 82%;
+    top: 58%;
+    width: 220px;
+    height: 0.9rem;
+    transform: rotate(13deg);
+}
+
+.delta-module-gauge {
+    left: 31%;
+    bottom: 8%;
+    width: min(310px, 27%);
+}
+
+.delta-module-gauge .delta-module-link {
+    border-radius: 90px 90px 34px 34px;
+}
+
+.delta-module-gauge .delta-module-media {
+    aspect-ratio: 1 / 1.08;
+}
+
+.delta-module-gauge .delta-branch {
+    left: -42%;
+    top: 38%;
+    width: 210px;
+    height: 0.9rem;
+    transform: rotate(-18deg);
+}
+
+.delta-module-bend {
+    right: 23%;
+    top: 8%;
+    width: min(330px, 28%);
+}
+
+.delta-module-bend .delta-module-link {
+    border-radius: 34px 34px 96px 34px;
+}
+
+.delta-module-bend .delta-module-media {
+    aspect-ratio: 16 / 9;
+    order: 0;
+}
+
+.delta-module-bend .delta-branch {
+    right: 78%;
+    bottom: 34%;
+    width: 245px;
+    height: 0.9rem;
+    transform: rotate(4deg);
+}
+
+.delta-module-report {
+    right: 4%;
+    bottom: 9%;
+    width: min(320px, 27%);
+}
+
+.delta-module-report .delta-module-link {
+    border-radius: 34px 34px 34px 86px;
+}
+
+.delta-module-report .delta-module-media {
+    aspect-ratio: 16 / 9;
+    max-height: none;
+}
+
+.delta-module-report .delta-branch {
+    right: 82%;
+    top: 42%;
+    width: 230px;
+    height: 0.9rem;
+    transform: rotate(-12deg);
+}
+
+/* Add subtle technical corner marks */
+.delta-module-link::after {
+    content: "";
+    position: absolute;
+    right: 0.9rem;
+    bottom: 0.9rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-right: 1px solid rgba(108, 182, 200, 0.32);
+    border-bottom: 1px solid rgba(108, 182, 200, 0.32);
+    opacity: 0.72;
+    pointer-events: none;
+}
+
+.delta-module:hover .delta-module-link::after {
+    border-color: rgba(117, 168, 77, 0.5);
+}
+
+/* Cleaner hover */
+.delta-module:hover .delta-module-link {
+    transform: translateY(-4px);
+}
+
+/* Tablet */
+@media (max-width: 1180px) {
+
+    .service-delta-shell,
+    .delta-system {
+        min-height: 720px;
+    }
+
+    .delta-module-drop {
+        left: 4%;
+        top: 8%;
+        width: 34%;
+    }
+
+    .delta-module-gauge {
+        left: 9%;
+        bottom: 7%;
+        width: 34%;
+    }
+
+    .delta-module-bend {
+        right: 5%;
+        top: 8%;
+        width: 38%;
+    }
+
+    .delta-module-report {
+        right: 5%;
+        bottom: 7%;
+        width: 38%;
+    }
+
+    .delta-main-pipe {
+        left: 7%;
+        width: 52%;
+    }
+}
+
+/* Mobile/tablet stack stays clean */
+@media (max-width: 980px) {
+    .service-delta-section .section-heading {
+        text-align: left;
+        justify-items: start;
+        margin-inline: 0;
+    }
+
+    .service-delta-section .section-heading h2,
+    .service-delta-section .section-heading p {
+        margin-inline: 0;
+    }
+
+    .service-delta-shell {
+        min-height: auto;
+        overflow: visible;
+    }
+
+    .delta-system {
+        min-height: auto;
+        gap: 0.9rem;
+    }
+
+    .delta-module-link {
+        overflow: hidden;
+        border-radius: var(--radius-lg) !important;
+    }
+
+    .delta-module h3,
+    .delta-module p {
+        max-width: none;
+    }
+
+    .delta-module-media {
+        min-height: 210px;
+    }
+}
+
+@media (max-width: 640px) {
+    .service-delta-section .section-heading {
+        margin-bottom: 1.8rem;
+    }
+
+    .delta-system {
+        padding: 0.7rem;
+    }
+
+    .delta-module-media {
+        min-height: 180px;
+    }
+
+    .delta-module-content {
+        padding: 0.9rem;
+    }
+}
+
+/* ==========================================================
+   SERVICE DELTA — LARGE DROPLET CARDS REDESIGN
+   Add to the bottom of /css/home.css
+   ========================================================== */
+
+/* Heading */
+.service-delta-section .section-heading {
+    width: min(920px, 100%);
+    margin-inline: auto;
+    margin-bottom: clamp(2.2rem, 5vw, 4rem);
+    text-align: center;
+    justify-items: center;
+}
+
+.service-delta-section .section-heading h2 {
+    max-width: 860px;
+    margin-inline: auto;
+    line-height: 1.02;
+    text-wrap: balance;
+}
+
+.service-delta-section .section-heading p {
+    max-width: 720px;
+    margin-inline: auto;
+    text-wrap: balance;
+}
+
+/* Shell */
+.service-delta-shell {
+    min-height: auto !important;
+    overflow: visible !important;
+    padding: clamp(0.7rem, 1.6vw, 1.1rem);
+    border-radius: clamp(1.35rem, 3vw, var(--radius-xl));
+    background:
+        radial-gradient(circle at 12% 24%, rgba(108, 182, 200, 0.14), transparent 28rem),
+        radial-gradient(circle at 86% 62%, rgba(117, 168, 77, 0.1), transparent 26rem),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent),
+        rgba(4, 16, 27, 0.58);
+}
+
+/* New grid system */
+.delta-droplet-system {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: clamp(1rem, 2.4vw, 2rem) !important;
+    min-height: auto !important;
+    padding: clamp(0.8rem, 2vw, 1.4rem) !important;
+}
+
+/* Hide old pipe system if any remains */
+.delta-droplet-system .delta-main-pipe,
+.delta-droplet-system .delta-branch,
+.delta-droplet-system .delta-module,
+.delta-droplet-system .delta-module-link {
+    display: none !important;
+}
+
+/* Droplet card */
+.delta-card {
+    position: relative;
+    min-width: 0;
+    isolation: isolate;
+}
+
+.delta-card-link {
+    position: relative;
+    display: grid;
+    min-height: clamp(430px, 38vw, 560px);
+    overflow: hidden;
+    color: var(--color-heading);
+    background: var(--color-bg-soft);
+    box-shadow:
+        0 28px 70px rgba(0, 0, 0, 0.34),
+        0 0 0 1px rgba(108, 182, 200, 0.16);
+    transition:
+        transform 0.34s var(--ease),
+        box-shadow 0.34s var(--ease),
+        filter 0.34s var(--ease);
+}
+
+/* Up droplet */
+.delta-card--up .delta-card-link {
+    clip-path: polygon(50% 0%,
+            62% 8%,
+            76% 19%,
+            89% 36%,
+            96% 55%,
+            93% 74%,
+            81% 90%,
+            64% 98%,
+            50% 100%,
+            36% 98%,
+            19% 90%,
+            7% 74%,
+            4% 55%,
+            11% 36%,
+            24% 19%,
+            38% 8%);
+}
+
+/* Down droplet */
+.delta-card--down .delta-card-link {
+    clip-path: polygon(50% 100%,
+            62% 92%,
+            76% 81%,
+            89% 64%,
+            96% 45%,
+            93% 26%,
+            81% 10%,
+            64% 2%,
+            50% 0%,
+            36% 2%,
+            19% 10%,
+            7% 26%,
+            4% 45%,
+            11% 64%,
+            24% 81%,
+            38% 92%);
+}
+
+/* Photo */
+.delta-card-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(1.08) contrast(1.08) brightness(0.72);
+    transition:
+        transform 0.7s var(--ease),
+        filter 0.34s var(--ease);
+}
+
+/* Overlay */
+.delta-card-link::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+        radial-gradient(circle at 20% 18%, rgba(108, 182, 200, 0.22), transparent 18rem),
+        radial-gradient(circle at 84% 80%, rgba(117, 168, 77, 0.16), transparent 18rem),
+        linear-gradient(180deg, rgba(4, 16, 27, 0.2), rgba(4, 16, 27, 0.86));
+    pointer-events: none;
+}
+
+/* Technical inner border */
+.delta-card-link::after {
+    content: "";
+    position: absolute;
+    inset: clamp(0.8rem, 1.6vw, 1.15rem);
+    z-index: 2;
+    border: 1px solid rgba(216, 226, 229, 0.18);
+    clip-path: inherit;
+    pointer-events: none;
+}
+
+/* Glow */
+.delta-card-glow {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(120deg, transparent 12%, rgba(108, 182, 200, 0.22), transparent 44%),
+        linear-gradient(300deg, transparent 22%, rgba(117, 168, 77, 0.12), transparent 58%);
+    opacity: 0;
+    transition: opacity 0.34s var(--ease);
+    pointer-events: none;
+}
+
+/* Water line */
+.delta-card-line {
+    position: absolute;
+    right: 14%;
+    left: 14%;
+    z-index: 3;
+    height: 2px;
+    border-radius: 999px;
+    background:
+        linear-gradient(90deg, transparent, var(--color-water), var(--color-green), transparent);
+    background-size: 12rem 100%;
+    box-shadow: 0 0 18px rgba(108, 182, 200, 0.58);
+    opacity: 0.78;
+    animation: pipeFlow 2.6s linear infinite;
+    pointer-events: none;
+}
+
+.delta-card--up .delta-card-line {
+    bottom: 18%;
+}
+
+.delta-card--down .delta-card-line {
+    top: 18%;
+}
+
+/* Content */
+.delta-card-content {
+    position: relative;
+    z-index: 4;
+    display: grid;
+    gap: 0.7rem;
+    width: min(76%, 390px);
+    padding: clamp(1.2rem, 2.4vw, 2rem);
+}
+
+.delta-card--up .delta-card-content {
+    align-self: end;
+    justify-self: center;
+    padding-bottom: clamp(3.2rem, 5vw, 4.6rem);
+    text-align: center;
+}
+
+.delta-card--down .delta-card-content {
+    align-self: start;
+    justify-self: center;
+    padding-top: clamp(3.2rem, 5vw, 4.6rem);
+    text-align: center;
+}
+
+.delta-card-topline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    width: max-content;
+    max-width: 100%;
+    margin-inline: auto;
+    padding: 0.46rem 0.68rem;
+    border: 1px solid rgba(108, 182, 200, 0.24);
+    border-radius: 999px;
+    color: var(--color-water);
+    background: rgba(4, 16, 27, 0.48);
+    backdrop-filter: blur(12px);
+    font-size: 0.68rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.delta-card-topline .svg-icon {
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-green);
+}
+
+.delta-card h3 {
+    color: #ffffff;
+    font-family: var(--font-heading);
+    font-size: clamp(1.45rem, 2.2vw, 2.2rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+    text-shadow: 0 10px 28px rgba(0, 0, 0, 0.44);
+}
+
+.delta-card p {
+    color: rgba(216, 226, 229, 0.86);
+    font-size: clamp(0.88rem, 1vw, 0.98rem);
+    line-height: 1.52;
+}
+
+.delta-card-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.42rem;
+    width: max-content;
+    margin-inline: auto;
+    padding: 0.58rem 0.78rem;
+    border: 1px solid rgba(117, 168, 77, 0.28);
+    border-radius: 999px;
+    color: var(--color-green);
+    background: rgba(117, 168, 77, 0.08);
+    font-size: 0.82rem;
+    font-weight: 850;
+    line-height: 1;
+    transition:
+        color 0.24s var(--ease),
+        border-color 0.24s var(--ease),
+        background 0.24s var(--ease);
+}
+
+/* Hover */
+.delta-card:hover .delta-card-link {
+    transform: translateY(-6px);
+    box-shadow:
+        0 34px 88px rgba(0, 0, 0, 0.42),
+        0 0 0 1px rgba(108, 182, 200, 0.36),
+        0 0 38px rgba(108, 182, 200, 0.18);
+}
+
+.delta-card:hover .delta-card-image {
+    transform: scale(1.06);
+    filter: saturate(1.12) contrast(1.1) brightness(0.78);
+}
+
+.delta-card:hover .delta-card-glow {
+    opacity: 1;
+}
+
+.delta-card:hover .delta-card-cta {
+    color: #ffffff;
+    border-color: rgba(117, 168, 77, 0.5);
+    background: rgba(117, 168, 77, 0.18);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .delta-droplet-system {
+        gap: 1rem !important;
+        padding: 0.8rem !important;
+    }
+
+    .delta-card-link {
+        min-height: clamp(380px, 44vw, 470px);
+    }
+
+    .delta-card-content {
+        width: min(82%, 360px);
+        padding-inline: 1.2rem;
+    }
+
+    .delta-card h3 {
+        font-size: clamp(1.28rem, 2.7vw, 1.8rem);
+    }
+
+    .delta-card p {
+        font-size: 0.86rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+    .service-delta-section .section-heading {
+        text-align: center;
+        justify-items: center;
+    }
+
+    .delta-droplet-system {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        padding: 0.55rem !important;
+    }
+
+    .service-delta-shell {
+        padding: 0.45rem;
+        border-radius: var(--radius-lg);
+    }
+
+    .delta-card-link {
+        min-height: 430px;
+    }
+
+    .delta-card-content {
+        width: min(84%, 360px);
+    }
+
+    .delta-card--up .delta-card-content {
+        padding-bottom: 3.3rem;
+    }
+
+    .delta-card--down .delta-card-content {
+        padding-top: 3.3rem;
+    }
+}
+
+/* Small mobile */
+@media (max-width: 430px) {
+    .delta-card-link {
+        min-height: 390px;
+    }
+
+    .delta-card-content {
+        width: min(88%, 320px);
+        gap: 0.58rem;
+        padding-inline: 0.9rem;
+    }
+
+    .delta-card h3 {
+        font-size: 1.35rem;
+    }
+
+    .delta-card p {
+        font-size: 0.82rem;
+        line-height: 1.45;
+    }
+
+    .delta-card-topline {
+        font-size: 0.6rem;
+        padding: 0.42rem 0.58rem;
+    }
+
+    .delta-card-cta {
+        font-size: 0.76rem;
+    }
+}
+
+/* ==========================================================
+   SERVICE DELTA — 4 IN ROW COMPACT PATCH
+   Add to the bottom of /css/home.css
+   ========================================================== */
+
+/* Desktop: 4 cards in one row */
+@media (min-width: 1181px) {
+    .delta-droplet-system {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: clamp(0.75rem, 1.25vw, 1.15rem) !important;
+        padding: clamp(0.65rem, 1.4vw, 1rem) !important;
+        align-items: center;
+    }
+
+    .service-delta-shell {
+        padding: clamp(0.55rem, 1.2vw, 0.9rem) !important;
+    }
+
+    .delta-card-link {
+        min-height: clamp(330px, 27vw, 430px) !important;
+    }
+
+    .delta-card-content {
+        width: min(84%, 270px) !important;
+        gap: 0.48rem !important;
+        padding-inline: 1rem !important;
+    }
+
+    .delta-card--up .delta-card-content {
+        padding-bottom: clamp(2.3rem, 3.2vw, 3.2rem) !important;
+    }
+
+    .delta-card--down .delta-card-content {
+        padding-top: clamp(2.3rem, 3.2vw, 3.2rem) !important;
+    }
+
+    .delta-card h3 {
+        font-size: clamp(1.05rem, 1.35vw, 1.55rem) !important;
+        line-height: 1 !important;
+        letter-spacing: -0.045em !important;
+    }
+
+    .delta-card p {
+        font-size: 0.76rem !important;
+        line-height: 1.38 !important;
+    }
+
+    .delta-card-topline {
+        gap: 0.38rem !important;
+        padding: 0.34rem 0.5rem !important;
+        font-size: 0.54rem !important;
+        letter-spacing: 0.08em !important;
+    }
+
+    .delta-card-topline .svg-icon {
+        width: 0.82rem !important;
+        height: 0.82rem !important;
+    }
+
+    .delta-card-cta {
+        padding: 0.46rem 0.62rem !important;
+        font-size: 0.68rem !important;
+    }
+
+    .delta-card-line {
+        right: 18% !important;
+        left: 18% !important;
+    }
+
+    .delta-card--up .delta-card-line {
+        bottom: 16% !important;
+    }
+
+    .delta-card--down .delta-card-line {
+        top: 16% !important;
+    }
+}
+
+/* Medium desktop / tablet: 2x2, but smaller */
+@media (max-width: 1180px) and (min-width: 721px) {
+    .delta-droplet-system {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1rem !important;
+        padding: 0.75rem !important;
+    }
+
+    .delta-card-link {
+        min-height: clamp(340px, 42vw, 430px) !important;
+    }
+
+    .delta-card-content {
+        width: min(82%, 330px) !important;
+        gap: 0.55rem !important;
+    }
+
+    .delta-card h3 {
+        font-size: clamp(1.2rem, 2.4vw, 1.75rem) !important;
+    }
+
+    .delta-card p {
+        font-size: 0.84rem !important;
+        line-height: 1.45 !important;
+    }
+}
+
+/* Mobile: smaller stacked cards */
+@media (max-width: 720px) {
+    .delta-card-link {
+        min-height: clamp(300px, 88vw, 360px) !important;
+    }
+
+    .delta-card-content {
+        width: min(86%, 300px) !important;
+        gap: 0.48rem !important;
+        padding-inline: 0.85rem !important;
+    }
+
+    .delta-card--up .delta-card-content {
+        padding-bottom: 2.5rem !important;
+    }
+
+    .delta-card--down .delta-card-content {
+        padding-top: 2.5rem !important;
+    }
+
+    .delta-card h3 {
+        font-size: clamp(1.12rem, 6vw, 1.45rem) !important;
+        line-height: 1 !important;
+    }
+
+    .delta-card p {
+        font-size: 0.78rem !important;
+        line-height: 1.38 !important;
+    }
+
+    .delta-card-topline {
+        padding: 0.34rem 0.48rem !important;
+        font-size: 0.54rem !important;
+    }
+
+    .delta-card-cta {
+        padding: 0.44rem 0.58rem !important;
+        font-size: 0.68rem !important;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 430px) {
+    .delta-card-link {
+        min-height: 285px !important;
+    }
+
+    .delta-card-content {
+        width: min(88%, 285px) !important;
+    }
+
+    .delta-card p {
+        font-size: 0.74rem !important;
+    }
+}
+
+/* ==========================================================
+   SERVICE DELTA — MOBILE SIMPLE SQUARE CARDS
+   Add to the bottom of /css/home.css
+   ========================================================== */
+
+@media (max-width: 720px) {
+    .delta-droplet-system {
+        grid-template-columns: 1fr !important;
+        gap: 0.85rem !important;
+        padding: 0.65rem !important;
+    }
+
+    .delta-card {
+        position: relative !important;
+    }
+
+    .delta-card-link {
+        display: grid !important;
+        min-height: 0 !important;
+        aspect-ratio: 1 / 1 !important;
+        overflow: hidden !important;
+
+        /* убираем форму капли на мобилке */
+        clip-path: none !important;
+
+        border-radius: 22px !important;
+        border: 1px solid rgba(108, 182, 200, 0.2) !important;
+        background: var(--color-bg-soft) !important;
+        box-shadow:
+            0 18px 44px rgba(0, 0, 0, 0.3),
+            0 0 0 1px rgba(108, 182, 200, 0.08) !important;
+    }
+
+    .delta-card--up .delta-card-link,
+    .delta-card--down .delta-card-link {
+        clip-path: none !important;
+        border-radius: 22px !important;
+    }
+
+    .delta-card-image {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        filter: saturate(1.08) contrast(1.06) brightness(0.78) !important;
+    }
+
+    .delta-card-link::before {
+        background:
+            linear-gradient(180deg, rgba(4, 16, 27, 0.08) 0%, rgba(4, 16, 27, 0.44) 42%, rgba(4, 16, 27, 0.92) 100%),
+            radial-gradient(circle at 18% 12%, rgba(108, 182, 200, 0.18), transparent 14rem) !important;
+    }
+
+    .delta-card-link::after {
+        inset: 0.72rem !important;
+        clip-path: none !important;
+        border-radius: 16px !important;
+        border-color: rgba(216, 226, 229, 0.16) !important;
+    }
+
+    .delta-card-content {
+        align-self: end !important;
+        justify-self: stretch !important;
+        width: 100% !important;
+        max-width: none !important;
+        gap: 0.5rem !important;
+
+        padding: 1rem !important;
+        padding-top: 3.8rem !important;
+
+        text-align: left !important;
+    }
+
+    .delta-card--up .delta-card-content,
+    .delta-card--down .delta-card-content {
+        align-self: end !important;
+        justify-self: stretch !important;
+        padding: 1rem !important;
+        padding-top: 3.8rem !important;
+        text-align: left !important;
+    }
+
+    .delta-card-topline {
+        margin-inline: 0 !important;
+        justify-content: flex-start !important;
+        width: max-content !important;
+        max-width: 100% !important;
+
+        padding: 0.34rem 0.52rem !important;
+        font-size: 0.56rem !important;
+        background: rgba(4, 16, 27, 0.58) !important;
+    }
+
+    .delta-card h3 {
+        max-width: 100% !important;
+        color: #ffffff !important;
+        font-size: clamp(1.15rem, 6vw, 1.45rem) !important;
+        line-height: 1.02 !important;
+        letter-spacing: -0.045em !important;
+    }
+
+    .delta-card p {
+        max-width: 100% !important;
+        color: rgba(216, 226, 229, 0.84) !important;
+        font-size: 0.78rem !important;
+        line-height: 1.4 !important;
+
+        display: -webkit-box !important;
+        -webkit-line-clamp: 2 !important;
+        -webkit-box-orient: vertical !important;
+        overflow: hidden !important;
+    }
+
+    .delta-card-cta {
+        margin-inline: 0 !important;
+        padding: 0.44rem 0.6rem !important;
+        font-size: 0.7rem !important;
+        background: rgba(117, 168, 77, 0.13) !important;
+    }
+
+    .delta-card-line {
+        display: none !important;
+    }
+
+    .delta-card-glow {
+        display: none !important;
+    }
+
+    .delta-card:hover .delta-card-link {
+        transform: none !important;
+    }
+
+    .delta-card:hover .delta-card-image {
+        transform: none !important;
+    }
+}
+
+/* Smaller phones */
+@media (max-width: 430px) {
+    .delta-droplet-system {
+        gap: 0.72rem !important;
+        padding: 0.5rem !important;
+    }
+
+    .delta-card-link {
+        border-radius: 18px !important;
+    }
+
+    .delta-card-link::after {
+        border-radius: 13px !important;
+    }
+
+    .delta-card-content,
+    .delta-card--up .delta-card-content,
+    .delta-card--down .delta-card-content {
+        padding: 0.85rem !important;
+        padding-top: 3.2rem !important;
+    }
+
+    .delta-card h3 {
+        font-size: 1.18rem !important;
+    }
+
+    .delta-card p {
+        font-size: 0.74rem !important;
+    }
+}
+
+/* ==========================================================
+   LEAK PATH RIBBON — TABLET / MOBILE COMPACT SNAKE
+   Add to the bottom of /css/home.css
+   ========================================================== */
+
+/* Tablet: compact snake layout */
+@media (max-width: 980px) and (min-width: 641px) {
+    .leak-ribbon {
+        margin-top: clamp(-5.5rem, -7vw, -4rem);
+    }
+
+    .leak-ribbon-shell {
+        border-radius: var(--radius-lg);
+    }
+
+    .leak-path-grid {
+        display: grid !important;
+        grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+        gap: 0.85rem !important;
+        min-height: auto !important;
+        padding: 1rem !important;
+        align-items: stretch !important;
+    }
+
+    .leak-path-pipe {
+        display: none !important;
+    }
+
+    .footprint {
+        display: none !important;
+    }
+
+    .leak-node {
+        display: grid !important;
+        grid-template-columns: 2.7rem minmax(0, 1fr) !important;
+        gap: 0.65rem !important;
+        align-items: center !important;
+        justify-items: start !important;
+        min-height: 4.15rem !important;
+        padding: 0.68rem 0.78rem !important;
+        border: 1px solid rgba(108, 182, 200, 0.18);
+        border-radius: 16px;
+        text-align: left !important;
+        background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025)),
+            rgba(17, 24, 32, 0.78);
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+    }
+
+    .leak-node:nth-of-type(1) {
+        grid-column: 1 / 3;
+    }
+
+    .leak-node:nth-of-type(2) {
+        grid-column: 3 / 5;
+    }
+
+    .leak-node:nth-of-type(3) {
+        grid-column: 5 / 7;
+    }
+
+    .leak-node:nth-of-type(4) {
+        grid-column: 2 / 4;
+    }
+
+    .leak-node:nth-of-type(5) {
+        grid-column: 4 / 6;
+    }
+
+    .leak-node-button {
+        width: 2.55rem !important;
+        height: 2.55rem !important;
+        box-shadow:
+            0 0 0 4px rgba(108, 182, 200, 0.05),
+            0 10px 24px rgba(0, 0, 0, 0.24) !important;
+    }
+
+    .leak-node-button::before {
+        inset: 0.48rem !important;
+    }
+
+    .leak-node-button .svg-icon {
+        width: 1.05rem;
+        height: 1.05rem;
+    }
+
+    .leak-node-copy {
+        min-height: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    .leak-node-copy strong {
+        font-size: 0.72rem !important;
+        line-height: 1.15 !important;
+    }
+
+    .leak-node-copy span {
+        font-size: 0.72rem !important;
+        line-height: 1.2 !important;
+    }
+}
+
+/* Mobile: compact alternating snake cards */
+@media (max-width: 640px) {
+    .leak-ribbon {
+        margin-top: -4.8rem !important;
+    }
+
+    .leak-ribbon-shell {
+        border-radius: 18px !important;
+    }
+
+    .leak-path-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.58rem !important;
+        min-height: auto !important;
+        padding: 0.72rem !important;
+        align-items: start !important;
+    }
+
+    .leak-path-pipe {
+        display: block !important;
+        top: 1rem !important;
+        bottom: 1rem !important;
+        left: 50% !important;
+        right: auto !important;
+        width: 0.55rem !important;
+        height: auto !important;
+        transform: translateX(-50%) !important;
+        opacity: 0.5;
+        z-index: 0;
+    }
+
+    .leak-path-pipe::before {
+        inset: 0.18rem !important;
+        background:
+            linear-gradient(180deg, transparent, rgba(108, 182, 200, 0.9), transparent) !important;
+        background-size: 100% 7rem !important;
+        animation: verticalFlow 2.4s linear infinite !important;
+    }
+
+    .leak-path-pipe::after {
+        display: none !important;
+    }
+
+    .footprint {
+        display: none !important;
+    }
+
+    .leak-node {
+        position: relative !important;
+        z-index: 2 !important;
+        display: grid !important;
+        grid-template-columns: 2.35rem minmax(0, 1fr) !important;
+        gap: 0.58rem !important;
+        align-items: center !important;
+        justify-items: start !important;
+        width: min(86%, 340px) !important;
+        min-height: 3.6rem !important;
+        padding: 0.55rem 0.65rem !important;
+        border: 1px solid rgba(108, 182, 200, 0.18);
+        border-radius: 15px;
+        text-align: left !important;
+        background:
+            linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.025)),
+            rgba(17, 24, 32, 0.88);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
+    }
+
+    .leak-node:nth-of-type(odd) {
+        justify-self: start !important;
+    }
+
+    .leak-node:nth-of-type(even) {
+        justify-self: end !important;
+    }
+
+    .leak-node-button {
+        width: 2.25rem !important;
+        height: 2.25rem !important;
+        box-shadow:
+            0 0 0 3px rgba(108, 182, 200, 0.05),
+            0 8px 20px rgba(0, 0, 0, 0.22) !important;
+    }
+
+    .leak-node-button::before {
+        inset: 0.42rem !important;
+    }
+
+    .leak-node-button .svg-icon {
+        width: 0.95rem;
+        height: 0.95rem;
+    }
+
+    .leak-node-copy {
+        min-height: 0 !important;
+        padding-top: 0 !important;
+        gap: 0.06rem !important;
+    }
+
+    .leak-node-copy strong {
+        font-size: 0.68rem !important;
+        line-height: 1.12 !important;
+    }
+
+    .leak-node-copy span {
+        font-size: 0.68rem !important;
+        line-height: 1.16 !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .leak-node {
+        width: min(90%, 310px) !important;
+        grid-template-columns: 2.1rem minmax(0, 1fr) !important;
+        padding: 0.5rem 0.58rem !important;
+    }
+
+    .leak-node-button {
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+
+    .leak-node-copy strong,
+    .leak-node-copy span {
+        font-size: 0.64rem !important;
+    }
+}
