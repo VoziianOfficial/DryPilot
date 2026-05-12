@@ -217,6 +217,10 @@
         });
 
         APP.renderFaqs();
+
+        if (typeof APP.initFaqAccordions === "function") {
+            APP.initFaqAccordions();
+        }
     }
 
 

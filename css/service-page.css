@@ -975,9 +975,7 @@
     box-shadow: 0 14px 38px rgba(0, 0, 0, 0.16);
 }
 
-.pipe-burst-note:nth-child(even) {
-    transform: translateY(-80px);
-}
+
 
 .pipe-burst-note strong {
     color: var(--color-heading);

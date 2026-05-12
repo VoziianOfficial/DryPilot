@@ -821,20 +821,33 @@
         document.head.appendChild(script);
     }
 
-    function initFaqAccordions() {
-        document.querySelectorAll("[data-faq-button]").forEach((button) => {
-            button.addEventListener("click", () => {
-                const panelId = button.getAttribute("aria-controls");
-                const panel = document.getElementById(panelId);
-                const isOpen = button.getAttribute("aria-expanded") === "true";
+  function initFaqAccordions() {
+    if (document.documentElement.dataset.faqAccordionReady === "true") return;
 
-                if (!panel) return;
+    document.documentElement.dataset.faqAccordionReady = "true";
 
-                button.setAttribute("aria-expanded", String(!isOpen));
-                panel.hidden = isOpen;
-            });
-        });
-    }
+    document.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-faq-button]");
+
+      if (!button) return;
+
+      const panelId = button.getAttribute("aria-controls");
+      const panel = document.getElementById(panelId);
+
+      if (!panel) return;
+
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+
+      button.setAttribute("aria-expanded", String(!isOpen));
+      panel.hidden = isOpen;
+
+      const faqItem = button.closest(".faq-item");
+
+      if (faqItem) {
+        faqItem.classList.toggle("is-open", !isOpen);
+      }
+    });
+  }
 
 
     function initForms() {
@@ -1343,17 +1356,18 @@
     }
 
 
-    window.DryPilot = {
-        config: CONFIG,
-        iconSvg,
-        escapeHtml,
-        getCurrentPageKey,
-        renderServiceCard,
-        renderSimpleServiceLink,
-        renderServiceDelta,
-        applyConfig,
-        initForms,
-        renderFaqs,
-        auditHardcodedBusinessData
-    };
+  window.DryPilot = {
+    config: CONFIG,
+    iconSvg,
+    escapeHtml,
+    getCurrentPageKey,
+    renderServiceCard,
+    renderSimpleServiceLink,
+    renderServiceDelta,
+    applyConfig,
+    initForms,
+    renderFaqs,
+    initFaqAccordions,
+    auditHardcodedBusinessData
+  };
 })();
