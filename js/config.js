@@ -1,17 +1,5 @@
 "use strict";
 
-/* ==========================================================
-   DRYPILOT — GLOBAL CONFIG
-   File: /js/config.js
-
-   Important:
-   This file is the single source of truth for all repeated
-   business data, services, footer data, forms, legal text,
-   page meta, FAQ, reviews, and routing content.
-
-   config.js MUST be loaded before main.js on every page.
-   ========================================================== */
-
 window.SITE_CONFIG = {
     companyName: "DryPilot",
     companyId: "DryPilot Provider Matching LLC",
