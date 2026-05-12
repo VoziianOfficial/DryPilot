@@ -3803,3 +3803,437 @@ body[data-service-id="moisture-damage"] .service-panel.scope-board-main {
         transform: none;
     }
 }
+
+/* ==========================================================
+   PIPE BURST BOARD — COMPACT PHOTO BACKGROUND VERSION
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+.service-detail-page .pipe-burst-board {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    min-height: clamp(390px, 46vw, 520px) !important;
+    padding: clamp(1rem, 2.4vw, 1.6rem) !important;
+
+    border: 1px solid rgba(108, 182, 200, 0.22) !important;
+    border-radius: var(--radius-xl) !important;
+
+    background:
+        linear-gradient(90deg, rgba(4, 16, 27, 0.94), rgba(4, 16, 27, 0.62), rgba(4, 16, 27, 0.92)),
+        radial-gradient(circle at 18% 18%, rgba(108, 182, 200, 0.2), transparent 20rem),
+        radial-gradient(circle at 86% 82%, rgba(117, 168, 77, 0.14), transparent 18rem),
+        url("../assets/images/service-burst-pipe.jpg") center / cover no-repeat !important;
+
+    box-shadow:
+        0 24px 70px rgba(0, 0, 0, 0.34),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+}
+
+/* Dark overlay + subtle grid */
+.service-detail-page .pipe-burst-board::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+    pointer-events: none !important;
+
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.12), rgba(4, 16, 27, 0.82)),
+        linear-gradient(90deg, rgba(108, 182, 200, 0.045) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.035) 1px, transparent 1px) !important;
+    background-size: auto, 42px 42px, 42px 42px !important;
+    opacity: 0.95 !important;
+}
+
+/* Make old illustration less massive */
+.service-detail-page .pipe-burst-main {
+    position: absolute !important;
+    left: 6% !important;
+    right: 6% !important;
+    top: 50% !important;
+    z-index: 1 !important;
+
+    height: 1.05rem !important;
+    transform: translateY(-50%) !important;
+    border-radius: 999px !important;
+
+    opacity: 0.55 !important;
+    pointer-events: none !important;
+}
+
+/* Crack smaller and cleaner */
+.service-detail-page .pipe-burst-crack {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    z-index: 2 !important;
+
+    width: clamp(3.2rem, 6vw, 5rem) !important;
+    height: clamp(3.2rem, 6vw, 5rem) !important;
+
+    transform: translate(-50%, -50%) !important;
+    opacity: 0.82 !important;
+    pointer-events: none !important;
+}
+
+.service-detail-page .pipe-burst-spray {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    z-index: 2 !important;
+
+    transform: translate(-50%, -50%) scale(0.82) !important;
+    opacity: 0.72 !important;
+    pointer-events: none !important;
+}
+
+/* Notes layout */
+.service-detail-page .pipe-burst-notes {
+    position: relative !important;
+    z-index: 4 !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 0.78rem !important;
+
+    min-height: 100% !important;
+    align-items: center !important;
+}
+
+/* Cards */
+.service-detail-page .pipe-burst-note {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+
+    display: grid !important;
+    align-content: center !important;
+    justify-items: center !important;
+    gap: 0.38rem !important;
+
+    min-height: clamp(150px, 16vw, 190px) !important;
+    padding: 0.9rem 0.78rem !important;
+
+    border: 1px solid rgba(216, 226, 229, 0.14) !important;
+    border-radius: 22px !important;
+
+    text-align: center !important;
+    color: var(--color-text) !important;
+
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.72), rgba(4, 16, 27, 0.5)),
+        rgba(17, 24, 32, 0.58) !important;
+
+    backdrop-filter: blur(12px) !important;
+    box-shadow:
+        0 16px 38px rgba(0, 0, 0, 0.22),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+
+    transition:
+        transform 0.28s var(--ease),
+        border-color 0.28s var(--ease),
+        background 0.28s var(--ease),
+        box-shadow 0.28s var(--ease);
+}
+
+.service-detail-page .pipe-burst-note::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -1 !important;
+
+    opacity: 0 !important;
+    pointer-events: none !important;
+
+    background:
+        radial-gradient(circle at 18% 14%, rgba(108, 182, 200, 0.2), transparent 10rem),
+        radial-gradient(circle at 84% 86%, rgba(117, 168, 77, 0.14), transparent 10rem) !important;
+
+    transition: opacity 0.28s var(--ease) !important;
+}
+
+.service-detail-page .pipe-burst-note strong {
+    display: block !important;
+    max-width: 100% !important;
+
+    color: #ffffff !important;
+    font-family: var(--font-heading) !important;
+    font-size: clamp(0.92rem, 1.2vw, 1.08rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.035em !important;
+    text-align: center !important;
+}
+
+.service-detail-page .pipe-burst-note span {
+    display: block !important;
+    max-width: 19ch !important;
+
+    color: rgba(216, 226, 229, 0.82) !important;
+    font-size: 0.76rem !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+}
+
+/* Hover */
+.service-detail-page .pipe-burst-note:hover,
+.service-detail-page .pipe-burst-note:focus-within {
+    transform: translateY(-4px) !important;
+    border-color: rgba(108, 182, 200, 0.45) !important;
+    background:
+        linear-gradient(180deg, rgba(4, 16, 27, 0.82), rgba(4, 16, 27, 0.58)),
+        rgba(17, 24, 32, 0.68) !important;
+
+    box-shadow:
+        0 22px 54px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(108, 182, 200, 0.14) !important;
+}
+
+.service-detail-page .pipe-burst-note:hover::before,
+.service-detail-page .pipe-burst-note:focus-within::before {
+    opacity: 1 !important;
+}
+
+/* Tablet: compact 2-column mosaic */
+@media (max-width: 1024px) and (min-width: 641px) {
+    .service-detail-page .pipe-burst-board {
+        min-height: auto !important;
+        padding: 1rem !important;
+        border-radius: 24px !important;
+    }
+
+    .service-detail-page .pipe-burst-main,
+    .service-detail-page .pipe-burst-crack,
+    .service-detail-page .pipe-burst-spray {
+        opacity: 0.28 !important;
+    }
+
+    .service-detail-page .pipe-burst-notes {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.72rem !important;
+    }
+
+    .service-detail-page .pipe-burst-note {
+        min-height: 5.8rem !important;
+        padding: 0.75rem 0.85rem !important;
+
+        display: grid !important;
+        align-content: center !important;
+        justify-items: start !important;
+        text-align: left !important;
+        border-radius: 18px !important;
+    }
+
+    .service-detail-page .pipe-burst-note:nth-child(5) {
+        grid-column: 1 / -1 !important;
+        width: min(100%, 520px) !important;
+        justify-self: center !important;
+    }
+
+    .service-detail-page .pipe-burst-note strong,
+    .service-detail-page .pipe-burst-note span {
+        max-width: none !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .pipe-burst-note span {
+        font-size: 0.72rem !important;
+        line-height: 1.28 !important;
+    }
+}
+
+/* Mobile: simple compact cards */
+@media (max-width: 640px) {
+    .service-detail-page .pipe-burst-board {
+        min-height: auto !important;
+        padding: 0.72rem !important;
+        border-radius: 20px !important;
+
+        background:
+            linear-gradient(180deg, rgba(4, 16, 27, 0.86), rgba(4, 16, 27, 0.94)),
+            url("../assets/images/service-burst-pipe.jpg") center / cover no-repeat !important;
+    }
+
+    .service-detail-page .pipe-burst-main,
+    .service-detail-page .pipe-burst-crack,
+    .service-detail-page .pipe-burst-spray {
+        display: none !important;
+    }
+
+    .service-detail-page .pipe-burst-notes {
+        grid-template-columns: 1fr !important;
+        gap: 0.5rem !important;
+    }
+
+    .service-detail-page .pipe-burst-note {
+        min-height: 3.75rem !important;
+        padding: 0.58rem 0.68rem !important;
+
+        display: grid !important;
+        align-content: center !important;
+        justify-items: start !important;
+
+        border-radius: 15px !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .pipe-burst-note strong {
+        font-size: 0.78rem !important;
+        line-height: 1.08 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .pipe-burst-note span {
+        max-width: none !important;
+        margin-top: 0.12rem !important;
+
+        font-size: 0.66rem !important;
+        line-height: 1.18 !important;
+        text-align: left !important;
+    }
+
+    .service-detail-page .pipe-burst-note:hover,
+    .service-detail-page .pipe-burst-note:focus-within {
+        transform: none !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .service-detail-page .pipe-burst-board {
+        padding: 0.58rem !important;
+    }
+
+    .service-detail-page .pipe-burst-note {
+        min-height: 3.35rem !important;
+        padding: 0.52rem 0.6rem !important;
+    }
+
+    .service-detail-page .pipe-burst-note strong {
+        font-size: 0.72rem !important;
+    }
+
+    .service-detail-page .pipe-burst-note span {
+        font-size: 0.62rem !important;
+    }
+}
+
+/* ==========================================================
+   PIPE BURST BOARD — TABLET/MOBILE TRUE CONTENT HEIGHT
+   Add as the LAST block in /css/service-page.css
+   ========================================================== */
+
+@media (max-width: 1024px) {
+    .service-detail-page .pipe-burst-board {
+        min-height: 0 !important;
+        height: auto !important;
+        max-height: none !important;
+
+        display: block !important;
+        padding: 0.85rem !important;
+
+        overflow: hidden !important;
+    }
+
+    .service-detail-page .pipe-burst-notes {
+        min-height: 0 !important;
+        height: auto !important;
+        align-items: stretch !important;
+    }
+
+    .service-detail-page .pipe-burst-note {
+        min-height: 0 !important;
+        height: auto !important;
+    }
+}
+
+/* Tablet — board высотой только по карточкам */
+@media (max-width: 1024px) and (min-width: 641px) {
+    .service-detail-page .pipe-burst-board {
+        padding: 0.85rem !important;
+        border-radius: 22px !important;
+    }
+
+    .service-detail-page .pipe-burst-notes {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.62rem !important;
+    }
+
+    .service-detail-page .pipe-burst-note {
+        min-height: 4.65rem !important;
+        padding: 0.62rem 0.75rem !important;
+        border-radius: 16px !important;
+        align-content: center !important;
+    }
+
+    .service-detail-page .pipe-burst-note:nth-child(5) {
+        grid-column: 1 / -1 !important;
+        width: min(100%, 440px) !important;
+        justify-self: center !important;
+    }
+
+    .service-detail-page .pipe-burst-note strong {
+        font-size: 0.76rem !important;
+        line-height: 1.08 !important;
+    }
+
+    .service-detail-page .pipe-burst-note span {
+        font-size: 0.66rem !important;
+        line-height: 1.18 !important;
+    }
+}
+
+/* Mobile — максимально компактно */
+@media (max-width: 640px) {
+    .service-detail-page .pipe-burst-board {
+        padding: 0.58rem !important;
+        border-radius: 17px !important;
+    }
+
+    .service-detail-page .pipe-burst-notes {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.42rem !important;
+    }
+
+    .service-detail-page .pipe-burst-note {
+        min-height: 3.05rem !important;
+        padding: 0.46rem 0.58rem !important;
+        border-radius: 13px !important;
+        align-content: center !important;
+    }
+
+    .service-detail-page .pipe-burst-note strong {
+        font-size: 0.68rem !important;
+        line-height: 1.06 !important;
+    }
+
+    .service-detail-page .pipe-burst-note span {
+        font-size: 0.58rem !important;
+        line-height: 1.14 !important;
+        margin-top: 0.08rem !important;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 380px) {
+    .service-detail-page .pipe-burst-board {
+        padding: 0.48rem !important;
+    }
+
+    .service-detail-page .pipe-burst-note {
+        min-height: 2.85rem !important;
+        padding: 0.42rem 0.52rem !important;
+    }
+
+    .service-detail-page .pipe-burst-note strong {
+        font-size: 0.64rem !important;
+    }
+
+    .service-detail-page .pipe-burst-note span {
+        font-size: 0.55rem !important;
+    }
+}
+
