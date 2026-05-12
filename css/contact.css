@@ -1409,3 +1409,547 @@
         linear-gradient(180deg, rgba(4, 16, 27, 0.66), rgba(4, 16, 27, 0.52)),
         rgba(4, 16, 27, 0.46) !important;
 }
+
+/* Remove decorative after layer from contact command panel */
+.contact-command-panel::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* ==========================================================
+   WATERLINE CTA — TABLET BUTTONS COLUMN
+   Add to bottom of /css/contact.css
+   ========================================================== */
+
+@media (max-width: 1024px) and (min-width: 641px) {
+    .waterline-cta-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: center !important;
+        gap: 0.75rem !important;
+        width: min(100%, 360px) !important;
+        margin-inline: auto !important;
+    }
+
+    .waterline-cta-actions .btn {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+}
+
+/* ==========================================================
+   CONTACT PIPE RAIL — TABLET/MOBILE COMPACT CARDS
+   Icons on the right
+   Add to bottom of /css/contact.css
+   ========================================================== */
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 641px) {
+    .contact-pipe-rail {
+        padding: 1rem !important;
+    }
+
+    .contact-pipe-node-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.85rem !important;
+        align-items: stretch !important;
+    }
+
+    .contact-pipe-node {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 2.55rem !important;
+        gap: 0.85rem !important;
+        align-items: center !important;
+        min-height: 4.6rem !important;
+        padding: 0.78rem 0.82rem 0.78rem 1rem !important;
+        text-align: left !important;
+    }
+
+    .contact-pipe-node p {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        display: grid !important;
+        gap: 0.14rem !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .contact-pipe-node strong {
+        font-size: 0.78rem !important;
+        line-height: 1.1 !important;
+        letter-spacing: 0.08em !important;
+    }
+
+    .contact-pipe-node a,
+    .contact-pipe-node p span {
+        font-size: 0.78rem !important;
+        line-height: 1.25 !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .contact-pipe-icon {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        width: 2.45rem !important;
+        height: 2.45rem !important;
+        min-width: 2.45rem !important;
+        min-height: 2.45rem !important;
+        justify-self: end !important;
+        align-self: center !important;
+        margin: 0 !important;
+    }
+
+    .contact-pipe-icon .svg-icon {
+        width: 1rem !important;
+        height: 1rem !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .contact-pipe-rail {
+        padding: 0.72rem !important;
+        border-radius: 20px !important;
+    }
+
+    .contact-pipe-node-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 0.62rem !important;
+    }
+
+    .contact-pipe-node {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 2.2rem !important;
+        gap: 0.7rem !important;
+        align-items: center !important;
+        width: 100% !important;
+        min-height: 3.75rem !important;
+        padding: 0.62rem 0.68rem 0.62rem 0.82rem !important;
+        text-align: left !important;
+        border-radius: 15px !important;
+    }
+
+    .contact-pipe-node p {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+        gap: 0.1rem !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .contact-pipe-node strong {
+        display: block !important;
+        width: 100% !important;
+        font-size: 0.72rem !important;
+        line-height: 1.1 !important;
+        letter-spacing: 0.08em !important;
+        text-align: left !important;
+    }
+
+    .contact-pipe-node a,
+    .contact-pipe-node p span {
+        display: block !important;
+        width: 100% !important;
+        font-size: 0.68rem !important;
+        line-height: 1.18 !important;
+        text-align: left !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    .contact-pipe-icon {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        width: 2.1rem !important;
+        height: 2.1rem !important;
+        min-width: 2.1rem !important;
+        min-height: 2.1rem !important;
+        justify-self: end !important;
+        align-self: center !important;
+        margin: 0 !important;
+    }
+
+    .contact-pipe-icon .svg-icon {
+        width: 0.92rem !important;
+        height: 0.92rem !important;
+    }
+
+    .contact-pipe-node:hover,
+    .contact-pipe-node:focus-within {
+        transform: none !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .contact-pipe-node {
+        grid-template-columns: minmax(0, 1fr) 1.95rem !important;
+        min-height: 3.45rem !important;
+        padding: 0.52rem 0.58rem 0.52rem 0.68rem !important;
+    }
+
+    .contact-pipe-icon {
+        width: 1.9rem !important;
+        height: 1.9rem !important;
+        min-width: 1.9rem !important;
+        min-height: 1.9rem !important;
+    }
+
+    .contact-pipe-node strong {
+        font-size: 0.68rem !important;
+    }
+
+    .contact-pipe-node a,
+    .contact-pipe-node p span {
+        font-size: 0.64rem !important;
+    }
+}
+
+/* ==========================================================
+   CONTACT PIPE NODE — TABLET/MOBILE CONTENT FIRST, ICON RIGHT
+   Add as the LAST block in /css/contact.css
+   ========================================================== */
+
+@media (max-width: 1024px) {
+    .contact-pipe-node-grid .contact-pipe-node {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) auto !important;
+        align-items: center !important;
+        justify-items: stretch !important;
+        gap: 0.75rem !important;
+        text-align: left !important;
+    }
+
+    /* Text/content always first, on the left */
+    .contact-pipe-node-grid .contact-pipe-node p {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        order: 1 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .contact-pipe-node-grid .contact-pipe-node strong,
+    .contact-pipe-node-grid .contact-pipe-node a,
+    .contact-pipe-node-grid .contact-pipe-node p span {
+        display: block !important;
+        width: 100% !important;
+        text-align: left !important;
+        overflow-wrap: anywhere !important;
+    }
+
+    /* Icon always second, at the far right */
+    .contact-pipe-node-grid .contact-pipe-node .contact-pipe-icon {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        order: 2 !important;
+
+        justify-self: end !important;
+        align-self: center !important;
+
+        margin: 0 !important;
+        flex: 0 0 auto !important;
+    }
+}
+
+/* Tablet compact sizes */
+@media (max-width: 1024px) and (min-width: 641px) {
+    .contact-pipe-node-grid .contact-pipe-node {
+        min-height: 4.45rem !important;
+        padding: 0.74rem 0.82rem 0.74rem 1rem !important;
+    }
+
+    .contact-pipe-node-grid .contact-pipe-node .contact-pipe-icon {
+        width: 2.45rem !important;
+        height: 2.45rem !important;
+        min-width: 2.45rem !important;
+        min-height: 2.45rem !important;
+    }
+}
+
+/* Mobile compact sizes */
+@media (max-width: 640px) {
+    .contact-pipe-node-grid .contact-pipe-node {
+        min-height: 3.65rem !important;
+        padding: 0.58rem 0.64rem 0.58rem 0.78rem !important;
+    }
+
+    .contact-pipe-node-grid .contact-pipe-node .contact-pipe-icon {
+        width: 2.1rem !important;
+        height: 2.1rem !important;
+        min-width: 2.1rem !important;
+        min-height: 2.1rem !important;
+    }
+
+    .contact-pipe-node-grid .contact-pipe-node .contact-pipe-icon .svg-icon {
+        width: 0.92rem !important;
+        height: 0.92rem !important;
+    }
+}
+
+/* ==========================================================
+   INTAKE SIDE PANEL — MOBILE COMPACT CARDS, ICONS RIGHT
+   Add as the LAST block in /css/contact.css
+   ========================================================== */
+
+@media (max-width: 640px) {
+    .intake-side-panel {
+        gap: 0.6rem !important;
+        padding: 0.72rem !important;
+    }
+
+    .intake-side-item {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 2.1rem !important;
+        align-items: center !important;
+        gap: 0.7rem !important;
+
+        min-height: 3.55rem !important;
+        padding: 0.56rem 0.62rem 0.56rem 0.78rem !important;
+
+        text-align: left !important;
+        border-radius: 15px !important;
+    }
+
+    /* Text first, left side */
+    .intake-side-item p {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        order: 1 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .intake-side-item strong {
+        display: block !important;
+        width: 100% !important;
+        font-size: 0.72rem !important;
+        line-height: 1.1 !important;
+        text-align: left !important;
+    }
+
+    .intake-side-item p span {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 0.1rem !important;
+        font-size: 0.66rem !important;
+        line-height: 1.16 !important;
+        text-align: left !important;
+    }
+
+    /* Icon second, right side */
+    .intake-side-icon {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        order: 2 !important;
+
+        width: 2.05rem !important;
+        height: 2.05rem !important;
+        min-width: 2.05rem !important;
+        min-height: 2.05rem !important;
+
+        justify-self: end !important;
+        align-self: center !important;
+        margin: 0 !important;
+
+        display: grid !important;
+        place-items: center !important;
+    }
+
+    .intake-side-icon .svg-icon {
+        width: 0.9rem !important;
+        height: 0.9rem !important;
+        display: grid !important;
+        place-items: center !important;
+    }
+
+    .intake-side-icon .svg-icon svg {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .intake-side-item:hover,
+    .intake-side-item:focus-within {
+        transform: none !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .intake-side-item {
+        grid-template-columns: minmax(0, 1fr) 1.9rem !important;
+        min-height: 3.25rem !important;
+        padding: 0.5rem 0.55rem 0.5rem 0.68rem !important;
+    }
+
+    .intake-side-icon {
+        width: 1.85rem !important;
+        height: 1.85rem !important;
+        min-width: 1.85rem !important;
+        min-height: 1.85rem !important;
+    }
+
+    .intake-side-icon .svg-icon {
+        width: 0.82rem !important;
+        height: 0.82rem !important;
+    }
+
+    .intake-side-item strong {
+        font-size: 0.68rem !important;
+    }
+
+    .intake-side-item p span {
+        font-size: 0.62rem !important;
+    }
+}
+
+/* ==========================================================
+   CONTACT COMMAND LIST — MOBILE COMPACT, ICONS RIGHT
+   Add as the LAST block in /css/contact.css
+   ========================================================== */
+
+@media (max-width: 640px) {
+    .contact-command-list {
+        display: grid !important;
+        gap: 0.6rem !important;
+    }
+
+    .contact-command-item {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) 2.1rem !important;
+        align-items: center !important;
+        gap: 0.7rem !important;
+
+        min-height: 3.55rem !important;
+        padding: 0.56rem 0.62rem 0.56rem 0.78rem !important;
+
+        text-align: left !important;
+        border-radius: 15px !important;
+    }
+
+    /* Text first, left side */
+    .contact-command-item p {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        order: 1 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: flex-start !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .contact-command-item strong {
+        display: block !important;
+        width: 100% !important;
+        font-size: 0.72rem !important;
+        line-height: 1.1 !important;
+        text-align: left !important;
+    }
+
+    .contact-command-item p span {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 0.1rem !important;
+        font-size: 0.66rem !important;
+        line-height: 1.16 !important;
+        text-align: left !important;
+    }
+
+    /* Icon second, right side */
+    .contact-command-item>.svg-icon {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        order: 2 !important;
+
+        width: 2.05rem !important;
+        height: 2.05rem !important;
+        min-width: 2.05rem !important;
+        min-height: 2.05rem !important;
+
+        justify-self: end !important;
+        align-self: center !important;
+        margin: 0 !important;
+
+        display: grid !important;
+        place-items: center !important;
+
+        color: var(--color-water) !important;
+        border: 1px solid rgba(108, 182, 200, 0.3) !important;
+        border-radius: 999px !important;
+        background: rgba(4, 16, 27, 0.5) !important;
+    }
+
+    .contact-command-item>.svg-icon svg {
+        width: 0.9rem !important;
+        height: 0.9rem !important;
+    }
+
+    /* Hide status dot on mobile so it doesn't break alignment */
+    .contact-command-status {
+        display: none !important;
+    }
+
+    .contact-command-item:hover,
+    .contact-command-item:focus-within {
+        transform: none !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .contact-command-item {
+        grid-template-columns: minmax(0, 1fr) 1.9rem !important;
+        min-height: 3.25rem !important;
+        padding: 0.5rem 0.55rem 0.5rem 0.68rem !important;
+    }
+
+    .contact-command-item>.svg-icon {
+        width: 1.85rem !important;
+        height: 1.85rem !important;
+        min-width: 1.85rem !important;
+        min-height: 1.85rem !important;
+    }
+
+    .contact-command-item>.svg-icon svg {
+        width: 0.82rem !important;
+        height: 0.82rem !important;
+    }
+
+    .contact-command-item strong {
+        font-size: 0.68rem !important;
+    }
+
+    .contact-command-item p span {
+        font-size: 0.62rem !important;
+    }
+}
