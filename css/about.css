@@ -2091,3 +2091,95 @@
         justify-content: center !important;
     }
 }
+
+/* ==========================================================
+   PREPARATION BOARD — CLEAN DARK PHOTO CARD FIX
+   Add as the LAST block in /css/about.css
+   ========================================================== */
+
+.prep-panel.large {
+    isolation: isolate !important;
+    color: var(--color-heading) !important;
+    background: #04101B !important;
+    border-color: rgba(108, 182, 200, 0.2) !important;
+}
+
+/* убираем светлый grid/overlay только у большой карточки */
+.prep-panel.large::before {
+    z-index: 2 !important;
+    background:
+        linear-gradient(90deg, rgba(108, 182, 200, 0.08) 1px, transparent 1px),
+        linear-gradient(180deg, rgba(108, 182, 200, 0.06) 1px, transparent 1px) !important;
+    background-size: 34px 34px !important;
+    opacity: 0.22 !important;
+}
+
+/* фото должно быть полноценным, НЕ прозрачным */
+.prep-panel.large .prep-panel-media {
+    inset: 0 !important;
+    z-index: 0 !important;
+    opacity: 1 !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+}
+
+/* фото ярче */
+.prep-panel.large .prep-panel-media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    filter: saturate(1.28) contrast(1.16) brightness(1.14) !important;
+}
+
+/* убираем все старые светлые псевдо-слои внутри media */
+.prep-panel.large .prep-panel-media::before {
+    display: none !important;
+    content: none !important;
+}
+
+/* один нормальный темный градиент поверх фото */
+.prep-panel.large .prep-panel-media::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    background:
+        linear-gradient(180deg,
+            rgba(4, 16, 27, 0.18) 0%,
+            rgba(4, 16, 27, 0.52) 48%,
+            rgba(4, 16, 27, 0.94) 100%),
+        radial-gradient(circle at 18% 18%, rgba(108, 182, 200, 0.2), transparent 16rem),
+        radial-gradient(circle at 88% 82%, rgba(117, 168, 77, 0.14), transparent 16rem) !important;
+}
+
+/* контент поверх фото и градиента */
+.prep-panel.large .prep-panel-content {
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+/* читаемый текст */
+.prep-panel.large h3 {
+    color: #ffffff !important;
+    text-shadow: 0 12px 32px rgba(0, 0, 0, 0.55) !important;
+}
+
+.prep-panel.large p {
+    color: rgba(216, 226, 229, 0.92) !important;
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.42) !important;
+}
+
+/* иконка как на темных карточках */
+.prep-panel.large .prep-panel-icon {
+    color: var(--color-water) !important;
+    background: rgba(4, 16, 27, 0.58) !important;
+    border-color: rgba(108, 182, 200, 0.36) !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+/* линия */
+.prep-panel.large .prep-panel-line {
+    background: linear-gradient(90deg, var(--color-water), var(--color-green), transparent) !important;
+    opacity: 1 !important;
+}
